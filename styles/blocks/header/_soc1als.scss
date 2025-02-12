@@ -1,0 +1,30 @@
+@use '../../helpers' as *; 
+
+.soc1als {
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: rem(46);
+
+        &--small {
+            column-gap: rem(34);
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+
+    @include tablet-above {
+        display: none;
+    }
+
+    &__image {
+        &--small {
+            min-width: rem(30);
+            min-height: rem(30);
+        }
+    }
+}

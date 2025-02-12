@@ -1,0 +1,41 @@
+@use 'normalize';
+@use 'fonts';
+@use 'utils';
+@use 'globals';
+@use 'variables';
+
+@use 'blocks/header/header';
+@use 'blocks/header/stories';
+@use 'blocks/header/logo';
+@use 'blocks/button';
+@use 'blocks/header/burger-button';
+@use 'blocks/header/soc1als';
+@use 'blocks/hero/hero';
+@use 'blocks/info/info';
+@use 'blocks/cloud/cloud';
+@use 'blocks/cloud/cloud-slider';
+@use 'blocks/rating/rating';
+@use 'blocks/rating/rating-stars';
+@use 'blocks/family/family';
+@use 'blocks/stroke/stroke';
+@use 'blocks/video/video';
+@use 'blocks/reason/reason';
+@use 'blocks/use/use';
+@use 'blocks/camel/camel';
+@use 'blocks/reviews/reviews';
+@use 'blocks/reviews/card';
+@use 'blocks/footer/footer';
+
+// header {
+//     display: none;
+// }
+
+// main {
+//     .section {
+//         &:not(:last-child) {
+//             display: none;
+//         }
+
+//     }
+
+// }

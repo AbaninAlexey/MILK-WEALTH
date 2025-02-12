@@ -1,0 +1,13 @@
+@use '../../helpers' as *; 
+
+.video {
+   &__body {
+        max-width: auto;
+        max-height: fluid(1152, 1080);
+        object-fit: cover;
+
+        @include mobile {
+            height: rem(1080);
+        }
+   } 
+}

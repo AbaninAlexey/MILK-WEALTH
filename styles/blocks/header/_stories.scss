@@ -1,0 +1,76 @@
+@use '../../helpers' as *; 
+
+// .stories-slider__nav {
+//     position: absolute;
+//     top: 15%;
+//     left: rem(-22);
+//     width: rem(590);
+//     z-index: -1;
+//     font-size: rem(40);
+
+//     @include mobile {
+//         left: rem(-17);
+//         width: rem(540);
+//     }
+// }
+
+.stories-slider {
+    .owl-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .owl-nav {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left: rem(-22);
+        right: rem(-22);
+        top: 50%;
+        translate: 0 -50%;
+        z-index: -1;
+
+        @include mobile {
+            left: rem(-15);
+            right: rem(-15);
+        }
+
+        @include mobile-s {
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &__outer {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__wrapper {
+        @include square(rem(70));
+
+        @include mobile-s {
+            @include square(rem(50));
+        }
+    }
+
+    // &__nav {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     position: absolute;
+    //     left: rem(-22);
+    //     right: rem(-22);
+    //     top: 50%;
+    //     translate: 0 -50%;
+    // }
+
+
+    &__img {
+        border-radius: 50%;
+        border: rem(3) solid transparent;
+        border-radius: 50%;
+        background: linear-gradient(140deg, #AC4AE4, #EB4B4B, #E5FF74) border-box; 
+    }
+        
+    
+}

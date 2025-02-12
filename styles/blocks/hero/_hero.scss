@@ -1,0 +1,68 @@
+@use '../../helpers' as *; 
+
+.hero {
+    background: linear-gradient(170deg, rgba(255, 255, 255, 0.868) 0%, rgba(0,0,0,0) 90%), 
+        url(../../../images/hero/bg.jpg)
+        no-repeat center / cover
+    ;
+
+        @include mobile {
+            background: linear-gradient(170deg, rgba(255, 255, 255, 0.542) 0%, rgba(0,0,0,0) 70%), 
+                url(../../../images/hero/bg.jpg)
+                no-repeat center / cover
+            ;
+            background-position: 65%;
+        }
+
+    &__body {
+        display: flex;
+        padding-block: rem(374) rem(484);
+        padding-left: rem(245);
+        margin-right: auto;
+
+        @include tablet {
+            justify-content: center;
+            padding: rem(80) rem(40) rem(660);
+            margin-right: 0;
+        }
+
+        @include mobile-s {
+            padding: rem(40) rem(20) rem(280);
+        }
+        
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-main {
+            font-family: var(--third-family);
+            font-weight: 700;
+        }
+    }
+
+    &__subtitle {
+        font-family: var(--font-family);
+
+        &:first-child {
+            height: rem(40);
+            @include mobile-s {
+                height: auto;
+            }
+        }
+        
+        &:last-child {
+            padding-top: rem(30);
+
+            @include tablet {
+                padding-top: rem(40);
+            }
+
+            @include mobile-s {
+                padding-top: rem(20);
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+@use '../../helpers' as *; 
+
+
+.cloud-slider {
+    .owl-dots {
+        display: flex;
+        position: absolute;
+        bottom: rem(120);
+        translate: 0 -50%;
+        left: 50%;
+        translate: -50%;
+        column-gap: fluid(24, 10);
+
+        @include laptop {
+            bottom: rem(60);
+        }
+
+        @include mobile-s {
+            bottom: rem(30);
+        }
+
+        .owl-dot {
+            span {
+                width: fluid(25, 20);
+                height: fluid(25, 20);
+                margin: 0;
+
+                @include mobile-s {
+                    @include square(rem(15));
+                }
+            }
+
+            &.active {
+                span {
+                    background-color: var(--font-color);
+                }
+            }
+        }
+
+    }
+
+    &__bg {
+        background: 
+            transparent url(../../../images/cloud/1.jpg) 
+            no-repeat center / cover
+        ;
+
+        @include laptop {
+            background-position: 100%;
+        }
+        
+    }
+
+    &__bg--two {
+        background: 
+            transparent url(../../../images/cloud/2.jpg) 
+            no-repeat center / cover
+        ;
+
+        @include laptop {
+            background-position: 100%;
+        }
+        
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: end;
+        justify-content: start;
+        width: fluid(1950, 1100);
+        height: fluid(1442, 756);
+
+        &--height {
+            height: fluid(1442, 895);
+        }
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: fluid(845, 460);
+        row-gap: rem(40);
+        padding-bottom: fluid(245, 140);
+        justify-content: start;
+        align-items: start;
+
+        @include mobile-s {
+            width: fluid(350, 300);
+        }
+
+    }
+
+    &__title {
+        font-family: var(--font-family);
+        font-weight: 400;
+        text-align: start;
+
+        @include mobile {
+            br {
+                display: none;
+              }
+        }
+    }
+
+    &__description {
+        max-width: fluid(700, 359);
+        text-align: start;
+
+        &--width {
+            max-width: fluid(700, 460);
+        }
+
+    }
+
+
+  
+}

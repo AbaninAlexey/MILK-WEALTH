@@ -1,0 +1,33 @@
+@use '../../helpers' as *; 
+
+.reviews {
+    padding-block: fluid(120, 80) fluid(150, 107);
+    background-color: var(--color-gray);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: fluid(75, 60);
+        justify-content: center;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: var(--font-family);
+        font-weight: 500;
+    }
+
+
+    &__body {
+        .owl-item {
+            width: auto !important;
+        }
+
+        .owl-stage {
+            display: flex;
+        }
+    }
+}

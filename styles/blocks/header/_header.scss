@@ -1,0 +1,145 @@
+@use '../../helpers' as *; 
+
+.header {
+
+    &__body {
+        background-color: var(--font-color);
+        padding-block: rem(33) rem(40);
+
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 1rem;
+        column-gap: 1rem;
+    }
+
+        @include tablet {
+            padding-block: rem(26) rem(25);
+        }
+
+        @include mobile-s {
+            padding-block: rem(16) rem(15);
+        }
+
+        &.is-active {
+            padding-top: rem(81);
+
+            @include mobile-s {
+                padding-top: rem(16);
+            }
+        }  
+    }
+
+
+    &__link {
+        @include tablet {
+            margin-bottom: rem(171);
+        }
+    }
+
+    &__logo-wrapper {
+        display: flex;
+        align-items: center;
+        padding-bottom: rem(22);
+
+        @include tablet {
+            padding-bottom: 0;
+        }
+    }
+
+    &__overlay {
+        display: flex;
+        align-items: center;
+        column-gap: rem(20);
+
+        @include tablet {
+            transition-duration: var(--transition-duration);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: var(--font-color);
+            justify-content: start;
+            padding-block: rem(290) rem(179);
+            width: 100%;
+            z-index: 2;
+            column-gap: rem(10);
+
+            @include mobile-s {
+                padding-block: rem(80) rem(100);
+            }
+
+            &:not(.is-active) {
+               @include hide;
+               translate: 100%; 
+            }
+        }
+    }
+
+    &__menu {
+        @include tablet {
+            margin-bottom: rem(80);
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: rem(76);
+
+            @include laptop {
+                column-gap: rem(20);
+            }
+
+            @include tablet {
+                flex-direction: column;
+                row-gap: rem(44);
+            }
+
+            @include mobile-s {
+                column-gap: rem(30);
+            }
+        }
+
+        &-link {
+            display: flex;
+            font-family: var(--font-family);
+            color: var(--white);
+            font-size: rem(20);
+            align-self: center;
+            
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__stories {
+        display: flex;
+        justify-content: center;
+
+        &-wrapper {
+            padding-block: rem(20);
+
+            @include mobile-above {
+                width: rem(570);
+            }
+
+            @include mobile {
+                max-width: rem(520);
+            }
+
+            @include mobile-s {
+                width: rem(340);
+                padding-block: rem(10);
+            }
+        }
+    }
+}

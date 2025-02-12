@@ -1,0 +1,36 @@
+@use '../../helpers' as *; 
+
+.logo {
+    display: flex;
+    column-gap: rem(10);
+    &__main {
+        max-width: fluid(44, 40);
+        z-index: 3;
+    }
+
+    &__text {
+        max-width: rem(90);
+
+        @include laptop {
+            display: none;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    &__menu {
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: rem(76);
+        }
+    }
+
+    
+}
+     
