@@ -1,0 +1,46 @@
+@use '../helpers' as *; 
+
+.tabs {
+    &__buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: rem(30);
+        
+
+        @include laptop {
+            column-gap: rem(14);
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: rem(30);
+        }
+    }
+
+    &__button {
+        padding-block:fluid(17, 17);
+        padding-inline: rem(40);
+        color: var(--white);
+        background-color: var(--cows-green);
+        border-radius: rem(10);
+        font-size: rem(20);
+        font-weight: 700;
+        border: 0;
+        width: 100%;
+
+
+        &.is-active {
+            pointer-events: none;
+        }
+    }
+
+    &__content {
+        &:not(.is-active) {
+            display: none;
+        }
+
+        &:focus-visible {
+            outline-offset: -1rem;
+        }
+    }
+}

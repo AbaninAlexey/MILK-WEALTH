@@ -11,6 +11,11 @@
         @include mobile {
             background-position: 50% 50%;
         }
+
+        &--product-list {
+            background: url(../../../images/family/product-list.jpg)
+            no-repeat center / cover;
+        }
     }
 
 

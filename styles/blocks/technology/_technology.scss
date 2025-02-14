@@ -1,0 +1,31 @@
+@use '../../helpers' as *; 
+
+.technology {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background-color: var(--cows-green);
+    height: rem(1744);
+    padding-block: rem(140);
+    z-index: 1;
+    margin-top: rem(-576);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: fluid(40, 20);
+        width: rem(1195);
+    }
+
+    &__text {
+        text-align: center;
+        width: rem(846);
+    }
+
+    &__text-main {
+        font-family: var(--font-family);
+        text-align: center;
+    }
+}

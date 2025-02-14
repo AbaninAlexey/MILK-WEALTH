@@ -1,0 +1,68 @@
+@use '../../helpers' as *; 
+
+.hero-alt {
+    background: url(../../../images/hero-alt/bg.jpg) no-repeat center / cover;
+
+        @include mobile {
+            background-position: 30%;
+        }
+
+    &__body {
+        display: flex;
+        padding-block: rem(374) rem(484);
+        justify-content: end;
+        color: var(--white);
+        min-height: fluid(1282, 895);
+
+        @include tablet {
+            justify-content: center;
+            padding: rem(72) rem(40) rem(558);
+            margin-right: 0;
+        }
+
+        @include mobile-s {
+            padding: rem(40) rem(20) rem(280);
+        }
+        
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-main {
+            font-family: var(--third-family);
+            font-weight: 700;
+        }
+    }
+
+    &__subtitle {
+        font-family: var(--font-family);
+        font-weight: 500;
+        text-align: center;
+
+        @include mobile {
+            font-size: rem(40);
+        }
+
+        &:first-child {
+            height: rem(40);
+            @include mobile-s {
+                height: auto;
+            }
+        }
+        
+        &:last-child {
+            padding-top: rem(30);
+
+            @include tablet {
+                padding-top: rem(40);
+            }
+
+            @include mobile-s {
+                padding-top: rem(20);
+            }
+        }
+    }
+}

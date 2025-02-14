@@ -2,7 +2,7 @@
 
 .video {
    &__body {
-        max-width: auto;
+        width: 100%;
         max-height: fluid(1152, 1080);
         object-fit: cover;
 

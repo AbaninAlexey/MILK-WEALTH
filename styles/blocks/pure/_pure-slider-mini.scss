@@ -1,0 +1,17 @@
+@use '../../helpers' as *; 
+
+.pure-slider-mini {
+    &__content {
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__image {
+        object-fit: cover;
+    }
+}
+
+.swiper-mini {
+    width: 100%;
+    height: auto;
+  }

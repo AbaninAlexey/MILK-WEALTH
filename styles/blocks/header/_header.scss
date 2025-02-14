@@ -111,6 +111,10 @@
             color: var(--white);
             font-size: rem(20);
             align-self: center;
+
+            @include hover {
+                color: var(--color-accent);
+            }
             
         }
 
