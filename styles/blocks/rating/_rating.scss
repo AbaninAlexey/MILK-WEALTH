@@ -140,13 +140,9 @@
     &__number {
         position: relative;
         background-color: var(--cows-green);
-        padding: rem(37) rem(289);
+        padding: fluid(37, 15) fluid(289, 44) fluid(20);
         font-family: var(--font-family);
         font-size: rem(50);
-
-        @include laptop {
-            padding: rem(15) rem(44) rem(20);
-        }
 
         @include mobile {
             display: flex;
@@ -192,18 +188,18 @@
         &-img {
             position: absolute;
             bottom: rem(-103);
-            right: rem(100);
+            right: fluid(100, -32);
             max-width: fluid(991, 544);
             
 
             @include laptop {
-                right: rem(-32);
-                max-width: rem(544);
+                // right: rem(-32);
+                // max-width: rem(544);
             }
 
-            @include mobile {
-                max-width: rem(544);
-            }
+            // @include mobile {
+            //     max-width: rem(544);
+            // }
 
             @include mobile-s {
                 max-width: rem(300);

@@ -79,24 +79,24 @@
         &-title {
             width: fluid(614, 265);
             height: auto;
+
+            @include mobile-s {
+                width: clamp(150px, 200px, 260px);
+                height: auto;
+            }
         }
 
         &-img {
-            width: fluid(1941, 748);
-            max-height: fluid(1360, 601);
-            height: 100%;
+            min-width: fluid(1941, 654);
+            height: fluid(1360, 532);
 
             &--rotate {
                 rotate: 180deg;
             }
 
-            @include mobile {
-                height: rem(601);
-            }
-
             @include mobile-s {
-                max-width: rem(600);
-                max-height: rem(400);
+                max-width: 40.5rem;
+                max-height: 25rem;
             }
         }
 
@@ -104,11 +104,11 @@
         &-wrapper {
             position: absolute;
             z-index: 21;
-            top: fluid(292,129);
+            top: fluid(287,94);
             font-weight: 400;
 
             @include mobile-s {
-                top: rem(80);
+                top: rem(50);
             }
         }
 

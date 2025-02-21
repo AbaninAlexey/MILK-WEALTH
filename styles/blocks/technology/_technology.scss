@@ -5,10 +5,28 @@
     align-items: end;
     justify-content: center;
     background-color: var(--cows-green);
-    height: rem(1744);
-    padding-block: rem(140);
+    height: fluid(1744, 713);
+    padding-block: fluid(140, 60);
     z-index: 1;
     margin-top: rem(-576);
+
+    @media (width <= 1600px) {
+        margin-top: rem(-410);
+    }
+
+    @include tablet {
+        margin-top: rem(-300);
+    }
+
+    @include mobile {
+        margin-top: rem(-196); 
+    }
+
+    @include mobile-s {
+        margin-top: rem(-100); 
+        height: rem(500);
+    }
+
 
     &__inner {
         display: flex;
@@ -16,16 +34,35 @@
         align-items: center;
         justify-content: center;
         row-gap: fluid(40, 20);
-        width: rem(1195);
+        width: fluid(1195, 460);
+
+        @include mobile-s {
+            width: rem(340);
+        }
+
     }
+
+
+
 
     &__text {
         text-align: center;
-        width: rem(846);
+        width: fluid(846, 460);
+        font-size: fluid(40, 23);
+
+        @include mobile-s {
+            font-size: rem(18);
+            width: rem(340);
+        }
     }
 
     &__text-main {
         font-family: var(--font-family);
         text-align: center;
+        font-size: fluid(70, 25);
+
+        @include mobile-s {
+            font-size: rem(20);
+        }
     }
 }

@@ -89,11 +89,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            column-gap: rem(76);
-
-            @include laptop {
-                column-gap: rem(20);
-            }
+            column-gap: fluid(76, 15);
 
             @include tablet {
                 flex-direction: column;
@@ -111,6 +107,7 @@
             color: var(--white);
             font-size: rem(20);
             align-self: center;
+            white-space: nowrap;
 
             @include hover {
                 color: var(--color-accent);

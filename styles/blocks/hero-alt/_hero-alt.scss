@@ -3,6 +3,10 @@
 .hero-alt {
     background: url(../../../images/hero-alt/bg.jpg) no-repeat center / cover;
 
+        @include laptop {
+            background-position: 15%;
+        }
+
         @include mobile {
             background-position: 30%;
         }

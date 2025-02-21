@@ -3,20 +3,13 @@
 .button {
     color: var(--white);
     font-family: var(--font-family);
-    font-size: rem(25);
+    font-size: fluid(25, 18);
     background-color: var(--white);
     color: var(--font-color);
-    padding: rem(15) rem(45) rem(14);
+    padding: fluid(15, 7) fluid(45, 10) fluid(14, 7);
     border-radius: rem(10);
     text-align: center;
 
-    @include laptop {
-        padding: rem(15) rem(20) rem(15);
-    }
-
-    @include tablet {
-        padding: rem(15) rem(20) rem(15);
-    }
 
     &--burger-menu {
         @include mobile {
@@ -30,6 +23,7 @@
 
         @include hover {
             background-color: var(--middle-blue);
+            color: var(--font-color);
         }
     }
 
@@ -39,6 +33,17 @@
 
         @include hover {
             background-color: #FFD574;
+        }
+    }
+
+    &--size-and-family {
+        font-family: var(--second-family);
+        font-size: rem(20);
+        font-weight: 700;
+        padding: rem(10) rem(48);
+
+        @include mobile {
+            font-size: rem(16);
         }
     }
 

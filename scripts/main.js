@@ -46,7 +46,9 @@ $(document).ready(function(){
       },
         nav: false,
         dots: false,
-        // loop: true,
+        loop: true,
+        autoWidth: true,
+        stagePadding: 362,
     });
   });
 

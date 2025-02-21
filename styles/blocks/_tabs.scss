@@ -1,10 +1,23 @@
 @use '../helpers' as *; 
 
 .tabs {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(60);
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+
     &__buttons {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         column-gap: rem(30);
+        justify-content: space-between;
+        width: 100%;
         
 
         @include laptop {
@@ -27,6 +40,11 @@
         font-weight: 700;
         border: 0;
         width: 100%;
+        
+
+        @include hover {
+            color: var(--color-accent);
+        }
 
 
         &.is-active {
@@ -43,4 +61,63 @@
             outline-offset: -1rem;
         }
     }
+
+    &__body {
+        width: 100%;
+    }
+
+
+    &__first-list {
+        display: grid;
+        flex-direction: column;
+        row-gap: rem(20);
+        column-gap: rem(30);
+        grid-template-columns: repeat(auto-fit, fluid(540, 460));
+    }
+
+    &__first-term {
+        color: var(--cows-green);
+    }
+
+    &__first-item {
+        display: flex;
+        column-gap: rem(15);
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: rem(25);
+    }
+
+    &__first-plus {
+        width: rem(18);
+        height: rem(18);
+        padding-top: rem(5);
+    }
+
+    &__third-bold {
+        font-family: var(--font-family);
+    }
+
+    &__third-inner {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        column-gap: rem(30);
+
+        @include tablet {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            row-gap: rem(20);
+        }
+    }
+
+    &__third-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        row-gap: fluid(40, 20);
+        font-size: fluid(40, 25);
+    }
+
 }
