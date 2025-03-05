@@ -120,4 +120,390 @@
         font-size: fluid(40, 25);
     }
 
+    &__fourth-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+        justify-content: space-between;
+        gap: rem(30);
+
+        @include laptop {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__fourth-item {
+        display: flex;
+        column-gap: rem(20);
+        row-gap: rem(20);
+        justify-content: space-between;
+        align-items: start;
+        font-size: fluid(40,30);
+        font-weight: 500;
+
+        @include laptop {
+            justify-content: start;
+            align-items: center;
+        }
+
+
+
+        &:first-child {
+            display: grid;
+            align-items: start;
+            justify-content: start;
+
+
+
+                grid-template-areas: 'image text'
+                                '.  small-text';
+
+                .tabs__fourth-image {
+                    grid-area: image;
+                }
+
+                .tabs__fourth-text {
+                    grid-area: text;
+                }
+
+                .tabs__fourth-small-text {
+                    grid-area: small-text;
+                    font-size: rem(30);
+                }
+            
+
+            
+        }
+    }
+
+    &__fourth-image {
+        max-height: fluid(85, 59);
+
+        &:first-child {
+            max-width: fluid(53, 37);
+        }
+
+        &:nth-child(2) {
+            max-width: fluid(28, 20);
+        }
+    }
+
+    &__second-inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(135);
+    }
+
+    &__second-body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &-img {
+            position: absolute;
+            top: fluid(509, 409);
+            left: fluid(560, -33);
+            order: -1;
+            height: fluid(1146,1008);
+            max-width: fluid(598, 527);
+        }
+    }
+
+    &__second-list {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        column-gap: rem(25);
+    }
+
+    &__second-item {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(20);
+    }
+
+
+    &__second-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        order: 1;
+
+        &:first-child {
+            margin-bottom: fluid(65, 61);
+            position: relative;
+            justify-content: center;
+
+
+            .tabs__second-elem {
+
+
+                &:first-child {
+                    position: absolute;
+                    top: rem(235);
+                    left: fluid(370, -27);
+
+
+                    .tabs__second-image {
+                        position: relative;
+                        width: fluid(239, 156);
+                        height: fluid(81, 53);
+
+                    }
+
+                    .tabs__second-title {
+                        width: fluid(272, 150);
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #000000;
+                            width: fluid(344, 149);
+                            height: rem(1);
+                            rotate: 53deg;
+                            left: fluid(150, 110);
+                            top: fluid(177, 120);
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    .tabs__second-image {
+                            width: fluid(239, 190);
+                            height: fluid(470, 376);
+                    }
+                }
+
+                &:nth-child(3) {
+                    position: absolute;
+                    top: fluid(174, 179);
+                    right: fluid(344, -29);
+
+                    .tabs__second-image {
+                        width: fluid(154, 100);
+                        height: fluid(151, 98);
+                    }
+
+                    .tabs__second-title {
+                        width: fluid(272, 183);
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #000000;
+                            width: fluid(344, 118);
+                            height: rem(1);
+                            rotate: 130deg;
+                            right: fluid(170, 130);
+                            top: fluid(160, 130);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &:nth-child(2) {
+            margin-bottom: fluid(188, 36);
+            justify-content: space-between;
+            position: relative;
+            height: fluid(220, 160);
+
+            .tabs__second-elem {
+                
+                &:first-child {
+                    position: absolute;
+                    top: rem(6);
+                    left: fluid(284, -35);
+
+                    .tabs__second-title {
+                        width: fluid(272, 180);
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #000000;
+                            width: fluid(249, 116);
+                            height: rem(1);
+                            rotate: 20deg;
+                            left: fluid(180, 70);
+                            top: fluid(70, 120);
+
+                            @include tablet {
+                                rotate: 60deg;
+                            }
+                        }
+                    }
+
+                    .tabs__second-image {
+                        width: fluid(186, 91);
+                        height: fluid(169, 82);
+                }
+                }
+
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 0;
+                    right: fluid(253, -23);
+
+                    .tabs__second-title {
+                        width: fluid(272, 170);
+                    }
+
+                    .tabs__second-image {
+                            width: fluid(194, 103);
+                            height: fluid(167, 88);
+                    }
+                }
+
+            }
+        }
+
+        &:nth-child(3) {
+            margin-bottom: rem(120);
+            justify-content: space-between;
+            position: relative;
+            height: fluid(256, 166);
+
+            @include tablet {
+                margin-bottom: rem(579);
+
+            }
+
+            .tabs__second-elem {
+                
+                &:first-child {
+                    position: absolute;
+                    top: rem(0);
+                    left: fluid(185, -58);
+
+                    .tabs__second-title {
+                        width: fluid(272, 168);
+                    }
+
+                    .tabs__second-image {
+                        width: fluid(122, 64);
+                        height: fluid(176, 94);
+                }
+                }
+
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 0;
+                    right: fluid(209, -58);
+
+                    .tabs__second-title {
+                        width: fluid(272, 168);
+                    }
+
+                    .tabs__second-image {
+                            width: fluid(71, 38);
+                            height: fluid(180, 95);
+                    }
+                }
+
+            }
+        }
+
+        &:nth-child(4) {
+            margin-bottom: fluid(90, -5);
+            justify-content: space-between;
+            position: relative;
+            height: fluid(256, 166);
+
+            .tabs__second-elem {
+                
+                &:first-child {
+                    position: absolute;
+                    top: rem(0);
+                    left: fluid(260, -48);
+
+                    .tabs__second-title {
+                        width: fluid(272, 150);
+                    }
+
+                    .tabs__second-image {
+                        width: fluid(186, 169);
+                        height: fluid(93, 84);
+                }
+                }
+
+                &:nth-child(2) {
+                    position: absolute;
+                    top: fluid(60, 21);
+                    right: fluid(209, -58);
+
+                    .tabs__second-title {
+                        width: fluid(272, 150);
+                    }
+
+                    .tabs__second-image {
+                            width: fluid(239, 107);
+                            height: fluid(111, 50);
+                    }
+                }
+
+            }
+        }
+
+        &:nth-child(5) {
+            margin-bottom: fluid(90, -5);
+            justify-content: space-between;
+            position: relative;
+            height: fluid(222, 176);
+
+            .tabs__second-elem {
+                
+                &:first-child {
+                    position: absolute;
+                    top: rem(0);
+                    left: fluid(327, 0);
+
+                    .tabs__second-title {
+                        width: fluid(324, 220);
+                    }
+
+                    .tabs__second-image {
+                        width: fluid(177, 96);
+                        height: fluid(177, 96);
+                }
+                }
+
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 0;
+                    right: fluid(295, 0);
+
+                    .tabs__second-title {
+                        width: fluid(324, 222);
+                    }
+
+                    .tabs__second-image {
+                            width: fluid(215, 127);
+                            height: fluid(177, 105);
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__second-elem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: rem(15);
+    }
+
+    &__second-title {
+        text-align: center;
+        font-size: fluid(25, 23);
+        font-family: var(--font-family);
+    }
+
+
 }
