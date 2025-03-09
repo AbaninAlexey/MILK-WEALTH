@@ -33,7 +33,7 @@
         @include laptop {
             align-items: end;
             column-gap: rem(89);
-            justify-content: start;
+            justify-content: space-between;
             margin-top: rem(-30);
         }
 

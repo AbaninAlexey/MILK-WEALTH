@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/main.js" type="module"></script>
     <script src="./scripts/swiper.js" type="module"></script>
+    <script src="./scripts/owl.js" type="module"></script>
 </head>
 <body>
     <header class="header" data-js-header>
@@ -354,7 +355,7 @@
         </section>
 
         <section class="info-alt section overflow-x" aria-labelledby="info-alt-title">
-            <div class="info-alt__inner tabs container container-padding-block">
+            <div class="info-alt__inner tabs container container-padding-block" data-js-tabs>
                 <h2 class="visually-hidden" id="info-alt-title">
                     Tabs buttons
                 </h2>
@@ -414,7 +415,7 @@
                 
                 <div class="tabs__body">
 
-                    <div class="tabs__content" id="tabpanel-1"
+                    <div class="tabs__content is-active" id="tabpanel-1"
                     aria-labelledby="tab-1"
                     tabindex="0" data-js-tabs-content
                     >
@@ -524,7 +525,7 @@
                         </ul>
                     </div>
 
-                    <div class="tabs__content is-active" id="tabpanel-2"
+                    <div class="tabs__content" id="tabpanel-2"
                     aria-labelledby="tab-2"
                     tabindex="0" data-js-tabs-content
                     >
