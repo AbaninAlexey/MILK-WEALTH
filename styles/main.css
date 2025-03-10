@@ -1048,7 +1048,10 @@ button[aria-label]::before {
 .cloud-slider .owl-dots .owl-dot.active span {
   background-color: var(--font-color);
 }
-.cloud-slider__bg {
+.cloud-slider__bg:nth-child(1) {
+  background: transparent url(../../../images/cloud/1.jpg) no-repeat center/cover;
+}
+.cloud-slider__bg:nth-child(2) {
   background: transparent url(../../../images/cloud/1.jpg) no-repeat center/cover;
 }
 @media (width <= 90.06125rem) {
@@ -1057,7 +1060,7 @@ button[aria-label]::before {
   }
 }
 .cloud-slider__bg--two {
-  background: transparent url(../../../images/cloud/2.jpg) no-repeat center/cover;
+  background: transparent url(../../../images/cloud/21.jpg) no-repeat center/cover;
 }
 @media (width <= 90.06125rem) {
   .cloud-slider__bg--two {
@@ -2608,6 +2611,33 @@ button[aria-label]::before {
   border: 0;
   width: 100%;
 }
+.tabs__button-text {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tabs__button-text::after {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 1.25rem;
+  margin-left: 0.9375rem;
+  background: url(../../images/tabs/arrow-right.svg) no-repeat center/cover;
+}
+.tabs__button.is-active {
+  background-color: var(--light-blue);
+  color: var(--font-color);
+  transition-duration: 0.1s;
+}
+.tabs__button.is-active .tabs__button-text::after {
+  content: "";
+  display: block;
+  width: 1.25rem;
+  height: 0.75rem;
+  margin-left: 0.9375rem;
+  background: url(../../images/tabs/arrow-right-active.svg) no-repeat center/cover;
+}
 @media (any-hover: hover) {
   .tabs__button:hover {
     color: var(--color-accent);
@@ -2636,7 +2666,12 @@ button[aria-label]::before {
   row-gap: 1.25rem;
   -moz-column-gap: 1.875rem;
        column-gap: 1.875rem;
-  grid-template-columns: repeat(auto-fit, clamp(28.75rem, 26.25rem + 6.25vw, 33.75rem));
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (width <= 90.06125rem) {
+  .tabs__first-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .tabs__first-term {
   color: var(--cows-green);

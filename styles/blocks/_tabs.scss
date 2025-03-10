@@ -40,6 +40,43 @@
         font-weight: 700;
         border: 0;
         width: 100%;
+
+
+        &-text {
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::after {
+                content: "";
+                display: block;
+                width: rem(12);
+                height: rem(20);
+                margin-left: rem(15);
+                background: url(../../images/tabs/arrow-right.svg) no-repeat center/cover;
+            }
+
+            
+        }
+
+        &.is-active {
+            background-color: var(--light-blue);
+            color: var(--font-color);
+            transition-duration: 0.1s;
+
+            .tabs__button-text {
+                &::after {
+                    content: "";
+                    display: block;
+                    width: rem(20);
+                    height: rem(12);
+                    margin-left: rem(15);
+                    background: url(../../images/tabs/arrow-right-active.svg) no-repeat center/cover;
+                }
+            }
+
+        }
         
 
         @include hover {
@@ -72,7 +109,11 @@
         flex-direction: column;
         row-gap: rem(20);
         column-gap: rem(30);
-        grid-template-columns: repeat(auto-fit, fluid(540, 460));
+        grid-template-columns: repeat(3, 1fr);
+
+        @include laptop {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     &__first-term {
@@ -85,6 +126,7 @@
         font-family: var(--font-family);
         font-weight: 500;
         font-size: rem(25);
+        
     }
 
     &__first-plus {

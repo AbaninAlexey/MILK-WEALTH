@@ -40,10 +40,21 @@
     }
 
     &__bg {
-        background: 
-            transparent url(../../../images/cloud/1.jpg) 
-            no-repeat center / cover
-        ;
+
+        &:nth-child(1) {
+            background: 
+                transparent url(../../../images/cloud/1.jpg) 
+                no-repeat center / cover
+            ;
+        }
+
+        &:nth-child(2) {
+            background: 
+                transparent url(../../../images/cloud/1.jpg) 
+                no-repeat center / cover
+            ;
+        }
+
 
         @include laptop {
             background-position: 100%;
@@ -53,7 +64,7 @@
 
     &__bg--two {
         background: 
-            transparent url(../../../images/cloud/2.jpg) 
+            transparent url(../../../images/cloud/21.jpg) 
             no-repeat center / cover
         ;
 
