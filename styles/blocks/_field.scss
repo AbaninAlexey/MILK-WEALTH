@@ -1,0 +1,39 @@
+@use '../helpers' as *; 
+ 
+.field {
+
+    &__input {
+        width: 100%;
+        border-radius: rem(10);
+        border: 0;
+        margin-inline: auto;
+        padding: 0;
+        font-size: rem(20);
+        height: rem(50);
+        padding-inline: 1rem;
+
+
+
+        &::placeholder {
+            font-size: rem(20);
+            font-weight: 500;
+            margin-inline: auto;
+            text-align: center;
+            line-height: 1;
+            color: var(--font-color);
+            opacity: 0.6;
+        }
+
+        
+        &--text-area {
+            height: rem(130);
+            resize: none;
+            width: 100%;
+
+            &::placeholder {
+                line-height: rem(130);
+            }
+
+        }
+    }
+}

@@ -15,10 +15,12 @@
 @use 'blocks/cloud/cloud';
 @use 'blocks/cloud/cloud-slider';
 @use 'blocks/rating/rating';
+@use 'blocks/rating/details-list';
 @use 'blocks/rating/rating-stars';
 @use 'blocks/family/family';
 @use 'blocks/stroke/stroke';
 @use 'blocks/video/video';
+@use 'blocks/video/video-alt';
 @use 'blocks/reason/reason';
 @use 'blocks/use/use';
 @use 'blocks/camel/camel';
@@ -32,6 +34,11 @@
 @use 'blocks/tabs';
 @use 'blocks/info-alt/info-alt';
 @use 'blocks/technology/technology';
+@use 'blocks/extra';
+@use 'blocks/radio';
+@use 'blocks/radios';
+@use 'blocks/field';
+@use 'blocks/contacts/contacts';
 
 // header {
 //     display: none;

@@ -1,20 +1,31 @@
 @use '../helpers' as *; 
 
 .button {
+    display: flex;
     color: var(--white);
     font-family: var(--font-family);
     font-size: fluid(25, 18);
     background-color: var(--white);
     color: var(--font-color);
-    padding: fluid(15, 7) fluid(45, 10) fluid(14, 7);
     border-radius: rem(10);
     text-align: center;
+    justify-content: center;
 
 
     &--burger-menu {
-        @include mobile {
-            padding: rem(15) rem(45) rem(15);
-        }
+            padding-block: rem(12) rem(12);
+            width: fluid(262, 200);
+
+            @include laptop {
+                max-width: rem(170);
+                font-size: rem(15);
+            }
+
+            @include tablet {
+                padding-block: rem(15) rem(15);
+                width: rem(300);
+            }
+       
     }
 
     &--blue {
@@ -33,6 +44,16 @@
 
         @include hover {
             background-color: #FFD574;
+        }
+    }
+
+    &--camel-orange {
+        background: var(--camel-orange);
+        color: var(--font-color);
+
+        @include hover {
+            background-color: var(--light-orange);
+            color: var(--font-color);
         }
     }
 

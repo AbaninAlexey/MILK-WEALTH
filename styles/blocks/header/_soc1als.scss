@@ -15,16 +15,10 @@
     &__link {
         display: flex;
         align-items: center;
+        color: var(--white);
     }
 
     @include tablet-above {
         display: none;
-    }
-
-    &__image {
-        &--small {
-            min-width: rem(30);
-            min-height: rem(30);
-        }
     }
 }

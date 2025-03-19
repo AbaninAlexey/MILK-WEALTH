@@ -36,6 +36,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: fluid(123, 85);
 
         &-main {
             font-family: var(--third-family);
@@ -45,6 +46,7 @@
 
     &__subtitle {
         font-family: var(--font-family);
+        font-size: fluid(50, 35);
 
         &:first-child {
             height: rem(40);

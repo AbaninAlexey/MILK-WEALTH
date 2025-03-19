@@ -1,0 +1,13 @@
+@use '../helpers' as *; 
+
+.radio {
+
+    &__label {
+        font-size: rem(20);
+        color: var(--white);
+    }
+
+    &__input {
+        display: flex;
+    }
+}

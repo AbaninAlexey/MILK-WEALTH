@@ -1,7 +1,6 @@
 @use '../../helpers' as *; 
 
 .hero-alt {
-    background: url(../../../images/hero-alt/bg.jpg) no-repeat center / cover;
 
         @include laptop {
             background-position: 15%;
@@ -17,6 +16,7 @@
         justify-content: end;
         color: var(--white);
         min-height: fluid(1282, 895);
+        background: url(../../../images/hero-alt/bg.jpg) no-repeat center / cover;
 
         @include tablet {
             justify-content: center;

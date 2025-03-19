@@ -1,7 +1,7 @@
 @use '../../helpers' as *; 
 
 .rating {
-    padding-block: rem(160) rem(120);
+    padding-block: rem(80) rem(200);
 
     @include tablet {
         padding-block: rem(80);
@@ -12,23 +12,35 @@
     }
 
     &__inner {
-        display: grid;
+        display: flex;
         flex-direction: column;
-        row-gap: rem(120);
-        align-items: center;
+        row-gap: rem(45);
+        width: 100vw;
 
         @include mobile {
             row-gap: rem(21);
         }
     }
 
+    &__main {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+
+        @include laptop {
+            display: contents;
+        }
+    }
+
     &__body {
         display: flex;
         flex-direction: column;
+        row-gap: fluid(40,20);
 
-        @include mobile {
+        @include laptop {
             order: 3;
-
+            padding-top: rem(50);
         }
     }
 
@@ -37,7 +49,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        row-gap: rem(40);
+        row-gap: rem(20);
 
         @include tablet {
             row-gap: rem(15);
@@ -57,6 +69,13 @@
     &__title {
         text-align: center;
         font-family: var(--font-family);
+        font-size: fluid(60, 29);
+
+        @include tablet {
+            br {
+                display: none;
+            }
+        }
 
         @include tablet {
             font-size: rem(29);
@@ -69,7 +88,6 @@
 
 
     &__cow {
-        padding-inline: fluid(229, 0);
 
         @include mobile {
             order: 1;
@@ -82,7 +100,11 @@
         &-img {
             display: flex;
             margin-top: rem(22);
-            max-width: fluid(680, 311);
+            width: fluid(539, 311);
+
+            @include laptop {
+                margin-left: fluid(100, -17);
+            }
 
 
             @include tablet {
@@ -91,7 +113,6 @@
 
             @include mobile {
                 max-width: rem(311);
-                margin-left: rem(-17);
             }
 
             @include mobile-s {
@@ -103,35 +124,44 @@
         &-body {
             display: flex;
             align-items: start;
-            
+        
 
         }
 
         &-description {
-            margin-left: fluid(-86, -35);
+            position: relative;
             display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: fluid(-86, -35);
             color: var(--white);
-            max-width: fluid(352, 220);
-            max-height: fluid(376, 235);
-            background: url(../../../images/rating/blue-cloud.svg)
-            no-repeat center / cover;
+            width: fluid(279, 220);
+            height: fluid(298, 235);
+            background: url(../../../images/rating/blue-cloud.svg) no-repeat center/cover;
 
             @include mobile-s {
-                max-width: rem(170);
-                max-height: rem(200);
+                width: rem(130);
+                height: rem(140);
                 font-weight: 400;
             }
 
             &-text {
-                padding: fluid(94, 59) fluid(28, 17) fluid(72, 45) fluid(59, 37);
+                position: absolute;
+                right: fluid(22,17);
+                top: fluid(72,59);
                 font-family: var(--font-family);
                 font-weight: 400;
-                font-size: fluid(30, 20);
+                font-size: fluid(22, 17);
                 line-height: 1.5;
+                width: fluid(209, 164);
+                height: auto;
 
                 @include mobile-s {
-                    padding: rem(40) rem(5) rem(30) rem(20);
-                    font-size: rem(15);
+                    font-size: rem(13);
+                    width: rem(100);
+                    height: auto;
+                    top: rem(20);
+                    right: rem(10);
                 }
             }
         }
@@ -140,9 +170,10 @@
     &__number {
         position: relative;
         background-color: var(--cows-green);
-        padding: fluid(37, 15) fluid(289, 44) fluid(20);
+        padding: fluid(37, 15) fluid(289, 44) fluid(47);
         font-family: var(--font-family);
         font-size: rem(50);
+        width: 100vw;
 
         @include mobile {
             display: flex;
@@ -187,23 +218,15 @@
 
         &-img {
             position: absolute;
-            bottom: rem(-103);
-            right: fluid(100, -32);
-            max-width: fluid(991, 544);
-            
-
-            @include laptop {
-                // right: rem(-32);
-                // max-width: rem(544);
-            }
-
-            // @include mobile {
-            //     max-width: rem(544);
-            // }
+            bottom: rem(-83);
+            right: fluid(214, 46);
+            width: fluid(755, 433);
+        
 
             @include mobile-s {
-                max-width: rem(300);
+                max-width: rem(250);
                 bottom: rem(-50);
+                right: rem(10);
             }
 
             
@@ -217,7 +240,7 @@
         column-gap: rem(30);
         text-align: center;
 
-        @include tablet {
+        @include laptop {
             flex-direction: column;
             row-gap: rem(20);
         }
@@ -231,21 +254,22 @@
     &__button {
         display: flex;
         align-items: center;
-        font-size: rem(25);
+        font-size: fluid(25, 20);
         font-family: var(--second-family);
         font-weight: 800;
         align-items: center;
         justify-content: center;
-        width: rem(408);
+        width: fluid(408, 50);
+        height: rem(60);
 
-        @include mobile {
-            font-size: rem(20);
-            max-width: fluid(461, 300);
+        @include laptop {
+           width: rem(461);
         }
+
 
         @include mobile-s {
             font-size: rem(15);
-            max-width: fluid(300, 200);
+            max-width: rem(320);
         }
     }
 }

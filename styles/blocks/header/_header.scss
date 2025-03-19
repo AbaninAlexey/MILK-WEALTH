@@ -1,10 +1,13 @@
 @use '../../helpers' as *; 
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
 
     &__body {
         background-color: var(--font-color);
-        padding-block: rem(33) rem(40);
+        padding-block: rem(38) rem(38);
 
     &-inner {
         display: flex;
@@ -89,7 +92,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            column-gap: fluid(76, 15);
+            column-gap: fluid(67, 10);
+
 
             @include tablet {
                 flex-direction: column;
@@ -109,6 +113,14 @@
             align-self: center;
             white-space: nowrap;
 
+            &.is-active {
+                color: var(--color-accent);
+            }
+
+            @include laptop {
+                font-size: rem(15);
+            }
+
             @include hover {
                 color: var(--color-accent);
             }
@@ -125,6 +137,8 @@
     &__stories {
         display: flex;
         justify-content: center;
+        background-color: var(--white);
+        position: static;
 
         &-wrapper {
             padding-block: rem(20);
