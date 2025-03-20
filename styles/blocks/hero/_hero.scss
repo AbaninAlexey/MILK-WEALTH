@@ -38,6 +38,10 @@
         align-items: center;
         font-size: fluid(123, 85);
 
+        @include mobile-s {
+            font-size: rem(60);
+        }
+
         &-main {
             font-family: var(--third-family);
             font-weight: 700;
@@ -50,8 +54,10 @@
 
         &:first-child {
             height: rem(40);
+
             @include mobile-s {
                 height: auto;
+                font-size: rem(25);
             }
         }
         
@@ -64,6 +70,7 @@
 
             @include mobile-s {
                 padding-top: rem(20);
+                font-size: rem(25);
             }
         }
     }

@@ -3,6 +3,10 @@
 .rating {
     padding-block: rem(80) rem(200);
 
+    @include laptop {
+        padding-block: rem(80) rem(80);
+    }
+
     @include tablet {
         padding-block: rem(80);
     }
@@ -15,7 +19,6 @@
         display: flex;
         flex-direction: column;
         row-gap: rem(45);
-        width: 100vw;
 
         @include mobile {
             row-gap: rem(21);
@@ -124,7 +127,7 @@
         &-body {
             display: flex;
             align-items: start;
-        
+            width: auto;
 
         }
 
@@ -170,10 +173,10 @@
     &__number {
         position: relative;
         background-color: var(--cows-green);
-        padding: fluid(37, 15) fluid(289, 44) fluid(47);
+        padding: fluid(37, 15) 0  fluid(47) fluid(289, 44);
         font-family: var(--font-family);
         font-size: rem(50);
-        width: 100vw;
+
 
         @include mobile {
             display: flex;

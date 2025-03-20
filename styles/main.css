@@ -877,6 +877,11 @@ button[aria-label]::before {
   align-items: center;
   font-size: clamp(5.3125rem, 4.125rem + 2.96875vw, 7.6875rem);
 }
+@media (width <= 39.43625rem) {
+  .hero__title {
+    font-size: 3.75rem;
+  }
+}
 .hero__title-main {
   font-family: var(--third-family);
   font-weight: 700;
@@ -891,6 +896,7 @@ button[aria-label]::before {
 @media (width <= 39.43625rem) {
   .hero__subtitle:first-child {
     height: auto;
+    font-size: 1.5625rem;
   }
 }
 .hero__subtitle:last-child {
@@ -904,6 +910,7 @@ button[aria-label]::before {
 @media (width <= 39.43625rem) {
   .hero__subtitle:last-child {
     padding-top: 1.25rem;
+    font-size: 1.5625rem;
   }
 }
 
@@ -930,7 +937,6 @@ button[aria-label]::before {
 }
 .info__list {
   display: flex;
-  align-content: justify-content;
   justify-content: space-between;
   height: 10.9375rem;
   -moz-column-gap: 3.75rem;
@@ -948,6 +954,11 @@ button[aria-label]::before {
   }
 }
 @media (width <= 90.06125rem) and (width <= 40.06125rem) {
+  .info__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (width <= 90.06125rem) and (width <= 39.43625rem) {
   .info__list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1151,6 +1162,11 @@ button[aria-label]::before {
 .rating {
   padding-block: 5rem 12.5rem;
 }
+@media (width <= 90.06125rem) {
+  .rating {
+    padding-block: 5rem 5rem;
+  }
+}
 @media (width <= 63.99875rem) {
   .rating {
     padding-block: 5rem;
@@ -1165,7 +1181,6 @@ button[aria-label]::before {
   display: flex;
   flex-direction: column;
   row-gap: 2.8125rem;
-  width: 100vw;
 }
 @media (width <= 40.06125rem) {
   .rating__inner {
@@ -1274,6 +1289,7 @@ button[aria-label]::before {
 .rating__cow-body {
   display: flex;
   align-items: start;
+  width: auto;
 }
 .rating__cow-description {
   position: relative;
@@ -1316,10 +1332,9 @@ button[aria-label]::before {
 .rating__number {
   position: relative;
   background-color: var(--cows-green);
-  padding: clamp(0.9375rem, 0.25rem + 1.71875vw, 2.3125rem) clamp(2.75rem, -4.90625rem + 19.140625vw, 18.0625rem) clamp(0.625rem, -0.53125rem + 2.890625vw, 2.9375rem);
+  padding: clamp(0.9375rem, 0.25rem + 1.71875vw, 2.3125rem) 0 clamp(0.625rem, -0.53125rem + 2.890625vw, 2.9375rem) clamp(2.75rem, -4.90625rem + 19.140625vw, 18.0625rem);
   font-family: var(--font-family);
   font-size: 3.125rem;
-  width: 100vw;
 }
 @media (width <= 40.06125rem) {
   .rating__number {
@@ -3819,12 +3834,30 @@ button[aria-label]::before {
   padding-top: 2.5rem;
 }
 
+.radio {
+  display: flex;
+}
 .radio__label {
   font-size: 1.25rem;
   color: var(--white);
+  display: table;
 }
 .radio__input {
-  display: flex;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  min-width: 1.4375rem;
+  height: 1.4375rem;
+  background-color: var(--white);
+  border-radius: 0.3125rem;
+  cursor: pointer;
+}
+.radio__input:checked {
+  background-color: var(--white);
+  background-image: url(../../images/contacts/checked.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .radios__item {

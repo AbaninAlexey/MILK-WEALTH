@@ -24,7 +24,6 @@
 
     &__list {
         display: flex;
-        align-content: justify-content;
         justify-content: space-between;
         height: rem(175);
         column-gap: rem(60);
@@ -38,6 +37,10 @@
             column-gap: rem(20);
 
             @include mobile {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include mobile-s {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
