@@ -140,7 +140,7 @@
             color: var(--white);
             width: fluid(279, 220);
             height: fluid(298, 235);
-            background: url(../../../images/rating/blue-cloud.svg) no-repeat center/cover;
+            background: url(../images/rating/blue-cloud.svg) no-repeat center/cover;
 
             @include mobile-s {
                 width: rem(130);

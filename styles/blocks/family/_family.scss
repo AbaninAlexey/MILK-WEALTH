@@ -2,7 +2,7 @@
 
 .family {
     &__inner {
-        background: url(../../../images/family/family.jpg)
+        background: url(../images/family/family.jpg)
             no-repeat center / cover;
         display: flex;
         align-items: end;
@@ -13,7 +13,7 @@
         }
 
         &--product-list {
-            background: url(../../../images/family/product-list.jpg)
+            background: url(../images/family/product-list.jpg)
             no-repeat center / cover;
         }
     }
