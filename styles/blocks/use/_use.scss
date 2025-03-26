@@ -1,7 +1,7 @@
 @use '../../helpers' as *; 
 
 .use {
-    background: url(../../../images/use/bg.jpg) no-repeat center / cover;
+    background: url(../images/use/bg.jpg) no-repeat center / cover;
     color: var(--white);
     padding-block: fluid(109,48);
     min-height: fluid(1080, 983);

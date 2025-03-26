@@ -845,11 +845,11 @@ button[aria-label]::before {
 }
 
 .hero {
-  background: linear-gradient(170deg, rgba(255, 255, 255, 0.868) 0%, rgba(0, 0, 0, 0) 90%), url(../../../images/hero/bg.jpg) no-repeat center/cover;
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.868) 0%, rgba(0, 0, 0, 0) 90%), url(../images/hero/bg.jpg) no-repeat center/cover;
 }
 @media (width <= 40.06125rem) {
   .hero {
-    background: linear-gradient(170deg, rgba(255, 255, 255, 0.542) 0%, rgba(0, 0, 0, 0) 70%), url(../../../images/hero/bg.jpg) no-repeat center/cover;
+    background: linear-gradient(170deg, rgba(255, 255, 255, 0.542) 0%, rgba(0, 0, 0, 0) 70%), url(../images/hero/bg.jpg) no-repeat center/cover;
     background-position: 65%;
   }
 }
@@ -1099,10 +1099,10 @@ button[aria-label]::before {
   background-color: var(--font-color);
 }
 .cloud-slider__bg:nth-child(1) {
-  background: transparent url(../../../images/cloud/1.jpg) no-repeat center/cover;
+  background: transparent url(../images/cloud/1.jpg) no-repeat center/cover;
 }
 .cloud-slider__bg:nth-child(2) {
-  background: transparent url(../../../images/cloud/1.jpg) no-repeat center/cover;
+  background: transparent url(../images/cloud/1.jpg) no-repeat center/cover;
 }
 @media (width <= 90.06125rem) {
   .cloud-slider__bg {
@@ -1110,7 +1110,7 @@ button[aria-label]::before {
   }
 }
 .cloud-slider__bg--two {
-  background: transparent url(../../../images/cloud/21.jpg) no-repeat center/cover;
+  background: transparent url(../images/cloud/21.jpg) no-repeat center/cover;
 }
 @media (width <= 90.06125rem) {
   .cloud-slider__bg--two {
@@ -1860,7 +1860,7 @@ button[aria-label]::before {
 .reason__cow-description {
   display: flex;
   position: relative;
-  background: url(../../../images/reason/green-cloud.png) no-repeat center/cover;
+  background: url(../images/reason/green-cloud.png) no-repeat center/cover;
   width: 37.25rem;
   height: 30.3125rem;
 }
@@ -2089,7 +2089,7 @@ button[aria-label]::before {
 }
 
 .use {
-  background: url(../../../images/use/bg.jpg) no-repeat center/cover;
+  background: url(../images/use/bg.jpg) no-repeat center/cover;
   color: var(--white);
   padding-block: clamp(3rem, 1.09375rem + 4.765625vw, 6.8125rem);
   min-height: clamp(61.4375rem, 58.40625rem + 7.578125vw, 67.5rem);

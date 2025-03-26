@@ -2,13 +2,13 @@
 
 .hero {
     background: linear-gradient(170deg, rgba(255, 255, 255, 0.868) 0%, rgba(0,0,0,0) 90%), 
-        url(../../../images/hero/bg.jpg)
+        url(../images/hero/bg.jpg)
         no-repeat center / cover
     ;
 
         @include mobile {
             background: linear-gradient(170deg, rgba(255, 255, 255, 0.542) 0%, rgba(0,0,0,0) 70%), 
-                url(../../../images/hero/bg.jpg)
+                url(../images/hero/bg.jpg)
                 no-repeat center / cover
             ;
             background-position: 65%;
