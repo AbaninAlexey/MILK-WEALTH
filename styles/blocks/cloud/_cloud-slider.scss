@@ -2,42 +2,6 @@
 
 
 .cloud-slider {
-    .owl-dots {
-        display: flex;
-        position: absolute;
-        bottom: rem(120);
-        translate: 0 -50%;
-        left: 50%;
-        translate: -50%;
-        column-gap: fluid(24, 10);
-
-        @include laptop {
-            bottom: rem(60);
-        }
-
-        @include mobile-s {
-            bottom: rem(30);
-        }
-
-        .owl-dot {
-            span {
-                width: fluid(25, 20);
-                height: fluid(25, 20);
-                margin: 0;
-
-                @include mobile-s {
-                    @include square(rem(15));
-                }
-            }
-
-            &.active {
-                span {
-                    background-color: var(--font-color);
-                }
-            }
-        }
-
-    }
 
     &__bg {
 
@@ -46,13 +10,10 @@
                 transparent url(../images/cloud/1.jpg) 
                 no-repeat center / cover
             ;
-        }
 
-        &:nth-child(2) {
-            background: 
-                transparent url(../images/cloud/1.jpg) 
-                no-repeat center / cover
-            ;
+            @include mobile {
+                background-position: bottom right;
+            }
         }
 
 
@@ -124,6 +85,39 @@
 
     }
 
+
+    .swiper-pagination {
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: flex;
+        column-gap: rem(34);
+        justify-content: center;
+        bottom: rem(120);
+
+        @include tablet {
+            bottom: rem(60);
+            column-gap: rem(10);
+        }
+    }
+
+    .swiper-pagination-bullet {
+
+        @include square(rem(25));
+        margin: 0;
+
+        @include mobile {
+            @include square(rem(20));
+        }
+
+        @include mobile-s {
+            @include square(rem(15));
+        }
+
+        &-active {
+            background-color: var(--font-color);
+        }
+    }
 
   
 }

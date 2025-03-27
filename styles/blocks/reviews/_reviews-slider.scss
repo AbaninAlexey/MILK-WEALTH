@@ -1,0 +1,14 @@
+@use '../../helpers' as *; 
+
+.reviews-slider {
+    &__slide,.swiper-slide {
+        width: auto !important;
+    }
+
+    &__wrapper,.swiper__wrapper {
+        
+        @include tablet-above {
+            transform: translateX(rem(-191)) !important;
+        }
+    }
+}

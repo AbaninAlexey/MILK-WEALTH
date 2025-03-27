@@ -1,7 +1,7 @@
 @use '../../helpers' as *; 
 
 .hero-alt {
-
+    background: url(../images/hero-alt/bg.jpg) no-repeat center / cover;
         @include laptop {
             background-position: 15%;
         }
@@ -12,20 +12,21 @@
 
     &__body {
         display: flex;
-        padding-block: rem(374) rem(484);
+        padding-top: rem(374);
         justify-content: end;
         color: var(--white);
         min-height: fluid(1282, 895);
-        background: url(../images/hero-alt/bg.jpg) no-repeat center / cover;
+        
 
         @include tablet {
             justify-content: center;
-            padding: rem(72) rem(40) rem(558);
+            padding: rem(72) rem(40) 0;
             margin-right: 0;
         }
 
         @include mobile-s {
-            padding: rem(40) rem(20) rem(280);
+            padding: rem(40) rem(20) 0;
+            min-height: rem(600);
         }
         
     }

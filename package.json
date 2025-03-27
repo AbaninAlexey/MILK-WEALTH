@@ -9,7 +9,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "jquery": "^3.7.1",
-    "owl.carousel": "^2.3.4"
+    "jquery": "^3.7.1"
   }
 }

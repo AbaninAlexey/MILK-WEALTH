@@ -24,7 +24,6 @@ class Tabs {
         this.state = {
             activeTabIndex: [...this.buttonElements].findIndex((buttonElement) => {
                 buttonElement.classList.contains(this.stateClasses.isActive)
-                console.log(buttonElement.classList.contains(this.stateClasses.isActive))
             })
         }
         this.limitTabIndex = this.buttonElements.lenght - 1

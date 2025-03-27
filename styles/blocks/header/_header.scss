@@ -143,16 +143,12 @@
         &-wrapper {
             padding-block: rem(20);
 
-            @include mobile-above {
-                width: rem(570);
-            }
-
             @include mobile {
-                max-width: rem(520);
+                width: rem(520);
             }
 
             @include mobile-s {
-                width: rem(340);
+                width: clamp(rem(300), 60%, rem(520));
                 padding-block: rem(10);
             }
         }

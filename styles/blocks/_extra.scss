@@ -6,6 +6,10 @@
     color: var(--dark);
     opacity: 0.6;
 
+    @include mobile-s {
+        padding-block: rem(10) rem(10);
+    }
+
     &__list {
         display: flex;
         column-gap: rem(5);

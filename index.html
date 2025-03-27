@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport"  content="width=device-width, user-scalable = no, initial-scale=1.0, maximum-scale=1.0">
     <title>Milk Wealth</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./styles/main.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
-    <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.css" />
-    <script src="../node_modules/owl.carousel/dist/owl.carousel.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/main.js" type="module"></script>
-    <script src="./scripts/owl.js" type="module"></script>
+    <script src="./scripts/swiper.js" type="module"></script>
 </head>
 <body>
     <header class="header" data-js-header>
         <div class="header__body " data-js-header-body>
             <div class="header__body-inner container">
-                <div class="header__logo-wrapper logo">
-                    <img class="logo__main" 
-                    src="./images/logo.svg" alt="" 
-                    width="44" 
-                    height="44" 
-                    loading="lazy"
-                >
-                <img class="logo__text" 
-                    src="./images/logo-text.svg" alt="Milk Wealth" 
-                    width="90" 
-                    height="44" 
-                    loading="lazy"
-                >
+                <div class="header__logo-wrapper ">
+                    <a href="/index.html" class="header__logo-link logo">
+                        <img class="logo__main" 
+                        src="./images/logo.svg" alt="" 
+                        width="44" 
+                        height="44" 
+                        loading="lazy"
+                        >
+                        <img class="logo__text" 
+                        src="./images/logo-text.svg" alt="Milk Wealth" 
+                        width="90" 
+                        height="44" 
+                        loading="lazy"
+                        >
+                    </a>
                 </div>
     
                 <div class="header__overlay" data-js-overlay>
@@ -102,34 +102,83 @@
             </div>   
         </div>
         <div class="header__stories visible-mobile">
-            <div class="header__stories-wrapper">
-                <div class="owl-carousel stories-slider">
-                    <div class="stories-slider__wrapper">
-                        <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
-                    </div>
-                    <div class="stories-slider__wrapper">
-                        <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
-                    </div>
-                    <div class="stories-slider__wrapper">
-                        <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
-                    </div>
-                    <div class="stories-slider__wrapper">
-                        <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
-                    </div>
-                    <div class="stories-slider__wrapper">
-                        <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
-                    </div>
-                    <div class="stories-slider__wrapper">
-                        <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
-                    </div>
-                    <div class="stories-slider__wrapper">
-                        <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
-                    </div>
-                    <div class="stories-slider__wrapper">
-                        <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
-                    </div>
-    
-                  </div>
+            <div class="header__stories-wrapper stories-nav">
+
+                <div class="swiper stories-slider">
+                    <div class="swiper-wrapper stories-slider__wrapper">
+
+                      <div class="swiper-slide stories-slider__slide">
+                        <div class="stories-slider__wrapper">
+                            <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide stories-slider__slide">
+                        <div class="stories-slider__wrapper">
+                            <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide stories-slider__slide">
+                        <div class="stories-slider__wrapper">
+                            <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide stories-slider__slide">
+                        <div class="stories-slider__wrapper">
+                            <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide stories-slider__slide">
+                        <div class="stories-slider__wrapper">
+                            <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide stories-slider__slide">
+                        <div class="stories-slider__wrapper">
+                            <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide stories-slider__slide">
+                        <div class="stories-slider__wrapper">
+                            <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide stories-slider__slide">
+                        <div class="stories-slider__wrapper">
+                            <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide stories-slider__slide">
+                        <div class="stories-slider__wrapper">
+                            <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide stories-slider__slide">
+                        <div class="stories-slider__wrapper">
+                            <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide stories-slider__slide">
+                        <div class="stories-slider__wrapper">
+                            <img src="./images/header/1.jpg" alt="stories" class="stories-slider__img" width="70" height="70" loading="lazy">
+                        </div>
+                      </div>
+
+
+                      
+                    </div>        
+                </div>
+                <div class="swiper-button-prev stories-nav__prev"></div>
+                <div class="swiper-button-next stories-nav__next"></div>
             </div>
         </div>
     </header>
@@ -211,105 +260,121 @@
 
         <section class="section cloud" aria-labelledby="cloud-title">
             <div class="cloud__inner">
-                    <div class="owl-carousel owl-theme cloud-slider owl-controls .owl-page">
-                        <div class="cloud-slider__bg">
-                            <div class="cloud-slider__item container">
-                                <div class="cloud-slider__wrapper">
-                                    <div class="cloud-slider__content">
-                                        <h2 class="cloud-slider__title" id="cloud-title">
-                                            Beautiful skin & hair
-                                        </h2>
-                                        <div class="cloud-slider__description">
-                                            <p>
-                                                Milk Wealth Colostrum promotes hair growth 
-                                                and supports healthy skin and nails due to 
-                                                its rich content of growth factors, immunoglobulins, 
-                                                and essential nutrients. 
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="swiper cloud-slider">
+                        <div class="swiper-wrapper cloud-slider__wrapper">
 
-                        <div class="cloud-slider__bg">
-                            <div class="cloud-slider__item container">
-                                <div class="cloud-slider__wrapper">
-                                    <div class="cloud-slider__content">
-                                        <h2 class="cloud-slider__title">
-                                            Healthy digestion
-                                        </h2>
-                                        <div class="cloud-slider__description">
-                                            <p>
-                                                The richness of immunoglobulins (IgG, IgA, and IgM) 
-                                                and lactoferrin helps boost the immune system and gut 
-                                                health, providing protection from infections, including 
-                                                upper respiratory illnesses
-                                            </p>
+                          <div class="swiper-slide cloud-slider__slide">
+                            <div class="cloud-slider__bg">
+                                <div class="cloud-slider__item container">
+                                    <div class="cloud-slider__wrapper">
+                                        <div class="cloud-slider__content">
+                                            <h2 class="cloud-slider__title" id="cloud-title">
+                                                Beautiful skin & hair
+                                            </h2>
+                                            <div class="cloud-slider__description">
+                                                <p>
+                                                    Milk Wealth Colostrum promotes hair growth 
+                                                    and supports healthy skin and nails due to 
+                                                    its rich content of growth factors, immunoglobulins, 
+                                                    and essential nutrients. 
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                          </div>
 
-                        <div class="cloud-slider__bg">
-                            <div class="cloud-slider__item container">
-                                <div class="cloud-slider__wrapper">
-                                    <div class="cloud-slider__content">
-                                        <h2 class="cloud-slider__title">
-                                            Balance energy during the 
-                                            day and good sleep at night
-                                        </h2>
-                                        <div class="cloud-slider__description">
-                                            <p>
-                                                Colostrum contains a large amount of 
-                                                growth factors, 
-                                                immunoglobulins and essential nutrients. 
-                                                This makes it an ideal supplement for 
-                                                athletes. 
-                                            </p>
+                          <div class="swiper-slide cloud-slider__slide">
+                            <div class="cloud-slider__bg">
+                                <div class="cloud-slider__item container">
+                                    <div class="cloud-slider__wrapper">
+                                        <div class="cloud-slider__content">
+                                            <h2 class="cloud-slider__title" id="cloud-title">
+                                                Beautiful skin & hair
+                                            </h2>
+                                            <div class="cloud-slider__description">
+                                                <p>
+                                                    Milk Wealth Colostrum promotes hair growth 
+                                                    and supports healthy skin and nails due to 
+                                                    its rich content of growth factors, immunoglobulins, 
+                                                    and essential nutrients. 
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                          </div>
 
-                        <div class="cloud-slider__bg">
-                            <div class="cloud-slider__item container">
-                                <div class="cloud-slider__wrapper">
-                                    <div class="cloud-slider__content">
-                                        <h2 class="cloud-slider__title">
-                                            Strengthens immunity
-                                        </h2>
-                                        <div class="cloud-slider__description">
-                                            <p>
-                                                Milk Wealth Colostrum promotes hair growth and 
-                                                supports healthy skin and nails due to its rich content 
-                                            </p>
+                          <div class="swiper-slide cloud-slider__slide">
+                            <div class="cloud-slider__bg">
+                                <div class="cloud-slider__item container">
+                                    <div class="cloud-slider__wrapper">
+                                        <div class="cloud-slider__content">
+                                            <h2 class="cloud-slider__title" id="cloud-title">
+                                                Beautiful skin & hair
+                                            </h2>
+                                            <div class="cloud-slider__description">
+                                                <p>
+                                                    Milk Wealth Colostrum promotes hair growth 
+                                                    and supports healthy skin and nails due to 
+                                                    its rich content of growth factors, immunoglobulins, 
+                                                    and essential nutrients. 
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                          </div>
 
-                        <div class="cloud-slider__bg">
-                            <div class="cloud-slider__item container">
-                                <div class="cloud-slider__wrapper">
-                                    <div class="cloud-slider__content">
-                                        <h2 class="cloud-slider__title">
-                                            Benefits for your brain
-                                        </h2>
-                                        <div class="cloud-slider__description">
-                                            <p>
-                                                Milk Wealth Colostrum contains proline-rich polypeptides 
-                                                (PRPs) that improve cognitive 
-                                                performance, especially in older people.  
-                                            </p>
+                          <div class="swiper-slide cloud-slider__slide">
+                            <div class="cloud-slider__bg">
+                                <div class="cloud-slider__item container">
+                                    <div class="cloud-slider__wrapper">
+                                        <div class="cloud-slider__content">
+                                            <h2 class="cloud-slider__title" id="cloud-title">
+                                                Beautiful skin & hair
+                                            </h2>
+                                            <div class="cloud-slider__description">
+                                                <p>
+                                                    Milk Wealth Colostrum promotes hair growth 
+                                                    and supports healthy skin and nails due to 
+                                                    its rich content of growth factors, immunoglobulins, 
+                                                    and essential nutrients. 
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                          </div>
+
+                          <div class="swiper-slide cloud-slider__slide">
+                            <div class="cloud-slider__bg">
+                                <div class="cloud-slider__item container">
+                                    <div class="cloud-slider__wrapper">
+                                        <div class="cloud-slider__content">
+                                            <h2 class="cloud-slider__title" id="cloud-title">
+                                                Beautiful skin & hair
+                                            </h2>
+                                            <div class="cloud-slider__description">
+                                                <p>
+                                                    Milk Wealth Colostrum promotes hair growth 
+                                                    and supports healthy skin and nails due to 
+                                                    its rich content of growth factors, immunoglobulins, 
+                                                    and essential nutrients. 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+    
                         </div>
+                        <div class="swiper-pagination"></div>        
                     </div>
             </div>
         </section>
@@ -408,7 +473,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </в>
+                            </details>
                         </div> 
                     </div>
                 </div>
@@ -865,29 +930,13 @@
         </section>
 
         <section class="section cloud" aria-labelledby="cloud-title">
+
+
             <div class="cloud__inner">
-                    <div class="owl-carousel owl-theme cloud-slider owl-controls">
-                        <div class="cloud-slider__bg--two">
-                            <div class="cloud-slider__item container">
-                                <div class="cloud-slider__wrapper cloud-slider__wrapper--height">
-                                    <div class="cloud-slider__content">
-                                        <h2 class="cloud-slider__title">
-                                            Colostrum: <br> everyday energy for active people
-                                        </h2>
-                                        <div class="cloud-slider__description cloud-slider__description--width">
-                                            <p>
-                                                Colostrum is a great addition to the whole family's 
-                                                diet! Due to its natural composition, it helps 
-                                                strengthen the immune system, increases energy 
-                                                and improves well-being. It is great for both 
-                                                adults and children.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="swiper cloud-slider">
+                    <div class="swiper-wrapper cloud-slider__wrapper cloud-slider__wrapper--height">
 
+                      <div class="swiper-slide cloud-slider__slide">
                         <div class="cloud-slider__bg--two">
                             <div class="cloud-slider__item container">
                                 <div class="cloud-slider__wrapper cloud-slider__wrapper--height">
@@ -908,7 +957,9 @@
                                 </div>
                             </div>
                         </div>
+                      </div>
 
+                      <div class="swiper-slide cloud-slider__slide">
                         <div class="cloud-slider__bg--two">
                             <div class="cloud-slider__item container">
                                 <div class="cloud-slider__wrapper cloud-slider__wrapper--height">
@@ -929,7 +980,9 @@
                                 </div>
                             </div>
                         </div>
+                      </div>
 
+                      <div class="swiper-slide cloud-slider__slide">
                         <div class="cloud-slider__bg--two">
                             <div class="cloud-slider__item container">
                                 <div class="cloud-slider__wrapper cloud-slider__wrapper--height">
@@ -950,7 +1003,9 @@
                                 </div>
                             </div>
                         </div>
+                      </div>
 
+                      <div class="swiper-slide cloud-slider__slide">
                         <div class="cloud-slider__bg--two">
                             <div class="cloud-slider__item container">
                                 <div class="cloud-slider__wrapper cloud-slider__wrapper--height">
@@ -971,31 +1026,57 @@
                                 </div>
                             </div>
                         </div>
+                      </div>
+
+                      <div class="swiper-slide cloud-slider__slide">
+                        <div class="cloud-slider__bg--two">
+                            <div class="cloud-slider__item container">
+                                <div class="cloud-slider__wrapper cloud-slider__wrapper--height">
+                                    <div class="cloud-slider__content">
+                                        <h2 class="cloud-slider__title">
+                                            Colostrum: <br> everyday energy for active people
+                                        </h2>
+                                        <div class="cloud-slider__description cloud-slider__description--width">
+                                            <p>
+                                                Colostrum is a great addition to the whole family's 
+                                                diet! Due to its natural composition, it helps 
+                                                strengthen the immune system, increases energy 
+                                                and improves well-being. It is great for both 
+                                                adults and children.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+
+
                     </div>
-            </div>
+                    <div class="swiper-pagination"></div>        
+                </div>
+        </div>
         </section>
 
         <section class="section camel overflow-x" aria-labelledby="camel-title">
             <div class="camel__inner">
-                <header class="camel__header">
-                        <p class="camel__subtitle h3">
-                            Camel
-                        </p>
-                        <h2 class="camel__title h1" id="camel-title">
-                            Colostrum
-                        </h2>
-                        <p class="camel__subtitle h3">
-                            Immuno* Boost
-                        </p>
-                </header>
-                <div class="camel__main">
+                <div class="camel__main container">
                     <div class="camel__main-body">
+                        <img 
+                            src="./images/camel/new-camel.svg" 
+                            alt="Cute camel" 
+                            class="camel__main-img"
+                            width="514"
+                            height="698"
+                            loading="lazy"
+                        >
                         <img 
                             src="./images/camel/camel.svg" 
                             alt="Cute camel" 
-                            class="camel__main-img"
-                            width="853"
-                            height="711"
+                            class="camel__main-img-alt"
+                            width="494"
+                            height="382"
                             loading="lazy"
                         >
                         <div class="camel__main-description">
@@ -1009,6 +1090,25 @@
                                 on Amazon
                             </p>
                         </div>
+                    </div>
+                    <div class="camel__header">
+                        <div class="camel__header-wrapper">
+                            <p class="camel__subtitle h3">
+                                Camel
+                            </p>
+                            <h2 class="camel__title h1" id="camel-title">
+                                Colostrum
+                            </h2>
+                            <p class="camel__subtitle h3">
+                                Immuno* Boost
+                            </p>
+                        </div>
+                        <div class="camel__buttons">
+                            <a href="#" class="camel__button button button--blue button--pudding">
+                                READ MORE
+                            </a>
+
+                        </div> 
                     </div>
                 </div>
                 <div class="camel__strip">
@@ -1024,14 +1124,10 @@
                         >
                 </div> 
             
-                <div class="camel__buttons">
-                    <a href="" class="camel__button button button--blue button--pudding">
-                        READ MORE
-                    </a>
-                </div> 
 
             </div>
         </section>
+
 
         <section class="section reviews overflow-x" aria-labelledby="reviews-title">
             <div class="reviews__inner">
@@ -1039,463 +1135,428 @@
                     Our customers say <br> about colostrum
                 </h2>
                 <div class="reviews__body">
-                    <div class="owl-carousel reviews__slider">
-                        <div class="reviews__card card">
-                            <div class="card__inner">
-                                <blockquote class="card__body">
-                                    <cite class="card__cite h3">
-                                        Rebecca
-                                    </cite>
-                                    <p class="card__text">
-                                        The term "immuno" in our product concept 
-                                        emphasizes its role in supporting the body's 
-                                        immune function. We rely on the latest. 
-                                    </p>
-                                </blockquote>
-                                <div class="card__stars rating-stars">
-                                    <p class="rating-stars-text">
-                                        Amazon rating
-                                    </p>
-                                    <div class="rating-stars__stars">
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
+                    <div class="reviews-slider swiper">
+                        <div class="swiper-wrapper reviews-slider__wrapper">
+    
+                          <div class="reviews-slider__slide swiper-slide">
+                            <div class="reviews__card card">
+                                <div class="card__inner">
+                                    <blockquote class="card__body">
+                                        <cite class="card__cite h3">
+                                            Rebecca
+                                        </cite>
+                                        <p class="card__text">
+                                            The term "immuno" in our product concept 
+                                            emphasizes its role in supporting the body's 
+                                            immune function. We rely on the latest. 
+                                        </p>
+                                    </blockquote>
+                                    <div class="card__stars rating-stars">
+                                        <p class="rating-stars-text">
+                                            Amazon rating
+                                        </p>
+                                        <div class="rating-stars__stars">
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                          </div>
 
-                        <div class="reviews__card card">
-                            <div class="card__inner">
-                                <blockquote class="card__body">
-                                    <cite class="card__cite h3">
-                                        Silvia
-                                    </cite>
-                                    <p class="card__text">
-                                        The term "immuno" in our product 
-                                        concept emphasizes its role in.
-                                    </p>
-                                </blockquote>
-                                <div class="card__stars rating-stars">
-                                    <p class="rating-stars-text">
-                                        Amazon rating
-                                    </p>
-                                    <div class="rating-stars__stars">
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
+                          <div class="reviews-slider__slide swiper-slide">
+                            <div class="reviews__card card">
+                                <div class="card__inner">
+                                    <blockquote class="card__body">
+                                        <cite class="card__cite h3">
+                                            Rebecca
+                                        </cite>
+                                        <p class="card__text">
+                                            The term "immuno" in our product concept 
+                                            emphasizes its role in supporting the body's 
+                                            immune function. We rely on the latest. 
+                                        </p>
+                                    </blockquote>
+                                    <div class="card__stars rating-stars">
+                                        <p class="rating-stars-text">
+                                            Amazon rating
+                                        </p>
+                                        <div class="rating-stars__stars">
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                          </div>
 
-                        <div class="reviews__card card">
-                            <div class="card__inner">
-                                <blockquote class="card__body">
-                                    <cite class="card__cite h3">
-                                        Rebecca
-                                    </cite>
-                                    <p class="card__text">
-                                        The term "immuno" in our product concept emphasizes 
-                                        its role in supporting the body's immune 
-                                        function. We rely on the latest. 
-                                    </p>
-                                </blockquote>
-                                <div class="card__stars rating-stars">
-                                    <p class="rating-stars-text">
-                                        Amazon rating
-                                    </p>
-                                    <div class="rating-stars__stars">
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
+                          <div class="swiper-slide reviews-slider__slide">
+                            <div class="reviews__card card">
+                                <div class="card__inner">
+                                    <blockquote class="card__body">
+                                        <cite class="card__cite h3">
+                                            Rebecca
+                                        </cite>
+                                        <p class="card__text">
+                                            The term "immuno" in our product concept 
+                                            emphasizes its role in supporting the body's 
+                                            immune function. We rely on the latest. 
+                                        </p>
+                                    </blockquote>
+                                    <div class="card__stars rating-stars">
+                                        <p class="rating-stars-text">
+                                            Amazon rating
+                                        </p>
+                                        <div class="rating-stars__stars">
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                          </div>
 
-                        <div class="reviews__card card">
-                            <div class="card__inner">
-                                <blockquote class="card__body">
-                                    <cite class="card__cite h3">
-                                        Michael
-                                    </cite>
-                                    <p class="card__text">
-                                        The term "immuno" in our 
-                                        product concept emphasizes 
-                                        its role in.
-                                    </p>
-                                </blockquote>
-                                <div class="card__stars rating-stars">
-                                    <p class="rating-stars-text">
-                                        Amazon rating
-                                    </p>
-                                    <div class="rating-stars__stars">
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
+                          <div class="swiper-slide reviews-slider__slide">
+                            <div class="reviews__card card">
+                                <div class="card__inner">
+                                    <blockquote class="card__body">
+                                        <cite class="card__cite h3">
+                                            Rebecca
+                                        </cite>
+                                        <p class="card__text">
+                                            The term "immuno" in our product concept 
+                                            emphasizes its role in supporting the body's 
+                                            immune function. We rely on the latest. 
+                                        </p>
+                                    </blockquote>
+                                    <div class="card__stars rating-stars">
+                                        <p class="rating-stars-text">
+                                            Amazon rating
+                                        </p>
+                                        <div class="rating-stars__stars">
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                          </div>
 
-                        <div class="reviews__card card">
-                            <div class="card__inner">
-                                <blockquote class="card__body">
-                                    <cite class="card__cite h3">
-                                        Silvia
-                                    </cite>
-                                    <p class="card__text">
-                                        The term "immuno" in our product concept 
-                                        emphasizes its role in supporting the body's 
-                                        immune function. We rely on the latest. 
-                                    </p>
-                                </blockquote>
-                                <div class="card__stars rating-stars">
-                                    <p class="rating-stars-text">
-                                        Amazon rating
-                                    </p>
-                                    <div class="rating-stars__stars">
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
+                          <div class="swiper-slide reviews-slider__slide">
+                            <div class="reviews__card card">
+                                <div class="card__inner">
+                                    <blockquote class="card__body">
+                                        <cite class="card__cite h3">
+                                            Rebecca
+                                        </cite>
+                                        <p class="card__text">
+                                            The term "immuno" in our product concept 
+                                            emphasizes its role in supporting the body's 
+                                            immune function. We rely on the latest. 
+                                        </p>
+                                    </blockquote>
+                                    <div class="card__stars rating-stars">
+                                        <p class="rating-stars-text">
+                                            Amazon rating
+                                        </p>
+                                        <div class="rating-stars__stars">
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                          </div>
 
-                        <div class="reviews__card card">
-                            <div class="card__inner">
-                                <blockquote class="card__body">
-                                    <cite class="card__cite h3">
-                                        Silvia
-                                    </cite>
-                                    <p class="card__text">
-                                        The term "immuno" in our 
-                                        product concept emphasizes 
-                                        its role in.
-                                    </p>
-                                </blockquote>
-                                <div class="card__stars rating-stars">
-                                    <p class="rating-stars-text">
-                                        Amazon rating
-                                    </p>
-                                    <div class="rating-stars__stars">
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
+                          <div class="swiper-slide reviews-slider__slide">
+                            <div class="reviews__card card">
+                                <div class="card__inner">
+                                    <blockquote class="card__body">
+                                        <cite class="card__cite h3">
+                                            Rebecca
+                                        </cite>
+                                        <p class="card__text">
+                                            The term "immuno" in our product concept 
+                                            emphasizes its role in supporting the body's 
+                                            immune function. We rely on the latest. 
+                                        </p>
+                                    </blockquote>
+                                    <div class="card__stars rating-stars">
+                                        <p class="rating-stars-text">
+                                            Amazon rating
+                                        </p>
+                                        <div class="rating-stars__stars">
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                          </div>
 
-                        <div class="reviews__card card">
-                            <div class="card__inner">
-                                <blockquote class="card__body">
-                                    <cite class="card__cite h3">
-                                        Silvia
-                                    </cite>
-                                    <p class="card__text">
-                                        The term "immuno" in our 
-                                        product concept emphasizes 
-                                        its role in.
-                                    </p>
-                                </blockquote>
-                                <div class="card__stars rating-stars">
-                                    <p class="rating-stars-text">
-                                        Amazon rating
-                                    </p>
-                                    <div class="rating-stars__stars">
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
+                          
+                          <div class="swiper-slide reviews-slider__slide">
+                            <div class="reviews__card card">
+                                <div class="card__inner">
+                                    <blockquote class="card__body">
+                                        <cite class="card__cite h3">
+                                            Rebecca
+                                        </cite>
+                                        <p class="card__text">
+                                            The term "immuno" in our product concept 
+                                            emphasizes its role in supporting the body's 
+                                            immune function. We rely on the latest. 
+                                        </p>
+                                    </blockquote>
+                                    <div class="card__stars rating-stars">
+                                        <p class="rating-stars-text">
+                                            Amazon rating
+                                        </p>
+                                        <div class="rating-stars__stars">
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                            <img 
+                                                src="./images/rating/star.svg" 
+                                                alt="yellow star" 
+                                                class="rating-stars__star"
+                                                width="40"
+                                                height="40"
+                                            >
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="reviews__card card">
-                            <div class="card__inner">
-                                <blockquote class="card__body">
-                                    <cite class="card__cite h3">
-                                        Silvia
-                                    </cite>
-                                    <p class="card__text">
-                                        The term "immuno" in our 
-                                        product concept emphasizes 
-                                        its role in.
-                                    </p>
-                                </blockquote>
-                                <div class="card__stars rating-stars">
-                                    <p class="rating-stars-text">
-                                        Amazon rating
-                                    </p>
-                                    <div class="rating-stars__stars">
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                        <img 
-                                            src="./images/rating/star.svg" 
-                                            alt="yellow star" 
-                                            class="rating-stars__star"
-                                            width="40"
-                                            height="40"
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
- 
-                      </div>
+                          </div>
+    
+    
+    
+                          
+                        </div>        
+                    </div>
                 </div>
             </div>
         </section>
@@ -1505,18 +1566,20 @@
         <div class="footer__inner container">
             <div class="footer__wrapper">
                 <div class="footer__logo-wrapper logo">
-                    <img class="logo__main" 
-                    src="./images/logo.svg" alt="" 
-                    width="44" 
-                    height="44" 
-                    loading="lazy"
-                >
-                <img class="footer__text" 
-                    src="./images/logo-text.svg" alt="Milk Wealth" 
-                    width="90" 
-                    height="44" 
-                    loading="lazy"
-                >
+                    <a href="/index.html" class="header__logo-link logo">
+                        <img class="logo__main" 
+                        src="./images/logo.svg" alt="" 
+                        width="44" 
+                        height="44" 
+                        loading="lazy"
+                        >
+                        <img class="logo__text" 
+                        src="./images/logo-text.svg" alt="Milk Wealth" 
+                        width="90" 
+                        height="44" 
+                        loading="lazy"
+                        >
+                    </a>
                 </div>
                 <nav class="footer__menu">
                     <ul class="footer__menu-list">

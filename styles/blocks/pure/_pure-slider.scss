@@ -12,27 +12,30 @@
     width: 100%;
     height: 100%;
   }
+
+  &:has(.swiper-button-next) {
+    .swiper-button-next::after, .swiper-button-prev::after {
+      content: '' !important; 
+    }         
+  
+    .swiper-button-next {
+      background: url('../images/pure/right.svg') no-repeat center;
+      background-size: contain;
+    }
+    
+    .swiper-button-prev {
+      background: url('../images/pure/left.svg') no-repeat center;
+      background-size: contain;
+    }
+    
+  }
 }
 
 .swiper {
     width: 100%;
     height: 100%;
-
   }
 
-  .swiper-button-next::after, .swiper-button-prev::after {
-    content: '' !important; 
-  }
-
-  .swiper-button-next {
-    background: url('../images/pure/right.svg') no-repeat center;
-    background-size: contain;
-  }
-  
-  .swiper-button-prev {
-    background: url('../images/pure/left.svg') no-repeat center;
-    background-size: contain;
-  }
   
 
 

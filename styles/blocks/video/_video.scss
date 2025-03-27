@@ -13,6 +13,9 @@
         @include mobile {
             height: rem(1080);
         }
+        @include mobile-s {
+            height: rem(600);
+        }
    } 
 
    &__panel {

@@ -1,10 +1,11 @@
 @use '../../helpers' as *; 
 
 .camel {
-    padding-block: rem(160) 0;
+    padding-block: fluid(80) rem(200);
 
-    @include mobile {
-        padding-block: rem(80) 0;
+
+    @include tablet {
+        padding-block: rem(80) rem(100);
     }
 
     @include mobile-s {
@@ -22,6 +23,27 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        row-gap: rem(40);
+
+        @media (width < rem(1700)) {
+            display: contents;
+        }
+
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            @media (width < rem(1700)) {
+                order: 1;
+                margin-bottom: rem(37);
+            }
+
+            @include mobile-s {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__subtitle {
@@ -55,32 +77,69 @@
 
     &__main {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: fluid(120, 57);
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+
+        @media (width < rem(1700)) {
+            display: contents;
+        }
 
         @include mobile-s {
             margin-top: rem(20);
         }
 
         &-img {
-            width: fluid(853, 434);
-            height: fluid(711, 362);
+            width: fluid(514, 434);
+            height: fluid(689, 362);
+
+            @media (width < rem(1700)) {
+                @include visually-hidden;
+            }
+            
 
             @include mobile-s {
                 max-width: rem(350);
                 height: auto;
             }
+
+            &-alt {
+                @media (width > rem(1699.99)) {
+                    @include visually-hidden;
+                } 
+                
+                margin-left: fluid(550,26);
+                margin-top: rem(37);
+                width: fluid(700,494);
+                height: fluid(541, 382);
+
+                @include mobile-s {
+                    margin-top: 0;
+                }
+            }
         }
 
         &-body {
             position: relative;
-            width: fluid(1000, 509);
-            height: fluid(877, 446);
-            margin-right: fluid(30, -40);
+            width: auto;
+
+            @include mobile {
+                position: relative;
+            }
+
+            @include laptop-above {
+                margin-left: rem(-24);
+                margin-top: rem(-38);
+    
+            }
+
+            @media (width < rem(1700)) {
+                order: 2;
+                margin-left: 0;
+            }
+
 
             @include mobile-s {
-                margin-right: 0;
                 width: rem(360);
                 height: auto;
             }
@@ -92,14 +151,22 @@
             align-items: center;
             justify-content: center;
             background: url(../images/camel/1.svg) no-repeat center / contain;
-            width: fluid(503, 256);
-            height: fluid(409, 208);
-            bottom: 0;
-            right: 0;
+            width: fluid(425, 256);
+            height: fluid(346, 208);
+            bottom: rem(71);
+            left: fluid(776, 253);
+            transform: translateX(0%);
+
+            @media (width < rem(1700)) {
+                left: fluid(835, 339);
+                bottom: fluid(-152, -83);
+            }
 
             @include mobile-s {
                 max-width: rem(220);
                 height: rem(120);
+                left: rem(200);
+                bottom: rem(30);
             }
 
             &-text {
@@ -109,6 +176,7 @@
                 font-family: var(--font-family);
                 font-weight: 500;
                 color: var(--font-color-dark);
+                @include fluid-text(60, 35);
 
                 @include mobile-s {
                     width: rem(100);
@@ -126,15 +194,34 @@
             background: url(../images/camel/2.svg) no-repeat center / contain;
             width: fluid(365, 186);
             height: fluid(295, 151);
-            top: fluid(740, 380);
-            left: fluid(784, 308);
+            top: fluid(450, 380);
+            left: fluid(1123, 308);
+            transform: translateX(0%);
             z-index: 2;
 
+            @media (width < rem(1700)) {
+                left: fluid(960, 394);
+                top: auto;
+                bottom: rem(20);
+                transform: translateY(100%);
+            }
+
+            @include laptop {
+                bottom: rem(10);
+            }
+
+            @include tablet {
+                bottom: rem(-10);
+            }
+
+            @include mobile {
+                bottom: rem(-17);
+            }
+
             @include mobile-s {
-                width: rem(200);
-                height: rem(100);
-                top: rem(260);
-                left: rem(170);
+                left: rem(250);
+                bottom: rem(95);
+                width: rem(120);
             }
 
                 &-text {
@@ -157,21 +244,31 @@
     }
 
     &__strip {
-        margin-top: fluid(109, 70);
+        margin-top: rem(11);
         position: relative;
         background-color: var(--camel-orange);
         min-width: 100vw;
         display: flex;
-        align-items: start;
+        align-items: center;
         justify-content: end;
+        height: fluid(185, 103);
+
+        @media (width < rem(1700)) {
+            order: 3;
+            margin-top: fluid(188, 154);
+        }
+
+        @include mobile-s {
+            margin-top: 0;
+        }
+
 
         &-text {
             font-family: var(--font-family);
             display: flex;
             align-items: start;
             text-align: center;
-            padding-inline: fluid(248, 77);
-            padding-block: fluid(82, 33) fluid(63, 21);
+            padding-right: fluid(248, 77);
             font-size: fluid(40,20);
 
             @include mobile-s {
@@ -179,19 +276,26 @@
                 padding-block: rem(15);
                 justify-content: center;
                 align-items: center;
+                font-size: rem(15);
             }
         }
 
         &-img {
             position: absolute;
-            left:  fluid(263, 11);
+            left:  fluid(296, 11);
             bottom: fluid(525,286);
             translate: 0% 100%;
-            max-width: fluid(876, 446);
+            width: fluid(778, 448);
+            height: fluid(671,400);
+
+            @include mobile {
+                bottom: rem(290);
+            }
 
             @include mobile-s {
                 max-width: rem(250);
-                left: rem(0);
+                left: rem(40);
+                bottom: rem(260);
             }
         }
     }
@@ -200,10 +304,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-block: fluid(248, 116) fluid(160, 103);
-
-        @include mobile-s {
-            padding-block: rem(30);
+        @media (width < rem(1700)) {
+            order: 4;
+            margin-top: rem(116);
+            width: rem(461);
+            margin-inline: auto;
         }
     }
 
@@ -211,9 +316,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        min-width: fluid(554, 461);
+        width: rem(262);
         font-weight: 700;
         font-family: var(--secont-family);
+        z-index: 3;
+
+        @media (width < rem(1700)) {
+            width: 100%;
+        }
+
 
         @include mobile-s {
             min-width: rem(300);
