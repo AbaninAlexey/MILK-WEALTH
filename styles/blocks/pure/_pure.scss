@@ -3,6 +3,7 @@
 .pure {
     padding-block: fluid(120, 78) fluid(78, 77);
 
+
     &__inner {
         display: flex;
         align-items: center;
@@ -18,6 +19,7 @@
     &__slider-main-wrapper {
         width: fluid(845, 564);
         height: fluid(903, 613);
+        position: relative;
 
         @media(width <= 1700px) {
             order: 2;
@@ -25,7 +27,7 @@
 
         @include mobile-s {
             width: rem(300);
-            height: rem(400);
+            height: rem(350);
         }
     }
 
@@ -39,7 +41,7 @@
         }
 
         @include mobile-s {
-            width: rem(340);
+            width: rem(300);
             height: rem(100);
             margin-top: 0;
         }

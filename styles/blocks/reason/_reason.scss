@@ -9,6 +9,11 @@
         row-gap: fluid(80, 54);
         justify-content: center;
         align-items: center;
+
+        @include mobile-s {
+            row-gap: rem(20);
+            padding-top: rem(20);
+        }
     }
 
     &__title {
@@ -24,6 +29,10 @@
 
         @include tablet {
             row-gap: rem(60);
+        }
+
+        @include mobile-s {
+            row-gap: rem(20);
         }
     }
 
@@ -110,7 +119,7 @@
         justify-content: center;
 
         @include mobile {
-            row-gap: rem(20);
+            row-gap: rem(10);
         }
     }
 
@@ -141,6 +150,10 @@
 
         @include tablet {
             grid-template-columns: repeat(1, 1fr);
+        }
+
+        @include mobile-s {
+            row-gap: rem(20);
         }
     }
 
@@ -279,6 +292,11 @@
 
             @include mobile {
                 margin-top: rem(-13);
+            }
+
+            @include mobile-s {
+                font-size: rem(35);
+                margin-top: rem(-5);
             }
         }
 

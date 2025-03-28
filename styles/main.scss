@@ -10,6 +10,7 @@
 @use 'blocks/button';
 @use 'blocks/header/burger-button';
 @use 'blocks/header/soc1als';
+@use 'blocks/header/stories-popup';
 @use 'blocks/hero/hero';
 @use 'blocks/info/info';
 @use 'blocks/cloud/cloud';
@@ -42,16 +43,3 @@
 @use 'blocks/contacts/contacts';
 @use 'blocks/reviews/reviews-slider';
 
-// header {
-//     display: none;
-// }
-
-// main {
-//     .section {
-//         &:not(:last-child) {
-//             display: none;
-//         }
-
-//     }
-
-// }

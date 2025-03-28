@@ -1,6 +1,9 @@
 @use '../../helpers' as *; 
 
 .pure-slider-mini {
+    width: 100%;
+    height: 100%;
+    
     &__content {
         max-width: 100%;
         height: auto;

@@ -51,6 +51,10 @@
             font-size: rem(40);
         }
 
+        @include mobile-s {
+            font-size: rem(30);
+        }
+
         &:first-child {
             height: rem(40);
             @include mobile-s {

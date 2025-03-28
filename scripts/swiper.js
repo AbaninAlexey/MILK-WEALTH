@@ -5,13 +5,13 @@ const thumbsSlider = new Swiper(".thumbs-slider", {
 });
 
 
-   new Swiper('.main-slider', {
+  new Swiper('.pure-slider', {
     slidesPerView: 1,
     direction: 'horizontal',
     loop: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.custom-next',
+      prevEl: '.custom-prev',
     },
     thumbs: {
       swiper: thumbsSlider,
@@ -46,9 +46,7 @@ const thumbsSlider = new Swiper(".thumbs-slider", {
         320: {
             slidesPerView: 4,
             spaceBetween: 20,
-          },
-
-          
+          }, 
       },
     direction: 'horizontal',
     navigation: {

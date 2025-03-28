@@ -46,12 +46,22 @@
         font-size: rem(20);
         font-family: var(--font-family);
         font-weight: 500;
+
+        &-link {
+            font-weight: 400;
+        }
         
         &-item {
             &:last-child {
                 @include tablet {
                     grid-column: span 2;
                     margin-bottom: rem(-14);
+                }
+            }
+
+            @include mobile {
+                &:last-child {
+                    padding-top: rem(14);
                 }
             }
         }
@@ -81,6 +91,11 @@
     &__soc1als {
         display: flex;
         column-gap: rem(33);
+        width: 100%;
+
+        @include mobile-s {
+            width: auto;
+        }
     }
 
     &__text {

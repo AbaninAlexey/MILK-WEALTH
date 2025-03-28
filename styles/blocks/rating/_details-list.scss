@@ -15,7 +15,7 @@
             width: rem(20);
             height: rem(12);
             margin-left: rem(15);
-            background: url(../../images/tabs/arrow-right-active.svg) no-repeat center/cover;
+            background: url(../images/tabs/arrow-right-active.svg) no-repeat center/cover;
         }
     }
 
@@ -26,8 +26,10 @@
         width: rem(12);
         height: rem(20);
         margin-left: rem(15);
-        background: url(../../images/tabs/arrow-right-white.svg) no-repeat center/cover;
+        background: url(../images/tabs/arrow-right.svg) no-repeat center/contain;
     }
+
+    
 
 
     &__list {

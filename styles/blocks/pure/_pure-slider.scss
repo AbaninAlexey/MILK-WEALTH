@@ -1,6 +1,8 @@
 @use '../../helpers' as *; 
 
 .pure-slider {
+  width: 100%;
+  height: 100%;
 
   &__content {
     width: 100%;
@@ -12,31 +14,37 @@
     width: 100%;
     height: 100%;
   }
-
-  &:has(.swiper-button-next) {
-    .swiper-button-next::after, .swiper-button-prev::after {
-      content: '' !important; 
-    }         
-  
-    .swiper-button-next {
-      background: url('../images/pure/right.svg') no-repeat center;
-      background-size: contain;
-    }
-    
-    .swiper-button-prev {
-      background: url('../images/pure/left.svg') no-repeat center;
-      background-size: contain;
-    }
-    
-  }
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
+.custom-prev, .custom-next {
+  width: fluid(28, 17);
+  height: fluid(50, 37);
+  position: absolute;
+  top: 50%;
+  z-index: 6;
+  right: 0;
+
+  @include mobile {
+    top: 111%;
   }
 
-  
+}
 
+.custom-prev {
+  left: 0;
+  background: url(../images/pure/left.svg) no-repeat center/cover;
 
+  @include mobile-s {
+    left: rem(-25);
+  }
 
+}
+
+.custom-next {
+  right: 0;
+  background: url(../images/pure/right.svg) no-repeat center/cover;
+
+  @include mobile-s {
+    right: rem(-25);
+  }
+}

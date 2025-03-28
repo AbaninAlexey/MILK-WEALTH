@@ -16,6 +16,10 @@
         display: flex;
         align-items: center;
         color: var(--white);
+
+        &--small {
+            @include square(rem(30));
+        }
     }
 
     @include tablet-above {
