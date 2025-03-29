@@ -1,7 +1,7 @@
 class Stories  {
-    imagesArr = [] // Массив с изображениями из кружочков
-    currentStory = 0 //Счетчик истории
-    storyTimeout // Обьявление переменной таймера
+    imagesArr = [] 
+    currentStory = 0 
+    storyTimeout 
 
     selectors = {
         root: '[data-js-header-stories]',
@@ -17,6 +17,7 @@ class Stories  {
 
     stateClasses = {
         isActive: 'is-active',
+        next: 'next',
         isLock: 'is-lock',
     }
 
@@ -54,28 +55,38 @@ class Stories  {
 
     closeStoriesPopup = () => {
         this.storiesPopupElement.classList.toggle(this.stateClasses.isActive)
-        this.progressBarElement.style.transition = "none"; 
-        this.progressBarElement.style.width = "0%"; 
+        this.progressBarElement.style.transition = "none"
+        this.progressBarElement.style.width = "0%"
         document.documentElement.classList.toggle(this.stateClasses.isLock)
-        clearTimeout(this.storyTimeout) //Очистка таймера при закрытии
+        clearTimeout(this.storyTimeout) 
 
     }
 
     loadStory  = () => {
         clearTimeout(this.storyTimeout)
-        this.progressBarElement.style.width = "0%"; //Сбросс прогрессбара
+        this.progressBarElement.style.width = "0%"
+        this.storiesPopupImageElement.classList.remove(this.stateClasses.isActive, this.stateClasses.next)
+
         this.storiesPopupImageElement.src = this.imagesArr[this.currentStory].src 
 
         setTimeout(() => {
+            this.storiesPopupImageElement.classList.add(this.stateClasses.next)
+            this.storiesPopupImageElement.style.transition = "1s";
+            this.storiesPopupImageElement.classList.add(this.stateClasses.isActive)
+            this.storiesPopupImageElement.classList.remove(this.stateClasses.next)
+        }, 50); 
+
+        setTimeout(() => {
             this.progressBarElement.style.width = "100%"; 
-            this.progressBarElement.style.transition = "width 5s linear"; 
+            this.progressBarElement.style.transition = "width 5s linear"
         }, 20);
     
         this.storyTimeout = setTimeout(() => {
             this.nextStory()
         }, 5000);
-
-        this.progressBarElement.style.transition = "none";
+        
+        this.progressBarElement.style.transition = "none"
+        this.storiesPopupImageElement.style.transition = "none"
     }
 
     nextStory = () => {
