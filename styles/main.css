@@ -2429,7 +2429,7 @@ button[aria-label]::before {
 }
 @media (width <= 39.43625rem) {
   .camel {
-    padding-block: 1.875rem 0;
+    padding-block: 2.5rem 2.5rem;
   }
 }
 .camel__inner {
@@ -2531,7 +2531,8 @@ button[aria-label]::before {
 }
 @media (width <= 39.43625rem) {
   .camel__main-img {
-    max-width: 21.875rem;
+    max-width: 22.5rem;
+    width: 100%;
     height: auto;
   }
 }
@@ -2584,7 +2585,7 @@ button[aria-label]::before {
 }
 @media (width <= 39.43625rem) {
   .camel__main-body {
-    width: 22.5rem;
+    width: 18.75rem;
     height: auto;
   }
 }
@@ -2608,10 +2609,10 @@ button[aria-label]::before {
 }
 @media (width <= 39.43625rem) {
   .camel__main-description {
-    max-width: 13.75rem;
-    height: 7.5rem;
-    left: 12.5rem;
-    bottom: 1.875rem;
+    width: 12.5rem;
+    height: 6.25rem;
+    left: 11.25rem;
+    bottom: 3.125rem;
   }
 }
 .camel__main-description-text {
@@ -2668,8 +2669,8 @@ button[aria-label]::before {
 }
 @media (width <= 39.43625rem) {
   .camel__main-description-two {
-    left: 15.625rem;
-    bottom: 5.9375rem;
+    left: 13.75rem;
+    bottom: 6.5625rem;
     width: 7.5rem;
   }
 }
@@ -2708,6 +2709,7 @@ button[aria-label]::before {
 @media (width <= 39.43625rem) {
   .camel__strip {
     margin-top: 0;
+    height: 5rem;
   }
 }
 .camel__strip-text {
@@ -2720,7 +2722,7 @@ button[aria-label]::before {
 }
 @media (width <= 39.43625rem) {
   .camel__strip-text {
-    padding-inline: 3.75rem;
+    padding-right: 0.625rem;
     padding-block: 0.9375rem;
     justify-content: center;
     align-items: center;
@@ -2743,7 +2745,7 @@ button[aria-label]::before {
 @media (width <= 39.43625rem) {
   .camel__strip-img {
     max-width: 15.625rem;
-    left: 2.5rem;
+    left: 0rem;
     bottom: 16.25rem;
   }
 }
@@ -3046,6 +3048,11 @@ button[aria-label]::before {
 .pure {
   padding-block: clamp(4.875rem, 3.5625rem + 3.28125vw, 7.5rem) clamp(4.8125rem, 4.78125rem + 0.078125vw, 4.875rem);
 }
+@media (width <= 40.06125rem) {
+  .pure {
+    padding-inline: 0;
+  }
+}
 .pure__inner {
   display: flex;
   align-items: center;
@@ -3088,7 +3095,7 @@ button[aria-label]::before {
   .pure__slider-child-wrapper {
     width: 18.75rem;
     height: 6.25rem;
-    margin-top: 0;
+    margin-top: 1.875rem;
   }
 }
 .pure__body {
@@ -3256,7 +3263,7 @@ button[aria-label]::before {
 }
 .tabs__button {
   padding-block: clamp(1.0625rem, 1.0625rem + 0vw, 1.0625rem);
-  padding-inline: 2.5rem;
+  padding-inline: 1.25rem;
   color: var(--white);
   background-color: var(--cows-green);
   border-radius: 0.625rem;
@@ -3278,6 +3285,11 @@ button[aria-label]::before {
   height: 1.25rem;
   margin-left: 0.9375rem;
   background: url(../images/tabs/arrow-right-white.svg) no-repeat center/cover;
+}
+@media (width <= 90.06125rem) {
+  .tabs__button-text::after {
+    margin-left: 0rem;
+  }
 }
 .tabs__button.is-active {
   background-color: var(--light-blue);
@@ -4184,16 +4196,18 @@ button[aria-label]::before {
   align-items: center;
   justify-content: center;
   row-gap: clamp(1.25rem, 0.625rem + 1.5625vw, 2.5rem);
-  width: clamp(28.75rem, 5.78125rem + 57.421875vw, 74.6875rem);
+  max-width: clamp(28.75rem, 5.78125rem + 57.421875vw, 74.6875rem);
+  width: 100%;
 }
 @media (width <= 39.43625rem) {
   .technology__inner {
-    width: 21.25rem;
+    max-width: 21.25rem;
   }
 }
 .technology__text {
   text-align: center;
-  width: clamp(28.75rem, 16.6875rem + 30.15625vw, 52.875rem);
+  max-width: clamp(28.75rem, 16.6875rem + 30.15625vw, 52.875rem);
+  width: 100%;
   font-size: clamp(1.4375rem, 0.90625rem + 1.328125vw, 2.5rem);
 }
 @media (width <= 39.43625rem) {

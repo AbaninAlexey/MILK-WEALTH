@@ -32,7 +32,7 @@
 
     &__button {
         padding-block:fluid(17, 17);
-        padding-inline: rem(40);
+        padding-inline: rem(20);
         color: var(--white);
         background-color: var(--cows-green);
         border-radius: rem(10);
@@ -55,6 +55,10 @@
                 height: rem(20);
                 margin-left: rem(15);
                 background: url(../images/tabs/arrow-right-white.svg) no-repeat center/cover;
+
+                @include laptop {
+                    margin-left: rem(0);
+                }
             }
 
             

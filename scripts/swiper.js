@@ -2,6 +2,15 @@ const thumbsSlider = new Swiper(".thumbs-slider", {
     direction: "horizontal", 
     slidesPerView: 3, 
     spaceBetween: 45,
+    breakpoints: {
+      630: {
+          spaceBetween: 45,
+      },
+
+      320: {
+        spaceBetween: 10,
+      },
+    },
 });
 
 

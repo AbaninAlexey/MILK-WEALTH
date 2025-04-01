@@ -25,6 +25,7 @@
     @include mobile-s {
         margin-top: rem(-100); 
         height: rem(500);
+        
     }
 
 
@@ -34,10 +35,11 @@
         align-items: center;
         justify-content: center;
         row-gap: fluid(40, 20);
-        width: fluid(1195, 460);
+        max-width: fluid(1195, 460);
+        width: 100%;
 
         @include mobile-s {
-            width: rem(340);
+            max-width: rem(340);
         }
 
     }
@@ -47,7 +49,8 @@
 
     &__text {
         text-align: center;
-        width: fluid(846, 460);
+        max-width: fluid(846, 460);
+        width: 100%;
         font-size: fluid(40, 23);
 
         @include mobile-s {
