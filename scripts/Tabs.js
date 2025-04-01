@@ -6,6 +6,7 @@ class Tabs {
         root: rootSelector,
         button: '[data-js-tabs-button]',
         content: '[data-js-tabs-content]',
+        contentAbove: '[data-js-tabs-content-above]',
     }
 
     stateClasses = {
@@ -21,6 +22,7 @@ class Tabs {
         this.rootElement = rootElement
         this.buttonElements = this.rootElement.querySelectorAll(this.selectors.button)
         this.contentElements = this.rootElement.querySelectorAll(this.selectors.content)
+        this.contentAboveElements = this.rootElement.querySelectorAll(this.selectors.contentAbove)
         this.state = {
             activeTabIndex: [...this.buttonElements].findIndex((buttonElement) => {
                 buttonElement.classList.contains(this.stateClasses.isActive)
@@ -42,6 +44,11 @@ class Tabs {
         })
 
         this.contentElements.forEach((contentElement, index) => {
+            const isActive = index === activeTabIndex
+            contentElement.classList.toggle(this.stateClasses.isActive, isActive)
+        })
+
+        this.contentAboveElements.forEach((contentElement, index) => {
             const isActive = index === activeTabIndex
             contentElement.classList.toggle(this.stateClasses.isActive, isActive)
         })
@@ -115,13 +122,16 @@ class Tabs {
         
     }
 
+    headerHeight = document.querySelector('[data-js-header]').offsetHeight
+
     bindEvents() {
         this.buttonElements.forEach((buttonElement, index) => {
-            buttonElement.addEventListener('click', () => {
+            buttonElement.addEventListener('click', (e) => {
                 this.onButtonClick(index)
+                let buttonElementPosition = e.target.offsetTop - this.headerHeight
+                window.scrollTo({top: buttonElementPosition - 20})
             })
         })
-
         this.rootElement.addEventListener('keydown', this.onKeyDown)
     }
 }

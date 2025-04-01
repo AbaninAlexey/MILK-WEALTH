@@ -54,10 +54,10 @@
             margin-bottom: rem(-17);
         }
 
-        @include mobile-s {
-            width: rem(640);
-            background-size: cover;
-        }
+        // @include mobile-s {
+        //     width: rem(640);
+        //     background-size: cover;
+        // }
     }
 
     &__form {
@@ -69,15 +69,16 @@
         padding-block: fluid(67, 60) rem(87);
         padding-inline: fluid(176, 139) fluid(160, 139);
 
-        @include mobile-s {
-                width: 90%; 
- 
-        }
 
         &-title {
             font-family: var(--font-family);
             color: var(--white);
             font-weight: 500;
+        }
+
+        @include mobile-s {
+            padding-inline: rem(20);
+            width: 90vw;
         }
     }
 
