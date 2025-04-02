@@ -92,6 +92,11 @@
         display: flex;
         column-gap: rem(33);
         width: 100%;
+        justify-content: end;
+
+        @include mobile {
+            justify-content: start;
+        }
 
         @include mobile-s {
             width: auto;

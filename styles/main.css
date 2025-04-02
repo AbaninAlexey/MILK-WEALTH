@@ -441,7 +441,7 @@ button[aria-label]::before {
   --third-family: "Platypi", sans-serif;
   --font-inter: "Inter", sans-serif;
   --container-width: 107.5rem;
-  --container-padding-x: 5.625rem;
+  --container-padding-x: 6.25rem;
   --transition-duration: 0.2s;
 }
 @media (width <= 39.43625rem) {
@@ -2948,6 +2948,12 @@ button[aria-label]::before {
   -moz-column-gap: 2.0625rem;
        column-gap: 2.0625rem;
   width: 100%;
+  justify-content: end;
+}
+@media (width <= 40.06125rem) {
+  .footer__soc1als {
+    justify-content: start;
+  }
 }
 @media (width <= 39.43625rem) {
   .footer__soc1als {

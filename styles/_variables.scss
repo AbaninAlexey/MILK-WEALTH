@@ -42,7 +42,7 @@
     --font-inter: "Inter", sans-serif;
 
     --container-width: #{rem(1720)};
-    --container-padding-x: #{rem(90)};
+    --container-padding-x: #{rem(100)};
 
 	@include mobile-s {
 		--container-padding-x: #{rem(20)};
