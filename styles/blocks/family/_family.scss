@@ -10,11 +10,18 @@
 
         @include mobile {
             background-position: 50% 50%;
+            background: url(../images/family/family-mobile.jpg)
+            no-repeat center / cover;
         }
 
         &--product-list {
             background: url(../images/family/product-list.jpg)
             no-repeat center / cover;
+
+            @include mobile {
+                background: url(../images/family/product-list-mobile.jpg)
+            no-repeat center / cover;
+            }
         }
     }
 

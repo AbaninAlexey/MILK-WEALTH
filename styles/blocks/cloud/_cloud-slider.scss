@@ -12,7 +12,10 @@
             ;
 
             @include mobile {
-                background-position: bottom right;
+                background: 
+                transparent url(../images/cloud/1-mobile.jpg) 
+                no-repeat center / cover
+            ;
             }
         }
 
@@ -32,6 +35,13 @@
         @include laptop {
             background-position: 100%;
         }
+
+        @include mobile {
+            background: 
+            transparent url(../images/cloud/21-mobile.jpg) 
+            no-repeat center / cover
+        ;
+        }
         
     }
 
@@ -44,6 +54,10 @@
 
         &--height {
             height: fluid(1442, 895);
+        }
+
+        @include mobile-s {
+            height: rem(700);
         }
 
     }
@@ -59,6 +73,7 @@
 
         @include mobile-s {
             width: fluid(350, 300);
+            row-gap: rem(20);
         }
 
     }
@@ -68,11 +83,11 @@
         font-weight: 400;
         text-align: start;
 
-        @include mobile {
-            br {
-                display: none;
-              }
+        @include mobile-s {
+            font-size: rem(30);
         }
+
+        
     }
 
     &__description {
@@ -99,9 +114,12 @@
             bottom: rem(60);
             column-gap: rem(10);
         }
+        
     }
 
     .swiper-pagination-bullet {
+        background-color: var(--color-stock);
+        opacity: 1;
 
         @include square(rem(25));
         margin: 0;

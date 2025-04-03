@@ -44,6 +44,10 @@
     --container-width: #{rem(1720)};
     --container-padding-x: #{rem(100)};
 
+	@include mobile {
+		--container-padding-x: #{rem(90)};
+	}
+
 	@include mobile-s {
 		--container-padding-x: #{rem(20)};
 	}

@@ -8,6 +8,7 @@
 
         @include mobile {
             background-position: 30%;
+            background: url(../images/hero-alt/bg-mobile.jpg) no-repeat center / cover;
         }
 
     &__body {

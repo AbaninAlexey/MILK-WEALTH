@@ -4,10 +4,19 @@
     position: sticky;
     top: 0;
     z-index: 10;
+    width: 100%;
+
+    &--fixed {
+        position: fixed;
+    }
 
     &__body {
         background-color: var(--font-color);
         padding-block: rem(38) rem(38);
+        transition-duration: var(--transition-duration);
+        &.in-top-position {
+            background-color: transparent;
+        }
 
     &-inner {
         display: flex;
@@ -39,16 +48,12 @@
         @include tablet {
             margin-bottom: rem(171);
         }
+
     }
 
     &__logo-wrapper {
         display: flex;
         align-items: center;
-        padding-bottom: rem(22);
-
-        @include tablet {
-            padding-bottom: 0;
-        }
     }
 
     &__overlay {
@@ -112,9 +117,15 @@
             font-size: rem(20);
             align-self: center;
             white-space: nowrap;
+            transition-duration: var(--transition-duration);
 
             &.is-active {
                 color: var(--color-accent);
+            }
+
+            
+            &.in-top-position {
+                color: var(--font-color);
             }
 
             @include laptop {
@@ -139,6 +150,11 @@
         justify-content: center;
         background-color: var(--white);
         position: static;
+        transition-duration: var(--transition-duration);
+
+        &.in-top-position {
+            display: none;
+        }
 
         &-wrapper {
             padding-block: rem(20);

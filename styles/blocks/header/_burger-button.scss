@@ -11,16 +11,25 @@
     padding: 0;
     z-index: 3;
 
+    &.in-top-position {
+        .burger-button__line {
+            background-color: var(--font-color);
+        }
+    }
+    
+
     &__line {
         width: 100%;
         height: rem(3);
         background-color: var(--white);
+
     }
 
     &.is-active {
 
         .burger-button__line {
             transition-duration: var(--transition-duration);
+
 
             &:first-child {
                 display: none;

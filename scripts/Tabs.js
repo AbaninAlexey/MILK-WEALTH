@@ -38,7 +38,6 @@ class Tabs {
         this.buttonElements.forEach((buttonElement, index) => {
             const isActive = index === activeTabIndex
             buttonElement.classList.toggle(this.stateClasses.isActive, isActive)
-
             buttonElement.setAttribute(this.stateAttributes.ariaSelected, isActive.toString)
             buttonElement.setAttribute(this.stateAttributes.tabIndex, isActive ? '0' : '-1')
         })
@@ -87,7 +86,11 @@ class Tabs {
     }
 
     onButtonClick(buttonIndex) {
-        this.state.activeTabIndex = buttonIndex
+        if (this.state.activeTabIndex === buttonIndex) {
+            this.state.activeTabIndex = -1 
+        } else {
+            this.state.activeTabIndex = buttonIndex 
+        }
         this.updateUI()
     }
 

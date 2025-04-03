@@ -22,7 +22,6 @@
   position: absolute;
   top: 50%;
   z-index: 6;
-  right: 0;
 
   @include mobile {
     top: 111%;
@@ -33,6 +32,7 @@
 .custom-prev {
   left: 0;
   background: url(../images/pure/left.svg) no-repeat center/cover;
+  left:  rem(-45);
 
   @include mobile-s {
     left: rem(-25);
@@ -41,7 +41,7 @@
 }
 
 .custom-next {
-  right: 0;
+  right: rem(-45);
   background: url(../images/pure/right.svg) no-repeat center/cover;
 
   @include mobile-s {

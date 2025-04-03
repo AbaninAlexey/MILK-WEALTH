@@ -74,7 +74,7 @@
         }
 
         &.is-active {
-            background-color: var(--light-blue);
+            background-color: var(--light-green);
             color: var(--font-color);
             transition-duration: 0.1s;
 
@@ -97,9 +97,9 @@
         }
 
 
-        &.is-active {
-            pointer-events: none;
-        }
+        // &.is-active {
+        //     pointer-events: none;
+        // }
     }
 
     &__content {

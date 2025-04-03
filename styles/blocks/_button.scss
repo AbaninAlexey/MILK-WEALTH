@@ -28,8 +28,8 @@
        
     }
 
-    &--blue {
-        background: var(--font-color);
+    &.in-top-position, &--blue {
+        background-color: var(--font-color);
         color: var(--white);
 
         @include hover {

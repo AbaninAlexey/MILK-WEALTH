@@ -30,6 +30,7 @@
         width: 100%;
         font-size: fluid(20, 18);
 
+
         @include laptop {
             align-items: end;
             column-gap: rem(89);
@@ -37,9 +38,10 @@
             margin-top: rem(-30);
         }
 
-        @include mobile-s{
-            column-gap: rem(40);
+        @include mobile-s {
+            column-gap: rem(0);
         }
+
     }
 
     &__menu {
@@ -99,7 +101,7 @@
         }
 
         @include mobile-s {
-            width: auto;
+            width: rem(217);
         }
     }
 
