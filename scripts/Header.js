@@ -33,7 +33,14 @@ class Header {
         this.buttonElement.classList.toggle(this.stateClasses.isActive)
         this.headerBodyElement.classList.toggle(this.stateClasses.isActive)
         document.documentElement.classList.toggle(this.stateClasses.isLock)
-        this.removeInTopPositionClass()
+        if (document.querySelector('[data-js-body]')) {
+            if (window.scrollY !== 0) {
+                this.removeInTopPositionClass()
+            } else {
+                this.toggleInTopPositionClass()
+            }
+        }
+
     }
 
     removeInTopPositionClass = () => {
@@ -48,17 +55,32 @@ class Header {
         this.buttonElement?.classList.remove(this.stateClasses.inTopPosition)
     }
 
+    toggleInTopPositionClass = () => {
+        this.headerLogoElement?.classList.toggle(this.stateClasses.inTopPosition)
+        this.headerButtonElement?.classList.toggle(this.stateClasses.inTopPosition)
+        this.headerBodyElement?.classList.toggle(this.stateClasses.inTopPosition)
+        this.headerStoriesElement?.classList.toggle(this.stateClasses.inTopPosition)
+        this.headerLinkElement.forEach( (link) => {
+                link?.classList.toggle(this.stateClasses.inTopPosition)
+            })
+        this.buttonElement?.classList.toggle(this.stateClasses.inTopPosition)
+    }
+
     scrollPage = () => {
         if (window.scrollY !== 0) {
-            this.removeInTopPositionClass()
+            this.removeInTopPositionClass() 
+        } else {
+            this.toggleInTopPositionClass()
         }
-        document.removeEventListener('scroll', this.scrollPage)
 
     }
 
     bindEvents() {
         this.buttonElement.addEventListener('click',  this.showMenu)
-        document.addEventListener('scroll', this.scrollPage)
+        if (document.querySelector('[data-js-page]')) {
+            document.addEventListener('scroll', this.scrollPage)
+        }
+    
     }
 }
 

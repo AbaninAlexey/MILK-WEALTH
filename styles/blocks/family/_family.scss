@@ -23,6 +23,26 @@
             no-repeat center / cover;
             }
         }
+
+        &--camel {
+            background: url(../images/family/family-camel-page.jpg)
+            no-repeat center / cover;
+
+            @include mobile {
+                background: url(../images/family/family-camel-page-mobile.jpg)
+            no-repeat center / cover;
+            }
+        }
+
+        &--camel-second {
+            background: url(../images/family/family-camel-page-2.jpg)
+            no-repeat center / cover;
+
+            @include mobile {
+                background: url(../images/family/family-camel-page-2-mobile.jpg)
+            no-repeat center / cover;
+            }
+        }
     }
 
 
@@ -33,16 +53,24 @@
         justify-content: start;
         width: rem(800);
         height: rem(960);
-        margin-bottom: fluid(199, 37);
+        margin-bottom: fluid(119, 118);
+
+        &--margin {
+            margin-bottom: fluid(119, 37);
+        }
+
+        &--camel {
+            background-color: var(--camel-orange);
+        }
 
         @include laptop {
             max-width: fluid(800, 360);
-            height: fluid(960, 582);
+            height: fluid(960, 562);
         }
 
         @include mobile {
             width: rem(360);
-            height: rem(582);
+            height: rem(562);
         }
 
         @include mobile-s {

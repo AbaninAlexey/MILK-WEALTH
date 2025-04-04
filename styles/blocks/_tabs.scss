@@ -42,6 +42,10 @@
         width: 100%;
         height: 100%;
 
+        &--camel {
+            background-color: var(--camel-orange); 
+        }
+
         &-wrapper {
             display: flex;
             flex-direction: column;
@@ -89,6 +93,13 @@
                 }
             }
 
+        }
+
+        
+        &--camel {
+            &.is-active {
+                background-color: var(--light-orange);  
+            }
         }
         
 

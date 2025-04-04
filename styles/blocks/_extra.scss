@@ -2,9 +2,12 @@
 
 
 .extra {
-    padding-block: rem(30) rem(20);
-    color: var(--dark);
-    opacity: 0.6;
+    padding-top: rem(40);
+    color: var(--white);
+
+    &--dark {
+        color: var(--dark);
+    }
 
     @include mobile-s {
         padding-block: rem(10) rem(10);

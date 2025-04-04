@@ -1,10 +1,16 @@
 @use '../../helpers' as *; 
 
 .hero-alt {
+    min-height: fluid(1085, 960);
     background: url(../images/hero-alt/bg.jpg) no-repeat center / cover;
-        @include laptop {
-            background-position: 15%;
+
+    &--camel {
+        background: url(../images/hero-alt/bg-camel-page.jpg) no-repeat center / cover;
+
+        @include mobile {
+            background: url(../images/hero-alt/bg-camel-page-mobile.jpg) no-repeat center / cover;
         }
+    }
 
         @include mobile {
             background-position: 30%;
@@ -13,10 +19,13 @@
 
     &__body {
         display: flex;
-        padding-top: rem(374);
+        padding-top: rem(153);
         justify-content: end;
         color: var(--white);
-        min-height: fluid(1282, 895);
+
+        &--camel {
+            padding-top: rem(299);
+        }
         
 
         @include tablet {
@@ -56,12 +65,6 @@
             font-size: rem(30);
         }
 
-        &:first-child {
-            height: rem(40);
-            @include mobile-s {
-                height: auto;
-            }
-        }
         
         &:last-child {
             padding-top: rem(30);

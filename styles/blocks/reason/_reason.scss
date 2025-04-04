@@ -69,6 +69,23 @@
         width: fluid(538, 466);
         height: fluid(530, 459);
 
+        &--camel {
+            right: rem(-97);
+            bottom: rem(-2);
+            width: fluid(629, 581);
+            height: fluid(549, 470);
+
+            @include mobile {
+                right: auto;
+                left: rem(-14);
+            }
+
+            @include mobile-s {
+                right: auto;
+                left: rem(40);
+            }
+        }
+
         @include mobile-s {
             width: rem(250);
             height: auto;
@@ -86,6 +103,14 @@
         ;
         width: rem(596);
         height: rem(485);
+
+        &--camel {
+            background: 
+            url(../images/reason/orange-cloud.png)
+            no-repeat center / cover
+        ;
+
+        }
 
         @include laptop {
             width: rem(612);
@@ -111,6 +136,24 @@
             left: rem(5);
             top: rem(44);
         }
+
+        &--camel {
+            width: rem(286);
+            height: rem(138);
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+
+            @include mobile {
+                width: rem(231);
+                height: rem(103);
+            }
+
+            @include mobile-s {
+                width: rem(160);
+                height: rem(80);
+            }
+        }
     }
 
     &__header {
@@ -133,6 +176,11 @@
         align-items: center;
         justify-content: center;
         margin-inline: auto;
+
+        &--camel {
+            color: var(--camel-orange);
+        }
+
         
         @include fluid-text(40, 35)
     }
@@ -306,6 +354,7 @@
         }
 
         &-description {
+
             @include tablet-above {
                 max-width: fluid(694, 380);
             }

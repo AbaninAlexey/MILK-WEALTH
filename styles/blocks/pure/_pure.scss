@@ -95,6 +95,10 @@
             color: var(--cows-green);
             font-weight: 500;
 
+            &--camel {
+                color: var(--camel-orange);
+            }
+
             &:last-child {
                 margin-top: rem(35);
 

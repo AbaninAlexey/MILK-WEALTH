@@ -471,7 +471,7 @@ button[aria-label]::before {
 .header__body {
   background-color: var(--font-color);
   padding-block: 2.375rem 2.375rem;
-  transition-duration: var(--transition-duration);
+  transition-duration: 0.5s;
 }
 .header__body.in-top-position {
   background-color: transparent;
@@ -1769,6 +1769,22 @@ button[aria-label]::before {
     background: url(../images/family/product-list-mobile.jpg) no-repeat center/cover;
   }
 }
+.family__inner--camel {
+  background: url(../images/family/family-camel-page.jpg) no-repeat center/cover;
+}
+@media (width <= 40.06125rem) {
+  .family__inner--camel {
+    background: url(../images/family/family-camel-page-mobile.jpg) no-repeat center/cover;
+  }
+}
+.family__inner--camel-second {
+  background: url(../images/family/family-camel-page-2.jpg) no-repeat center/cover;
+}
+@media (width <= 40.06125rem) {
+  .family__inner--camel-second {
+    background: url(../images/family/family-camel-page-2-mobile.jpg) no-repeat center/cover;
+  }
+}
 .family__card {
   background-color: var(--cows-green);
   display: flex;
@@ -1776,18 +1792,24 @@ button[aria-label]::before {
   justify-content: start;
   width: 50rem;
   height: 60rem;
-  margin-bottom: clamp(2.3125rem, -2.75rem + 12.65625vw, 12.4375rem);
+  margin-bottom: clamp(7.375rem, 7.34375rem + 0.078125vw, 7.4375rem);
+}
+.family__card--margin {
+  margin-bottom: clamp(2.3125rem, -0.25rem + 6.40625vw, 7.4375rem);
+}
+.family__card--camel {
+  background-color: var(--camel-orange);
 }
 @media (width <= 90.06125rem) {
   .family__card {
     max-width: clamp(22.5rem, 8.75rem + 34.375vw, 50rem);
-    height: clamp(36.375rem, 24.5625rem + 29.53125vw, 60rem);
+    height: clamp(35.125rem, 22.6875rem + 31.09375vw, 60rem);
   }
 }
 @media (width <= 40.06125rem) {
   .family__card {
     width: 22.5rem;
-    height: 36.375rem;
+    height: 35.125rem;
   }
 }
 @media (width <= 39.43625rem) {
@@ -2105,6 +2127,24 @@ button[aria-label]::before {
   width: clamp(29.125rem, 26.875rem + 5.625vw, 33.625rem);
   height: clamp(28.6875rem, 26.46875rem + 5.546875vw, 33.125rem);
 }
+.reason__cow-image--camel {
+  right: -6.0625rem;
+  bottom: -0.125rem;
+  width: clamp(36.3125rem, 34.8125rem + 3.75vw, 39.3125rem);
+  height: clamp(29.375rem, 26.90625rem + 6.171875vw, 34.3125rem);
+}
+@media (width <= 40.06125rem) {
+  .reason__cow-image--camel {
+    right: auto;
+    left: -0.875rem;
+  }
+}
+@media (width <= 39.43625rem) {
+  .reason__cow-image--camel {
+    right: auto;
+    left: 2.5rem;
+  }
+}
 @media (width <= 39.43625rem) {
   .reason__cow-image {
     width: 15.625rem;
@@ -2118,6 +2158,9 @@ button[aria-label]::before {
   background: url(../images/reason/green-cloud.png) no-repeat center/cover;
   width: 37.25rem;
   height: 30.3125rem;
+}
+.reason__cow-description--camel {
+  background: url(../images/reason/orange-cloud.png) no-repeat center/cover;
 }
 @media (width <= 90.06125rem) {
   .reason__cow-description {
@@ -2146,6 +2189,25 @@ button[aria-label]::before {
     top: 2.75rem;
   }
 }
+.reason__cow-cloud--camel {
+  width: 17.875rem;
+  height: 8.625rem;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+@media (width <= 40.06125rem) {
+  .reason__cow-cloud--camel {
+    width: 14.4375rem;
+    height: 6.4375rem;
+  }
+}
+@media (width <= 39.43625rem) {
+  .reason__cow-cloud--camel {
+    width: 10rem;
+    height: 5rem;
+  }
+}
 .reason__header {
   display: grid;
   row-gap: 0.625rem;
@@ -2167,6 +2229,9 @@ button[aria-label]::before {
   justify-content: center;
   margin-inline: auto;
   font-size: clamp(2.1875rem, 2.03125rem + 0.390625vw, 2.5rem);
+}
+.reason__description--camel {
+  color: var(--camel-orange);
 }
 .reason__list {
   display: grid;
@@ -3052,11 +3117,15 @@ button[aria-label]::before {
 }
 
 .hero-alt {
+  min-height: clamp(60rem, 56.09375rem + 9.765625vw, 67.8125rem);
   background: url(../images/hero-alt/bg.jpg) no-repeat center/cover;
 }
-@media (width <= 90.06125rem) {
-  .hero-alt {
-    background-position: 15%;
+.hero-alt--camel {
+  background: url(../images/hero-alt/bg-camel-page.jpg) no-repeat center/cover;
+}
+@media (width <= 40.06125rem) {
+  .hero-alt--camel {
+    background: url(../images/hero-alt/bg-camel-page-mobile.jpg) no-repeat center/cover;
   }
 }
 @media (width <= 40.06125rem) {
@@ -3067,10 +3136,12 @@ button[aria-label]::before {
 }
 .hero-alt__body {
   display: flex;
-  padding-top: 23.375rem;
+  padding-top: 9.5625rem;
   justify-content: end;
   color: var(--white);
-  min-height: clamp(55.9375rem, 43.84375rem + 30.234375vw, 80.125rem);
+}
+.hero-alt__body--camel {
+  padding-top: 18.6875rem;
 }
 @media (width <= 63.99875rem) {
   .hero-alt__body {
@@ -3107,14 +3178,6 @@ button[aria-label]::before {
 @media (width <= 39.43625rem) {
   .hero-alt__subtitle {
     font-size: 1.875rem;
-  }
-}
-.hero-alt__subtitle:first-child {
-  height: 2.5rem;
-}
-@media (width <= 39.43625rem) {
-  .hero-alt__subtitle:first-child {
-    height: auto;
   }
 }
 .hero-alt__subtitle:last-child {
@@ -3230,6 +3293,9 @@ button[aria-label]::before {
   color: var(--cows-green);
   font-weight: 500;
 }
+.pure__title-subtitle--camel {
+  color: var(--camel-orange);
+}
 .pure__title-subtitle:last-child {
   margin-top: 2.1875rem;
 }
@@ -3252,8 +3318,8 @@ button[aria-label]::before {
   height: 100%;
 }
 .pure-slider__image {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
   height: 100%;
 }
@@ -3359,6 +3425,9 @@ button[aria-label]::before {
   width: 100%;
   height: 100%;
 }
+.tabs__button--camel {
+  background-color: var(--camel-orange);
+}
 .tabs__button-wrapper {
   display: flex;
   flex-direction: column;
@@ -3397,6 +3466,9 @@ button[aria-label]::before {
   height: 0.75rem;
   margin-left: 0.9375rem;
   background: url(../images/tabs/arrow-right-active.svg) no-repeat center/cover;
+}
+.tabs__button--camel.is-active {
+  background-color: var(--light-orange);
 }
 @media (any-hover: hover) {
   .tabs__button:hover {
@@ -4285,6 +4357,9 @@ button[aria-label]::before {
   z-index: 1;
   margin-top: -36rem;
 }
+.technology--camel {
+  background-color: var(--camel-orange);
+}
 @media (width <= 1600px) {
   .technology {
     margin-top: -25.625rem;
@@ -4344,9 +4419,11 @@ button[aria-label]::before {
 }
 
 .extra {
-  padding-block: 1.875rem 1.25rem;
+  padding-top: 2.5rem;
+  color: var(--white);
+}
+.extra--dark {
   color: var(--dark);
-  opacity: 0.6;
 }
 @media (width <= 39.43625rem) {
   .extra {

@@ -13,7 +13,8 @@
     &__body {
         background-color: var(--font-color);
         padding-block: rem(38) rem(38);
-        transition-duration: var(--transition-duration);
+        transition-duration: 0.5s;
+
         &.in-top-position {
             background-color: transparent;
         }
