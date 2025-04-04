@@ -15,21 +15,23 @@
 
     &__body {
         display: flex;
-        padding-block: rem(374) rem(484);
+        padding-top: rem(374);
         padding-left: rem(245);
-        margin-right: auto;
+        justify-content: start;
+        align-items: start;
+        height: rem(1080);
 
         @include tablet {
             justify-content: center;
-            padding: rem(223) rem(40) rem(660);
+            padding-top: rem(223);
             margin-right: 0;
         }
         
 
-        @include mobile-s {
-            padding: rem(223) rem(20) rem(280);
+        @include mobile {
+            padding-top: rem(223);
+            padding-inline: rem(40);
         }
-        
     }
 
     &__title {

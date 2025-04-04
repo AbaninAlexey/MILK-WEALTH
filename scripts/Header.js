@@ -33,7 +33,7 @@ class Header {
         this.buttonElement.classList.toggle(this.stateClasses.isActive)
         this.headerBodyElement.classList.toggle(this.stateClasses.isActive)
         document.documentElement.classList.toggle(this.stateClasses.isLock)
-        if (document.querySelector('[data-js-body]')) {
+        if (document.querySelector('[data-js-page]')) {
             if (window.scrollY !== 0) {
                 this.removeInTopPositionClass()
             } else {
@@ -50,7 +50,7 @@ class Header {
         this.headerBodyElement?.classList.remove(this.stateClasses.inTopPosition)
         this.headerStoriesElement?.classList.remove(this.stateClasses.inTopPosition)
         this.headerLinkElement.forEach( (link) => {
-                link?.classList.remove(this.stateClasses.inTopPosition)
+                link?.classList?.remove(this.stateClasses.inTopPosition)
             })
         this.buttonElement?.classList.remove(this.stateClasses.inTopPosition)
     }

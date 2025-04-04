@@ -7,6 +7,8 @@
 
     &--dark {
         color: var(--dark);
+        opacity: 0.6;
+        padding-block: rem(30) rem(20);
     }
 
     @include mobile-s {

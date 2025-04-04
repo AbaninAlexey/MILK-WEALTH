@@ -61,6 +61,7 @@
             align-items: center;
             justify-content: space-between;
 
+
             &::after {
                 content: "";
                 display: block;
@@ -96,9 +97,29 @@
         }
 
         
+
+        
         &--camel {
             &.is-active {
                 background-color: var(--light-orange);  
+            }
+        }
+
+        &--about-us {
+            &.is-active {
+                background-color: var(--font-color);  
+                color: var(--white);
+            }
+
+            .tabs__button-text {
+                &::after {
+                    content: "";
+                    display: block;
+                    width: rem(20);
+                    height: rem(12);
+                    margin-left: rem(15);
+                    background: url(../images/tabs/arrow-down-white.svg) no-repeat center/cover !important;
+                }
             }
         }
         
@@ -107,10 +128,6 @@
             color: var(--color-accent);
         }
 
-
-        // &.is-active {
-        //     pointer-events: none;
-        // }
     }
 
     &__content {
