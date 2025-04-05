@@ -5,44 +5,44 @@ class VideoPlayer {
         root: rootSelector,
         video: '[data-js-video-player-video]',
         panel: '[data-js-video-player-panel]',
+        popup: '[data-js-video-player-popup]',
         playButton: '[data-js-video-player-play-button]',
+        closeButton: '[data-js-video-player-close-button]',
     }
 
     stateClasses = {
         isActive: 'is-active',
+        isLock: 'is-lock',
     }
 
     constructor(rootElement) {
-        this.rootElement = rootElement
-        this.videoElement = this.rootElement.querySelector(this.selectors.video)
-        this.playButtonElement = this.rootElement.querySelector(this.selectors.playButton)
-        this.bindEvents()
+        this.rootElement = rootElement;
+        this.videoElement = this.rootElement.querySelector(this.selectors.video);
+        this.playButtonElement = this.rootElement.querySelector(this.selectors.playButton);
+        this.closeButtonElement = this.rootElement.querySelector(this.selectors.closeButton);
+        this.popupElement = this.rootElement.querySelector(this.selectors.popup);
+        this.bindEvents();
       }
-    
-      onPlayButtonClick = () => {
+
+      showPopup = () => {
+        this.popupElement.classList.add(this.stateClasses.isActive);
+        document.documentElement.classList.add(this.stateClasses.isLock)
+        this.videoElement.controls = true;
+        this.playButtonElement.classList.add(this.stateClasses.isActive);
         this.videoElement.play()
-        this.videoElement.requestFullscreen()
-        this.videoElement.controls = true
-        this.playButtonElement.classList.remove(this.stateClasses.isActive)
       }
-    
-      onVideoPause = () => {
-        this.videoElement.controls = false
-        this.playButtonElement.classList.add(this.stateClasses.isActive)
+
+      closePopup = () => {
+        this.popupElement.classList.remove(this.stateClasses.isActive);
+        document.documentElement.classList.remove(this.stateClasses.isLock)
+        this.videoElement.controls = false;
+        this.playButtonElement.classList.remove(this.stateClasses.isActive);
+        this.videoElement.pause();
       }
-    
-      onVideoFullScreenChange = () => {
-        const isFullScreenEnabled = document.fullscreenElement === this.videoElement
-    
-        if (!isFullScreenEnabled) {
-          this.videoElement.pause()
-        }
-      }
-    
+
       bindEvents() {
-        this.playButtonElement.addEventListener('click', this.onPlayButtonClick)
-        this.videoElement.addEventListener('pause', this.onVideoPause)
-        this.videoElement.addEventListener('fullscreenchange', this.onVideoFullScreenChange)
+        this.playButtonElement.addEventListener('click', this.showPopup);
+        this.closeButtonElement?.addEventListener('click', this.closePopup);
       }
 
 }

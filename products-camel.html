@@ -240,39 +240,55 @@
     </header>
 
     <main>
-        <section class="section hero-alt hero-alt--camel" aria-labelledby="hero-title">
-            <div class="extra container">
-                <nav class="extra__nav">
-                    <ul class="extra__list">
-                      <li class="extra__item">
-                            <a href="./index.html" class="extra__link">
-                                Home 
-                            </a>
-                        </li>
-                      <li class="extra__item">
-                        Products
+        <div class="extra visible-mobile extra--dark container">
+            <nav class="extra__nav">
+                <ul class="extra__list">
+                  <li class="extra__item">
+                        <a href="./index.html" class="extra__link">
+                            Home 
+                        </a>
                     </li>
-                    </ul>
-                  </nav>
-            </div>
+                  <li class="extra__item">
+                    About Us
+                </li>
+                </ul>
+              </nav>
+        </div>
+        <section class="section hero-alt hero-alt--camel" aria-labelledby="hero-title">
             <div class="hero-alt__body hero-alt__body--camel container">
+                <div class="extra hidden-mobile">
+                    <nav class="extra__nav">
+                        <ul class="extra__list">
+                          <li class="extra__item">
+                                <a href="./index.html" class="extra__link">
+                                    Home 
+                                </a>
+                            </li>
+                          <li class="extra__item">
+                            Products
+                        </li>
+                        </ul>
+                      </nav>
+                </div>
+                <div class="hero-alt__body-wrapper hero-alt__body-wrapper--camel">
                     <h1 class="hero-alt__title" id="hero-title">
                         <span class="hero-alt__subtitle h3">First camel</span>
                         <span class="hero-alt__title-main">Colostrum</span>
                         <span class="hero-alt__subtitle h3">coming soon</span>
                     </h1>
+                </div>
             </div>
         </section>
 
         <section class="section pure container">
             <div class="pure__inner">
-                <div class="pure__slider-main-wrapper">
+                <div class="pure__slider-main-wrapper pure__slider-main-wrapper--camel">
                     <div class="swiper pure-slider">
                         <div class="swiper-wrapper pure-slider__wrapper">
                           <div class="swiper-slide pure-slider__slide">
                             <div class="pure-slider__content">
                                 <img 
-                                    class="pure-slider__image"
+                                    class="pure-slider__image "
                                     src="./images/pure/1-camel.png" 
                                     alt=""
                                     width="724"

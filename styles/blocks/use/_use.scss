@@ -3,16 +3,15 @@
 .use {
     background: url(../images/use/bg.jpg) no-repeat center / cover;
     color: var(--white);
-    padding-block: fluid(109,48);
-    min-height: fluid(1080, 983);
+    padding-block: fluid(109,80);
+    height: fluid(1080, 983);
 
     @include mobile {
-        background-position: 50% 0%;
         background: url(../images/use/bg-mobile.jpg) no-repeat center / cover;
     }
 
     @include mobile-s {
-        min-height: rem(620);
+        height: rem(850);
         background-position: center top;
     }
 
@@ -20,7 +19,7 @@
         display: grid;
         row-gap: rem(40);
 
-        @include mobile-s {
+        @include mobile {
             row-gap: rem(20);
         }
     }
@@ -38,16 +37,17 @@
             @include mobile {
                 width: rem(37); 
                 height: rem(59);
+                margin-top: rem(-35);
             }
         }
 
         @include mobile-s {
-            justify-content: center;
+            justify-content: start;
         }
 
         &-title {
             @include mobile-s {
-                font-size: rem(30);
+                font-size: rem(25);
                 font-weight: 500;    
             }
         }
@@ -73,6 +73,10 @@
 
     &__item {
 
+        @include mobile-s {
+            font-size: rem(20);
+        }
+
         &-title {
             display: flex;
             column-gap: rem(19);
@@ -80,10 +84,15 @@
             font-family: var(--font-family);
             font-weight: 400;
             margin-top: rem(40);
+
+            @include mobile-s {
+                font-size: rem(25);
+                margin-top: rem(20);
+            }
         }
 
         &-img {
-            margin-top: rem(-30);
+            margin-top: rem(-7);
         }
 
         &:nth-child(1) {
@@ -123,11 +132,12 @@
                 }
 
                 @include mobile {
-                    font-size: rem(35);
+                    font-size: rem(30);
                 }
 
                 @include mobile-s {
-                    max-width: rem(300);  
+                    max-width: rem(300); 
+                    font-size: rem(20); 
                 }
             }
         }

@@ -155,7 +155,7 @@
         &-wrapper {
             position: absolute;
             z-index: 21;
-            top: fluid(292,129);
+            top: fluid(289,130);
             font-weight: 400;
 
             @include mobile-s {
@@ -171,12 +171,12 @@
         &-title {
             font-weight: 400;
             text-align: center;
-            max-width: rem(1082);
+            width: fluid(1082, 461);
 
             @include fluid-text(120, 50);
 
             @include mobile {
-                max-width: rem(456);
+                width: rem(400);
             }
 
             @include mobile-s {

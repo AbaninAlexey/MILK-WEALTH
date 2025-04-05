@@ -1066,13 +1066,19 @@ button[aria-label]::before {
   .hero__body {
     justify-content: center;
     padding-top: 13.9375rem;
+    padding-inline: 2.5rem;
     margin-right: 0;
   }
 }
 @media (width <= 40.06125rem) {
   .hero__body {
     padding-top: 13.9375rem;
-    padding-inline: 2.5rem;
+  }
+}
+@media (width <= 39.43625rem) {
+  .hero__body {
+    height: 45rem;
+    padding-top: 8.125rem;
   }
 }
 .hero__title {
@@ -1868,10 +1874,17 @@ button[aria-label]::before {
 .family__title {
   font-family: var(--font-family);
   font-weight: 500;
+  width: clamp(16.875rem, 5.28125rem + 28.984375vw, 40.0625rem);
 }
 @media (width <= 40.06125rem) {
   .family__title {
-    font-size: 1.875rem;
+    font-size: 2.1875rem;
+  }
+}
+@media (width <= 39.43625rem) {
+  .family__title {
+    font-size: 1.5625rem;
+    width: 12.5rem;
   }
 }
 
@@ -1971,6 +1984,55 @@ button[aria-label]::before {
     height: 37.5rem;
   }
 }
+.video__popup {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+}
+.video__popup:not(.is-active) {
+  display: none;
+}
+.video__popup-container {
+  width: 100%;
+  height: 100%;
+  max-width: 60rem;
+  max-height: 37.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.video__popup-wrapper {
+  padding: 1.875rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.video__popup-close-button {
+  position: absolute !important;
+  top: -0.9375rem;
+  right: -0.9375rem;
+}
+.video__popup-body {
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
 .video__panel {
   position: absolute;
   inset: 0;
@@ -1990,6 +2052,12 @@ button[aria-label]::before {
   font-weight: 500;
   text-align: center;
   padding-top: clamp(3.75rem, -3.84375rem + 18.984375vw, 18.9375rem);
+  font-size: clamp(3.125rem, 2.5rem + 1.5625vw, 4.375rem);
+}
+@media (width <= 39.43625rem) {
+  .video__title {
+    font-size: 2.1875rem;
+  }
 }
 .video__play-button {
   position: absolute;
@@ -2046,6 +2114,12 @@ button[aria-label]::before {
   font-family: var(--font-family);
   font-weight: 500;
   text-align: center;
+  font-size: clamp(3.125rem, 2.5rem + 1.5625vw, 4.375rem);
+}
+@media (width <= 39.43625rem) {
+  .video-alt__title {
+    font-size: 2.1875rem;
+  }
 }
 .video-alt__play-button {
   color: var(--color-play-button);
@@ -2429,18 +2503,17 @@ button[aria-label]::before {
 .use {
   background: url(../images/use/bg.jpg) no-repeat center/cover;
   color: var(--white);
-  padding-block: clamp(3rem, 1.09375rem + 4.765625vw, 6.8125rem);
-  min-height: clamp(61.4375rem, 58.40625rem + 7.578125vw, 67.5rem);
+  padding-block: clamp(5rem, 4.09375rem + 2.265625vw, 6.8125rem);
+  height: clamp(61.4375rem, 58.40625rem + 7.578125vw, 67.5rem);
 }
 @media (width <= 40.06125rem) {
   .use {
-    background-position: 50% 0%;
     background: url(../images/use/bg-mobile.jpg) no-repeat center/cover;
   }
 }
 @media (width <= 39.43625rem) {
   .use {
-    min-height: 38.75rem;
+    height: 53.125rem;
     background-position: center top;
   }
 }
@@ -2448,7 +2521,7 @@ button[aria-label]::before {
   display: grid;
   row-gap: 2.5rem;
 }
-@media (width <= 39.43625rem) {
+@media (width <= 40.06125rem) {
   .use__inner {
     row-gap: 1.25rem;
   }
@@ -2468,16 +2541,17 @@ button[aria-label]::before {
   .use__header-logo {
     width: 2.3125rem;
     height: 3.6875rem;
+    margin-top: -2.1875rem;
   }
 }
 @media (width <= 39.43625rem) {
   .use__header {
-    justify-content: center;
+    justify-content: start;
   }
 }
 @media (width <= 39.43625rem) {
   .use__header-title {
-    font-size: 1.875rem;
+    font-size: 1.5625rem;
     font-weight: 500;
   }
 }
@@ -2501,6 +2575,11 @@ button[aria-label]::before {
     justify-content: center;
   }
 }
+@media (width <= 39.43625rem) {
+  .use__item {
+    font-size: 1.25rem;
+  }
+}
 .use__item-title {
   display: flex;
   -moz-column-gap: 1.1875rem;
@@ -2510,8 +2589,14 @@ button[aria-label]::before {
   font-weight: 400;
   margin-top: 2.5rem;
 }
+@media (width <= 39.43625rem) {
+  .use__item-title {
+    font-size: 1.5625rem;
+    margin-top: 1.25rem;
+  }
+}
 .use__item-img {
-  margin-top: -1.875rem;
+  margin-top: -0.4375rem;
 }
 .use__item:nth-child(1) {
   grid-area: 1/1/2/2;
@@ -2553,12 +2638,13 @@ button[aria-label]::before {
 }
 @media (width <= 40.06125rem) {
   .use__item:nth-child(3) .use__item-text {
-    font-size: 2.1875rem;
+    font-size: 1.875rem;
   }
 }
 @media (width <= 39.43625rem) {
   .use__item:nth-child(3) .use__item-text {
     max-width: 18.75rem;
+    font-size: 1.25rem;
   }
 }
 .use__item:nth-child(4) {
@@ -2958,6 +3044,11 @@ button[aria-label]::before {
   font-family: var(--font-family);
   font-weight: 500;
 }
+@media (width <= 39.43625rem) {
+  .reviews__title {
+    font-size: 1.875rem;
+  }
+}
 
 .card {
   display: flex;
@@ -3124,8 +3215,19 @@ button[aria-label]::before {
 }
 
 .hero-alt {
-  min-height: clamp(60rem, 56.09375rem + 9.765625vw, 67.8125rem);
+  height: clamp(60rem, 56.09375rem + 9.765625vw, 67.8125rem);
   background: url(../images/hero-alt/bg.jpg) no-repeat center/cover;
+}
+@media (width <= 39.43625rem) {
+  .hero-alt {
+    height: 43.75rem;
+  }
+}
+@media (width <= 40.06125rem) {
+  .hero-alt {
+    background-position: 30%;
+    background: url(../images/hero-alt/bg-mobile.jpg) no-repeat center/cover;
+  }
 }
 .hero-alt--camel {
   background: url(../images/hero-alt/bg-camel-page.jpg) no-repeat center/cover;
@@ -3135,20 +3237,21 @@ button[aria-label]::before {
     background: url(../images/hero-alt/bg-camel-page-mobile.jpg) no-repeat center/cover;
   }
 }
-@media (width <= 40.06125rem) {
-  .hero-alt {
-    background-position: 30%;
-    background: url(../images/hero-alt/bg-mobile.jpg) no-repeat center/cover;
-  }
-}
 .hero-alt__body {
   display: flex;
-  padding-top: 9.5625rem;
   justify-content: end;
   color: var(--white);
+  flex-direction: column;
 }
-.hero-alt__body--camel {
-  padding-top: 18.6875rem;
+.hero-alt__body-wrapper {
+  padding-top: 9.5625rem;
+  margin-left: auto;
+}
+@media (width <= 40.06125rem) {
+  .hero-alt__body-wrapper {
+    margin-inline: auto;
+    padding-top: 0rem;
+  }
 }
 @media (width <= 63.99875rem) {
   .hero-alt__body {
@@ -3159,6 +3262,7 @@ button[aria-label]::before {
 }
 @media (width <= 39.43625rem) {
   .hero-alt__body {
+    justify-content: start;
     padding: 2.5rem 1.25rem 0;
     min-height: 37.5rem;
   }
@@ -3188,7 +3292,7 @@ button[aria-label]::before {
   }
 }
 .hero-alt__subtitle:last-child {
-  padding-top: 1.875rem;
+  padding-top: 2.1875rem;
 }
 @media (width <= 63.99875rem) {
   .hero-alt__subtitle:last-child {
@@ -3225,6 +3329,10 @@ button[aria-label]::before {
   width: clamp(35.25rem, 26.46875rem + 21.953125vw, 52.8125rem);
   height: clamp(38.3125rem, 29.25rem + 22.65625vw, 56.4375rem);
   position: relative;
+}
+.pure__slider-main-wrapper--camel {
+  width: clamp(30.0625rem, 22.46875rem + 18.984375vw, 45.25rem);
+  height: clamp(37.4375rem, 27.5rem + 24.84375vw, 57.3125rem);
 }
 @media (width <= 1700px) {
   .pure__slider-main-wrapper {
@@ -3340,7 +3448,7 @@ button[aria-label]::before {
 }
 @media (width <= 40.06125rem) {
   .custom-prev, .custom-next {
-    top: 111%;
+    top: 117%;
   }
 }
 
@@ -4509,7 +4617,7 @@ button[aria-label]::before {
   padding: 0;
   font-size: 1.25rem;
   height: 3.125rem;
-  padding-inline: 1rem;
+  padding: 1rem;
 }
 .field__input::-moz-placeholder {
   font-size: 1.25rem;
@@ -4535,10 +4643,10 @@ button[aria-label]::before {
   width: 100%;
 }
 .field__input--text-area::-moz-placeholder {
-  line-height: 8.125rem;
+  line-height: 5.625rem;
 }
 .field__input--text-area::placeholder {
-  line-height: 8.125rem;
+  line-height: 5.625rem;
 }
 
 .stories-nav {
@@ -4813,7 +4921,7 @@ button[aria-label]::before {
 .about-us-hero__extra-wrapper {
   position: absolute;
   z-index: 21;
-  top: clamp(8.0625rem, 2.96875rem + 12.734375vw, 18.25rem);
+  top: clamp(8.125rem, 3.15625rem + 12.421875vw, 18.0625rem);
   font-weight: 400;
 }
 @media (width <= 39.43625rem) {
@@ -4830,12 +4938,12 @@ button[aria-label]::before {
 .about-us-hero__extra-title {
   font-weight: 400;
   text-align: center;
-  max-width: 67.625rem;
+  width: clamp(28.8125rem, 9.40625rem + 48.515625vw, 67.625rem);
   font-size: clamp(3.125rem, 0.9375rem + 5.46875vw, 7.5rem);
 }
 @media (width <= 40.06125rem) {
   .about-us-hero__extra-title {
-    max-width: 28.5rem;
+    width: 25rem;
   }
 }
 @media (width <= 39.43625rem) {

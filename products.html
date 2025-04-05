@@ -240,27 +240,44 @@
     </header>
 
     <main>
-        <section class="section hero-alt" aria-labelledby="hero-title">
-            <div class="extra container">
-                <nav class="extra__nav">
-                    <ul class="extra__list">
-                      <li class="extra__item">
-                            <a href="./index.html" class="extra__link">
-                                Home 
-                            </a>
-                        </li>
-                      <li class="extra__item">
-                        Products
+        <div class="extra visible-mobile extra--dark container">
+            <nav class="extra__nav">
+                <ul class="extra__list">
+                  <li class="extra__item">
+                        <a href="./index.html" class="extra__link">
+                            Home 
+                        </a>
                     </li>
-                    </ul>
-                  </nav>
-            </div>
+                  <li class="extra__item">
+                    About Us
+                </li>
+                </ul>
+              </nav>
+        </div>
+
+        <section class="section hero-alt" aria-labelledby="hero-title">
             <div class="hero-alt__body container">
+                <div class="extra hidden-mobile">
+                    <nav class="extra__nav">
+                        <ul class="extra__list">
+                          <li class="extra__item">
+                                <a href="./index.html" class="extra__link">
+                                    Home 
+                                </a>
+                            </li>
+                          <li class="extra__item">
+                            Products
+                        </li>
+                        </ul>
+                      </nav>
+                </div>
+                <div class="hero-alt__body-wrapper">
                     <h1 class="hero-alt__title" id="hero-title">
                         <span class="hero-alt__subtitle h3">The best</span>
                         <span class="hero-alt__title-main">Colostrum</span>
                         <span class="hero-alt__subtitle h3">Freez Dried for the <br> whole family</span>
                     </h1>
+                </div>
             </div>
         </section>
 
@@ -430,8 +447,8 @@
             <div class="family__inner family__inner--product-list">
                     <div class="family__card">  
                         <div class="family__card-body">
-                            <h2 class="family__title" id="family-title">
-                                Differences of <br> Milk Wealth
+                            <h2 class="family__title family__title--br" id="family-title">
+                                Differences of  Milk Wealth
                             </h2>
                             <div class="family__description">
                                 <p>

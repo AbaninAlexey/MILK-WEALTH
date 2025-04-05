@@ -614,9 +614,9 @@
             </div>
         </section>
 
-        <section class="section video" aria-labelledby="video-title">
-            <div class="video__inner" data-js-video-player>
-                <video data-js-video-player-video
+        <section class="section video" aria-labelledby="video-title" data-js-video-player>
+            <div class="video__inner">
+                <video 
                     class="video__body" 
                     poster="./images/video/poster-woman.jpg"
                 >
@@ -643,6 +643,32 @@
                         
                         
                     </button>
+                </div>
+            </div>
+            <div class="video__popup" data-js-video-player-popup>
+                <div class="video__popup-wrapper">
+                    <div class="video__popup-container">
+                        <button class=" video__popup-close-button button burger-button is-active" 
+                        type="button" 
+                        title="close video"
+                        aria-label="close video"
+                        data-js-video-player-close-button
+                         >
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                        </button>
+                        <video 
+                        class="video__popup-body" 
+                        poster="./images/video/poster-woman.jpg"
+                        data-js-video-player-video
+                        >
+                        <source src="./videos/example.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает встроенные видео :(
+                        
+                       </video>
+                    </div>
                 </div>
             </div>
         </section>
@@ -810,9 +836,9 @@
             </div>
         </sections>
 
-        <section class="section video-alt" aria-labelledby="video-title">
-            <div class="video-alt__inner" data-js-video-player>
-                <video data-js-video-player-video
+        <section class="section video-alt" aria-labelledby="video-title" data-js-video-player>
+            <div class="video-alt__inner">
+                <video 
                     class="video__body" 
                     poster="./images/video/2.jpg"
                 >
@@ -841,6 +867,32 @@
                         <p>
                             So that you don't compare us with <br> competitors, we did it for you
                         </p>
+                    </div>
+                </div>
+            </div>
+            <div class="video__popup" data-js-video-player-popup>
+                <div class="video__popup-wrapper">
+                    <div class="video__popup-container">
+                        <button class=" video__popup-close-button button burger-button is-active" 
+                        type="button" 
+                        title="close video"
+                        aria-label="close video"
+                        data-js-video-player-close-button
+                         >
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                        </button>
+                        <video 
+                        class="video__popup-body" 
+                        poster="./images/video/poster-woman.jpg"
+                        data-js-video-player-video
+                        >
+                        <source src="./videos/example.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает встроенные видео :(
+                        
+                       </video>
                     </div>
                 </div>
             </div>

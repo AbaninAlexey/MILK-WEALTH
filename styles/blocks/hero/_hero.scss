@@ -24,13 +24,18 @@
         @include tablet {
             justify-content: center;
             padding-top: rem(223);
+            padding-inline: rem(40);
             margin-right: 0;
         }
         
 
         @include mobile {
             padding-top: rem(223);
-            padding-inline: rem(40);
+        }
+
+        @include mobile-s {
+            height: rem(720);
+            padding-top: rem(130);
         }
     }
 

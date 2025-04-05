@@ -122,9 +122,16 @@
     &__title {
         font-family: var(--font-family);
         font-weight: 500;
+        width: fluid(641, 270);
 
         @include mobile {
-            font-size: rem(30);
+            font-size: rem(35);
+
+        }
+
+        @include mobile-s {
+            font-size: rem(25);
+            width: rem(200);
         }
     }
 }

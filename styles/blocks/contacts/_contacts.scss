@@ -53,11 +53,6 @@
         @include mobile-above {
             margin-bottom: rem(-17);
         }
-
-        // @include mobile-s {
-        //     width: rem(640);
-        //     background-size: cover;
-        // }
     }
 
     &__form {
