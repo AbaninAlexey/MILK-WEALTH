@@ -14,11 +14,20 @@
             row-gap: rem(20);
             padding-top: rem(20);
         }
+
+        &--about-us {
+            padding-block: fluid(60, 30);
+        }
     }
 
     &__title {
         font-family: var(--third-family);
         text-align: center;
+        width: max-content;
+        z-index: 1;
+        @include mobile-s {
+            font-size: rem(50);
+        }
     }
 
     &__body {
@@ -191,6 +200,16 @@
         grid-template-rows: rem(348) rem(299) rem(287) rem(147) rem(329);
         column-gap: rem(25);
         row-gap: rem(60);
+        z-index: 4;
+
+        &--about-us {
+            grid-template-rows: rem(476) rem(467) rem(476) rem(524) rem(428);
+            row-gap: rem(36);
+
+            @include mobile {
+                row-gap: rem(60); 
+            }
+        }
 
         @include laptop {
             grid-template-rows: repeat(5, auto);
@@ -235,10 +254,45 @@
         &-img {
             width: rem(238);
             height: rem(635);
+            z-index: 1;
 
             @include mobile-s {
                 width: 50%;
                 height: auto;
+            }
+
+            &--green-about {
+                position: absolute;
+                right: rem(-374);
+                top: rem(-32);
+                translate: 100%;
+                rotate: -54deg;
+                z-index: -1;
+
+                @include tablet {
+                    top: rem(-60);
+                    right: rem(-0);
+                    translate: 50%;
+                    rotate: -14deg;
+                }
+
+                @include mobile {
+                    min-width: rem(582);
+                    min-height: rem(308);
+                    top: rem(89);
+                    left: rem(256);
+                    translate: 0% -50%;
+                    rotate: -22deg;
+                }
+
+                @include mobile-s {
+                    min-width: rem(450);
+                    min-height: auto;
+                    top: rem(89);
+                    left: rem(160);
+                    translate: 0% -50%;
+                    rotate: -22deg;
+                }
             }
 
            &--green {
@@ -247,6 +301,7 @@
                 top: rem(-32);
                 translate: 100%;
                 rotate: -54deg;
+                z-index: -1;
 
                 @include tablet {
                     top: rem(-60);
@@ -257,8 +312,41 @@
 
                 @include mobile-s {
                     right: rem(-50);
+                    top: rem(-50);
                 }
            }
+
+           &--orange-about {
+            position: absolute;
+            left: rem(-365);
+            top: rem(-48);
+            translate: -100%;
+            rotate: 34deg;
+            z-index: -1;
+
+            @include tablet {
+                left: rem(0);
+                top: rem(61);
+                translate: -50%;
+                rotate: 11deg;
+            }
+
+            @include mobile {
+                left: rem(-62);
+                top: rem(-284);
+                rotate: 18deg;
+                z-index: -1;
+            }
+
+            @include mobile-s {
+                width: auto;
+                height: rem(350);
+                left: rem(-20);
+                top: rem(-150);
+                rotate: 18deg;
+                z-index: -1;
+            }
+       }
 
            
            &--orange {
@@ -267,6 +355,7 @@
                 top: rem(-48);
                 translate: -100%;
                 rotate: 34deg;
+                z-index: -1;
 
                 @include tablet {
                     left: rem(0);
@@ -279,6 +368,33 @@
                     left: rem(-50);
                 }
            }
+
+           &--red-about {
+            position: absolute;
+            left: rem(-162);
+            top: rem(-136);
+            translate: -100%;
+            rotate: 9.32deg;
+            z-index: -1;
+
+            @include tablet {
+                left: rem(23);
+                top: rem(100);
+                translate: -50% 95%;
+                rotate: 16deg;
+            }
+
+            @include mobile {
+                min-width: rem(582);
+                height: rem(308);
+                top: -303px;
+                left: -361px;
+                rotate: 92deg;
+                transform: scaleY(-1);
+                translate: 0% 200%;
+                
+            }
+       }
 
            &--red {
                 position: absolute;
@@ -297,6 +413,36 @@
                 @include mobile-s {
                     top: rem(-50);
                     left: rem(-30);
+                }
+           }
+
+           &--blue-about {
+                position: absolute;
+                right: rem(-300);
+                top: rem(-200);
+                translate: 100%;
+                rotate: -37deg;
+
+                @include tablet {
+                    position: absolute;
+                    right: rem(0);
+                    top: rem(-300);
+                    translate: 50% 0%;
+                    rotate: -17deg;
+                }
+
+                @include mobile {
+                    right: rem(-79);
+                    top: rem(-153);
+                    translate: 50% -200%;
+                    rotate: -14deg;
+                }
+
+                @include mobile-s {
+                    right: rem(-27);
+                    top: rem(122);
+                    translate: 50% -200%;
+                    rotate: -14deg;
                 }
            }
 

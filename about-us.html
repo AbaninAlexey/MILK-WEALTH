@@ -254,6 +254,7 @@
                 </ul>
               </nav>
         </div>
+
         <section class="about-us-hero section" aria-labelledby="about-us-hero-title">
             <div class="about-us-hero__inner container">
                 <div class="extra hidden-mobile">
@@ -300,16 +301,16 @@
         </section>
 
         <section class="info-alt section overflow-x" aria-labelledby="info-alt-title">
-            <div class="info-alt__inner tabs container container-padding-block" data-js-tabs>
+            <div class="info-alt__inner tabs" data-js-tabs>
                 <h2 class="visually-hidden" id="info-alt-title">
                     Tabs buttons
                 </h2>
 
-                <header class="tabs__header">
+                <header class="tabs__header tabs__header--padding container">
                     <div class="tabs__buttons" role="tablist" aria-labelledby="info-alt-title">
-                        <div class="tabs__button-wrapper">
+                        <div class="tabs__button-wrapper container">
                             <button
-                            class="tabs__button is-active tabs__button--about-us" type="button"
+                            class="tabs__button is-active" type="button"
                             id="tab-1"
                             role="tab"
                             aria-controls="tabpanel-1"
@@ -321,121 +322,278 @@
                                     Milk wealth history
                               </span> 
                            </button>
-
-                           <div class="tabs__content is-active is-hide-tablet-above" id="tabpanel-1"
-                           aria-labelledby="tab-1"
-                           tabindex="0" data-js-tabs-content
-                           >
-                               <ul class="tabs__first-list">
-                                   <li class="tabs__first-item">
-                                       <img src="./images/tabs/plus.svg" alt="" class="tabs__first-plus">
-                                       <p class="tabs__first-body">
-                                           <span class="tabs__first-term">
-                                               Immunoglobulins (IgG & IgA) —
-                                           </span>
-                                            antibodies that strengthen immunity and fight infections.
-                                       </p>
-                                   </li>
-       
-                                   <li class="tabs__first-item">
-                                       <img src="./images/tabs/plus.svg" alt="" class="tabs__first-plus">
-                                       <p class="tabs__first-body">
-                                           <span class="tabs__first-term">
-                                               Lactoferrin  —
-                                           </span>
-                                           a protein that protects against microorganisms.
-                                       </p>
-                                   </li>
-       
-                                   <li class="tabs__first-item">
-                                       <img src="./images/tabs/plus.svg" alt="" class="tabs__first-plus">
-                                       <p class="tabs__first-body">
-                                           <span class="tabs__first-term">
-                                               Tissue growth factors —
-                                           </span>
-                                           factors that promote cell regeneration.
-                                       </p>
-                                   </li>
-       
-                                   <li class="tabs__first-item">
-                                       <img src="./images/tabs/plus.svg" alt="" class="tabs__first-plus">
-                                       <p class="tabs__first-body">
-                                           <span class="tabs__first-term">
-                                               Lactic acid  —
-                                           </span>
-                                           an acid that supports microbiome balance and digestive health.
-                                       </p>
-                                   </li>
-       
-                                   <li class="tabs__first-item">
-                                       <img src="./images/tabs/plus.svg" alt="" class="tabs__first-plus">
-                                       <p class="tabs__first-body">
-                                           <span class="tabs__first-term">
-                                               Regenerative components —
-                                           </span>
-                                           components that promote tissue recovery.
-                                       </p>
-                                   </li>
-       
-                                   <li class="tabs__first-item">
-                                       <img src="./images/tabs/plus.svg" alt="" class="tabs__first-plus">
-                                       <p class="tabs__first-body">
-                                           <span class="tabs__first-term">
-                                               Micronutrients  —
-                                           </span>
-                                            essential elements required for normal body function.
-                                       </p>
-                                   </li>
-       
-                                   <li class="tabs__first-item">
-                                       <img src="./images/tabs/plus.svg" alt="" class="tabs__first-plus">
-                                       <p class="tabs__first-body">
-                                           <span class="tabs__first-term">
-                                               Antioxidants —
-                                           </span>
-                                           nutritions that protect cells from damage.
-                                       </p>
-                                   </li>
-       
-                                   <li class="tabs__first-item">
-                                       <img src="./images/tabs/plus.svg" alt="" class="tabs__first-plus">
-                                       <p class="tabs__first-body">
-                                           <span class="tabs__first-term">
-                                               Vitamins & minerals  —
-                                           </span>
-                                            nutrients essential for the body.
-                                       </p>
-                                   </li>
-       
-                                   <li class="tabs__first-item">
-                                       <img src="./images/tabs/plus.svg" alt="" class="tabs__first-plus">
-                                       <p class="tabs__first-body">
-                                           <span class="tabs__first-term">
-                                               Lipase —
-                                           </span>
-                                           an enzyme that breaks down fats and improves their absorption.
-       
-                                       </p>
-                                   </li>
-       
-                                   <li class="tabs__first-item">
-                                       <img src="./images/tabs/plus.svg" alt="" class="tabs__first-plus">
-                                       <p class="tabs__first-body">
-                                           <span class="tabs__first-term">
-                                               Whole food prebiotics —
-                                           </span>
-                                            prebiotics that support gut health.
-                                       </p>
-                                   </li>
-       
-                                 
-                               </ul>
-                           </div>
                         </div>
 
-                        <div class="tabs__button-wrapper">
+                        <div class="tabs__content is-active is-hide-tablet-above" id="tabpanel-1"
+                        aria-labelledby="tab-1"
+                        tabindex="0" data-js-tabs-content
+                        >
+                             <div class="about-history__slider">
+                                 <div class="swiper about-us-slider">
+                                     <div class="swiper-wrapper about-us-slider__wrapper">
+                                     <div class="swiper-slide about-us-slider__slide">
+                                             <div class="about-us-slider__first">
+                                                 <div class="about-us-slider__first-main">
+                                                     <p class="about-us-slider__first-text">
+                                                         My name is Aliya Kadyrbekova, and I am 
+                                                         the founder of Milk Wealth. I 
+                                                         am building a career in medicine in the USA
+                                                     </p>
+                                                     <p class="about-us-slider__first-text">
+                                                         I come from Kazakhstan, and my family has 
+                                                         a long tradition of farming, raising cows, 
+                                                         donkeys, camels, and horses. From an early 
+                                                         age, I was surrounded by natural, eco-friendly 
+                                                         milk and colostrum — a product known for its 
+                                                         healing properties.
+                                                     </p>
+                                                 </div>
+                                             </div>
+                                     </div>
+                 
+                                     <div class="swiper-slide about-us-slider__slide">
+                                         <div class="about-us-slider__second">
+                                             <div class="about-us-slider__second-main">
+                                                 <p class="about-us-slider__second-text">
+                                                     Despite our strong traditions, I realized 
+                                                     that it was important not only to preserve 
+                                                     this knowledge but also to apply modern 
+                                                     technologies and scientific advancements 
+                                                     to ensure that our products are not only 
+                                                     beneficial but also safe and in line with 
+                                                     global standards. That’s how the idea for 
+                                                     Milk Wealth was born — a brand that blends 
+                                                     ancient Kazakh traditions with innovative 
+                                                     medical research.
+                                                 </p>
+                                                 <p class="about-us-slider__second-text">
+                                                     My brand is built on a deep love for my homeland 
+                                                     and on a scientific approach. As a future doctor, 
+                                                     I understand the importance of evidence, 
+                                                     research, and quality control. That’s why 
+                                                     every product we create undergoes thorough 
+                                                     checks and independent testing to ensure its 
+                                                     safety and effectiveness. I want every customer 
+                                                     to feel confident knowing that they are choosing 
+                                                     healthy and safe products.
+                                                 </p>
+                                             </div>
+                                         </div>
+                                     </div> 
+
+                                     </div>    
+                                     <div class="swiper-pagination"></div>    
+                                 </div>
+                             </div>
+
+                             <div class="reason__inner reason__inner--about-us container overflow-x overflow-y">
+                                 <header class="reason__header">
+                                     <h2 class="reason__title h1" id="reason-title">
+                                         Milk Wealth
+                                     </h2>
+                                     <p class="reason__description">
+                                         Values
+                                     </p>
+                                 </header>
+                                 <div class="reason__body">
+                                     <ul class="reason__list reason__list--about-us">
+                                         <li class="reason__item">
+                                             <div class="reason__card">
+                                                 <span class="reason__card-number">
+                                                     #1
+                                                 </span>
+                                                 <div class="reason__card-body">
+                                                     <h3 class="reason__card-title">
+                                                         Scientific Approach and Proven Effectiveness
+                                                     </h3>
+                                                     <div class="reason__card-description">
+                                                         <p>
+                                                             I firmly believe that only through scientific 
+                                                             research and testing can we be confident in 
+                                                             the quality of a product. Every Milk Wealth 
+                                                             product undergoes independent verification 
+                                                             to ensure its safety and effectiveness. 
+                                                             We make no exceptions.
+                                                         </p>
+                                                     </div>
+                                                 </div>
+                                                 <img 
+                                                     src="./images/reason/1.png" 
+                                                     alt="colostrum" 
+                                                     class="reason__item-img reason__item-img--green hidden-mobile"
+                                                     width="238"
+                                                     height="635"
+                                                     loading="lazy"
+                                                 >
+
+                                                 <img 
+                                                     src="./images/about-us/spoon.svg" 
+                                                     alt="spoon" 
+                                                     class="reason__item-img reason__item-img--green-about visible-mobile"
+                                                     width="582"
+                                                     height="308"
+                                                     loading="lazy"
+                                                 >
+                                             </div>
+                 
+                                         </li>
+                                         <li class="reason__item">
+                                             <div class="reason__card">
+                                                 <span class="reason__card-number">
+                                                     #2
+                                                 </span>
+                                                 <div class="reason__card-body">
+                                                     <h3 class="reason__card-title">
+                                                         Tradition and <br> Innovation
+                                                     </h3>
+                                                     <div class="reason__card-description">
+                                                         <p>
+                                                             My family has instilled in me a 
+                                                             deep respect for tradition, but 
+                                                             I also understand the importance 
+                                                             of integrating new technologies.
+                                                             We are proud to preserve Kazakh 
+                                                             traditions while applying cutting-edge 
+                                                             medical research to create our products.
+                                                         </p>
+                                                     </div>
+                                                 </div>
+                                                 <img 
+                                                     src="./images/reason/2.png " 
+                                                     alt="" 
+                                                     class="reason__item-img reason__item-img--orange-about"
+                                                     width="238"
+                                                     height="635"
+                                                     loading="lazy"
+                                                 >
+                                             </div>
+                                         </li>
+                                         <li class="reason__item">
+                                             <div class="reason__card">
+                                                 <span class="reason__card-number">
+                                                     #3
+                                                 </span>
+                                                 <div class="reason__card-body">
+                                                     <h3 class="reason__card-title">
+                                                         Animal and  <br>      Environmental Care
+                                                     </h3>
+                                                     <div class="reason__card-description">
+                                                         <p>
+                                                             Our animals graze in the pristine 
+                                                             steppes of Kazakhstan, where GMOs 
+                                                             and genetic modifications are not 
+                                                             used. We believe that animal health 
+                                                             directly impacts the quality of the 
+                                                             milk, and we strive to ensure that 
+                                                             our products are as natural as possible.
+                                                         </p>
+                                                     </div>
+                                                 </div>
+                                                 <img 
+                                                     src="./images/reason/3.png" 
+                                                     alt="" 
+                                                     class="reason__item-img reason__item-img--red hidden-mobile"
+                                                     width="238"
+                                                     height="635"
+                                                     loading="lazy"
+                                                 >
+                                                 <img 
+                                                     src="./images/about-us/spoon.svg" 
+                                                     alt="" 
+                                                     class="reason__item-img reason__item-img--red-about visible-mobile"
+                                                     width="238"
+                                                     height="635"
+                                                     loading="lazy"
+                                                 >
+                                             </div>
+                                         </li>
+                                         <li class="reason__item">
+                                             <div class="reason__card">
+                                                 <span class="reason__card-number">
+                                                     #4
+                                                 </span>
+                                                 <div class="reason__card-body">
+                                                     <h3 class="reason__card-title">
+                                                         Responsibility and <br> Sustainability
+                                                     </h3>
+                                                     <div class="reason__card-description">
+                                                         <p>
+                                                             We are committed to minimizing our environmental 
+                                                             impact and follow sustainability principles 
+                                                             throughout every stage of production. This includes 
+                                                             a responsible approach to supplier selection0, 
+                                                             adherence to high-quality standards, and maintaining 
+                                                             harmony between tradition and innovation.
+                                                         </p>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </li>
+                                         <li class="reason__item">
+                                             <div class="reason__card">
+                                                 <span class="reason__card-number">
+                                                     #5
+                                                 </span>
+                                                 <div class="reason__card-body">
+                                                     <h3 class="reason__card-title">
+                                                         Professionalism and Commitment to Health
+                                                     </h3>
+                                                     <div class="reason__card-description">
+                                                         <p>
+                                                             As a future doctor, I personally oversee 
+                                                             every stage of production to ensure that 
+                                                             all our products meet the highest standards. 
+                                                             We are not just creating products; we are 
+                                                             providing real health solutions, backed by
+                                                             time and science.
+                                                         </p>
+                                                     </div>
+                                                 </div>
+                                                 <img 
+                                                     src="./images/reason/4.png" 
+                                                     alt="" 
+                                                     class="reason__item-img reason__item-img--blue-about hidden-mobile"
+                                                     width="238"
+                                                     height="635"
+                                                     loading="lazy"
+                                                 >
+                                                 <img 
+                                                     src="./images/reason/1.png" 
+                                                     alt="" 
+                                                     class="reason__item-img reason__item-img--blue-about visible-mobile"
+                                                     width="238"
+                                                     height="635"
+                                                     loading="lazy"
+                                                 >
+                                             </div>
+                                         </li>
+                                     </ul>
+                                 </div>
+                             </div>
+
+                             <div class="about-history__cloud">
+                                 <div class="about-history__cloud-wrapper">
+                                     <div class="about-history__cloud-text">
+                                         <p>
+                                             My mission is to pass on knowledge about 
+                                             the importance of taking care of your 
+                                             health by paying attention to natural, 
+                                             environmentally friendly products.
+                                         </p>
+                                         <p>
+                                             We are always striving for excellence, 
+                                             combining a scientific approach with the 
+                                             traditions of my people to create truly 
+                                             unique and effective products.
+                                         </p>
+                                     </div>
+                                 </div>
+                             </div>
+                        </div>
+
+                        <div class="tabs__button-wrapper container">
                             <button
-                            class="tabs__button tabs__button--about-us" type="button"
+                            class="tabs__button" type="button"
                             id="tab-2"
                             role="tab"
                             aria-controls="tabpanel-1"
@@ -447,248 +605,103 @@
                                     Why colostrum?
                               </span> 
                            </button>
+                        </div>
 
-                           <div class="tabs__content is-hide-tablet-above" id="tabpanel-2"
-                           aria-labelledby="tab-2"
-                           tabindex="0" data-js-tabs-content
-                           >
-                               <div class="tabs__second-inner">
-                                   <div class="tabs__second-body">
-       
-                                       <div class="tabs__second-row">
-                                           <div class="tabs__second-elem">
-                                               <img 
-                                                   src="./images/tabs/1.svg" 
-                                                   alt=""
-                                                   class="tabs__second-image"
-                                                   width="239"
-                                                   height="81"
-                                                   loading="lazy"
-                                               >
-                                               <h3 class="tabs__second-title">
-                                                   Respiratory <br> infections
-                                               </h3>
-                                           </div>
-       
-                                           <div class="tabs__second-elem">
-                                               <img 
-                                                   src="./images/tabs/cow.svg" 
-                                                   alt=""
-                                                   class="tabs__second-image"
-                                                   width="239"
-                                                   height="470"
-                                                   loading="lazy"
-                                               >
-                                           </div>
-       
-                                           <div class="tabs__second-elem">
-                                               <img 
-                                                   src="./images/tabs/2.svg" 
-                                                   alt=""
-                                                   class="tabs__second-image"
-                                                   width="154"
-                                                   height="151"
-                                                   loading="lazy"
-                                               >
-                                               <h3 class="tabs__second-title">
-                                                   Respiratory tract <br> infections
-                                               </h3>
-                                           </div>
-                                       </div>
-       
-                                       <div class="tabs__second-row">
-                                           <div class="tabs__second-elem">
-                                               <img 
-                                                   src="./images/tabs/3.svg" 
-                                                   alt=""
-                                                   class="tabs__second-image"
-                                                   width="186"
-                                                   height="169"
-                                                   loading="lazy"
-                                               >
-                                               <h3 class="tabs__second-title">
-                                                   Immune support
-                                               </h3>
-                                           </div>
-       
-                                           <div class="tabs__second-elem">
-                                               <img 
-                                                   src="./images/tabs/4.svg" 
-                                                   alt=""
-                                                   class="tabs__second-image"
-                                                   width="194"
-                                                   height="167"
-                                                   loading="lazy"
-                                               >
-                                               <h3 class="tabs__second-title">
-                                                   Sport nutrition
-                                               </h3>
-                                           </div>
-                                       </div>
-       
-                                       <div class="tabs__second-row">
-                                           <div class="tabs__second-elem">
-                                               <img 
-                                                   src="./images/tabs/5.svg" 
-                                                   alt=""
-                                                   class="tabs__second-image"
-                                                   width="122"
-                                                   height="179"
-                                                   loading="lazy"
-                                               >
-                                               <h3 class="tabs__second-title">
-                                                   Diegal infections
-                                               </h3>
-                                           </div>
-       
-                                           <div class="tabs__second-elem">
-                                               <img 
-                                                   src="./images/tabs/6.svg" 
-                                                   alt=""
-                                                   class="tabs__second-image"
-                                                   width="72"
-                                                   height="181"
-                                                   loading="lazy"
-                                               >
-                                               <h3 class="tabs__second-title">
-                                                   Breast milk <br> fortification
-                                               </h3>
-                                           </div>
-                                       </div>
-       
-                                       <div class="tabs__second-row">
-                                           <div class="tabs__second-elem">
-                                               <img 
-                                                   src="./images/tabs/7.svg" 
-                                                   alt=""
-                                                   class="tabs__second-image"
-                                                   width="186"
-                                                   height="169"
-                                                   loading="lazy"
-                                               >
-                                               <h3 class="tabs__second-title">
-                                                   Functional foods
-                                               </h3>
-                                           </div>
-       
-                                           <div class="tabs__second-elem">
-                                               <img 
-                                                   src="./images/tabs/8.svg" 
-                                                   alt=""
-                                                   class="tabs__second-image"
-                                                   width="239"
-                                                   height="107"
-                                                   loading="lazy"
-                                               >
-                                               <h3 class="tabs__second-title">
-                                                   Wound healing
-                                               </h3>
-                                           </div>
-                                       </div>
-       
-                                       <div class="tabs__second-row">
-                                           <div class="tabs__second-elem">
-                                               <img 
-                                                   src="./images/tabs/9.svg" 
-                                                   alt=""
-                                                   class="tabs__second-image"
-                                                   width="177"
-                                                   height="177"
-                                                   loading="lazy"
-                                               >
-                                               <h3 class="tabs__second-title">
-                                                   Gastrointestinal <br> infections
-                                               </h3>
-                                           </div>
-       
-                                           <div class="tabs__second-elem">
-                                               <img 
-                                                   src="./images/tabs/10.svg" 
-                                                   alt=""
-                                                   class="tabs__second-image"
-                                                   width="215"
-                                                   height="177"
-                                                   loading="lazy"
-                                               >
-                                               <h3 class="tabs__second-title">
-                                                   Polyclonal antibodies
-                                               </h3>
-                                           </div>
-                                       </div>
-       
-                                       <img 
-                                           src="./images/tabs/drop.svg" 
-                                           alt="" 
-                                           class="tabs__second-body-img"
-                                           loading="lazy"
-                                           width="598"
-                                           height="1146"
-                                           >
-                                   </div>
-       
-                                   <div class="tabs__second-extra">
-                                       <ul class="tabs__second-list">
-                                           <li class="tabs__second-item">
-                                               <h3 class="tabs__second-item-title">
-                                                   Immunity system support
-                                               </h3>
-                                               <div class="tabs__second-text">
-                                                   <p>
-                                                       The richness of immunoglobulins (IgG, IgA, and IgM) and 
-                                                       lactoferrin helps boost the immune system and gut health, 
-                                                       providing protection from infections, including upper 
-                                                       respiratory illnesses. It also alleviates allergy 
-                                                       symptoms and helps maintain immune balance. Bovine 
-                                                       colostrum enhances natural immunity and restorative 
-                                                       sleep, acting as a powerful defense against external 
-                                                       pathogens and internal challenges to the immune system.
-                                                   </p>
-                                               </div>
-                                           </li>
-       
-                                           <li class="tabs__second-item">
-                                               <h3 class="tabs__second-item-title">
-                                                   Brain and mental health
-                                               </h3>
-                                               <div class="tabs__second-text">
-                                                   <p>
-                                                       Milk Wealth Colostrum contains proline-rich polypeptides 
-                                                       (PRPs) that improve cognitive performance, especially in 
-                                                       older people. These peptides work by modulatingbrain-derived 
-                                                       neurotrophic factor (BDNF), which is important for brain 
-                                                       health and cognitive function. This unique property of 
-                                                       colostrum makes it a valuable addition to any diet, 
-                                                       providing mental clarity, improving memory and overall 
-                                                       brain health benefits for people of all ages.
-                                                   </p>
-                                               </div>
-                                           </li>
-       
-                                           <li class="tabs__second-item">
-                                               <h3 class="tabs__second-item-title">
-                                                   Sport and beauty
-                                               </h3>
-                                               <div class="tabs__second-text">
-                                                   <p>
-                                                       Milk Wealth Colostrum promotes hair 
-                                                       growth and supports healthy skin and nails 
-                                                       due to its rich content of growth factors, 
-                                                       immunoglobulins, and essential nutrients. 
-                                                       This unique natural combination makes it an 
-                                                       ideal supplement for athletes, providing 
-                                                       significant benefits for muscle recovery and 
-                                                       performance. It boostsmuscle growth and 
-                                                       reduces inflammation.
-                                                   </p>
-                                               </div>
-                                           </li>
-                                       </ul>
-                                   </div>
-                               </div>
-                           </div>
+                        <div class="tabs__content is-hide-tablet-above" id="tabpanel-1"
+                        aria-labelledby="tab-1"
+                        tabindex="0" data-js-tabs-content
+                        >
+                            <div class="swiper about-us-slider">
+                                <div class="swiper-wrapper about-us-slider__wrapper">
+                                <div class="swiper-slide about-us-slider__slide">
+                                        <div class="about-us-slider__first about-us-slider__first--history ">
+                                            <div class="about-us-slider__first-main about-us-slider__first-main--history ">
+                                                <p class="about-us-slider__first-text about-us-slider__first-text--history ">
+                                                    Colostrum is the first and main “shield” of nature, 
+                                                    which ensures the baby’s safety and health from the 
+                                                    first minutes of life.
+                                                </p>
+                                                <p class="about-us-slider__first-text about-us-slider__first-text--history">
+                                                    It is produced by mammals in the first 24–72 
+                                                    hours after birth. This is a unique natural 
+                                                    complex that is saturated with immunoglobulins, 
+                                                    vitamins, enzymes and growth factors.
+                                                </p>
+                                                <p class="about-us-slider__first-text about-us-slider__first-text--history">
+                                                    This is a useful substance that can 
+                                                    provide the body with 
+                                                    everything necessary for survival and growth.
+                                                </p>
+                                            </div>
+                                        </div>
+                                </div>
+            
+                                <div class="swiper-slide about-us-slider__slide">
+                                    <div class="about-us-slider__second about-us-slider__second--history">
+                                        <div class="about-us-slider__second-main about-us-slider__second-main--history ">
+                                            <h3 class="about-us-slider__second-main-title">
+                                                For newborn babies, colostrum plays an irreplaceable role:
+                                            </h3>
+                                            <ul class="about-us-slider__second-main-list">
+                                                <li class="about-us-slider__second-main-item">
+                                                    <p class="about-us-slider__second-text about-us-slider__second-text--history">
+                                                        forms immunity. It contains antibodies that 
+                                                        protect against infections and form the basis 
+                                                        of the immune system
+                                                    </p>
+                                                </li>
+                                                <li class="about-us-slider__second-main-item">
+                                                    <p class="about-us-slider__second-text about-us-slider__second-text--history">
+                                                        provides growth and development. Growth factors 
+                                                        in colostrum stimulate the development of 
+                                                        tissues, muscles and organs.
+                                                    </p>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="swiper-slide about-us-slider__slide">
+                                    <div class="about-us-slider__second about-us-slider__second--history">
+                                        <div class="about-us-slider__second-main about-us-slider__second-main--history ">
+                                            <h3 class="about-us-slider__second-main-title">
+                                                For newborn babies, colostrum plays an irreplaceable role:
+                                            </h3>
+                                            <ul class="about-us-slider__second-main-list">
+                                                <li class="about-us-slider__second-main-item">
+                                                    <p class="about-us-slider__second-text about-us-slider__second-text--history">
+                                                        forms immunity. It contains antibodies that 
+                                                        protect against infections and form the basis 
+                                                        of the immune system
+                                                    </p>
+                                                </li>
+                                                <li class="about-us-slider__second-main-item">
+                                                    <p class="about-us-slider__second-text about-us-slider__second-text--history">
+                                                        provides growth and development. Growth factors 
+                                                        in colostrum stimulate the development of 
+                                                        tissues, muscles and organs.
+                                                    </p>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                </div>    
+                                <div class="swiper-pagination"></div>    
+                            </div>
+                        </div>
+
+                        <div class="tabs__content is-hide-tablet-above" id="tabpanel-2"
+                        aria-labelledby="tab-2"
+                        tabindex="0" data-js-tabs-content
+                        >
                         </div>
     
-                        <div class="tabs__button-wrapper">
+                        <div class="tabs__button-wrapper container">
                             <button
                             class="tabs__button tabs__button--about-us" type="button"
                             id="tab-3"
@@ -742,7 +755,7 @@
                            </div>
                         </div>
 
-                        <div class="tabs__button-wrapper">
+                        <div class="tabs__button-wrapper container">
                             <button
                             class="tabs__button tabs__button--about-us" type="button"
                             id="tab-4"
@@ -817,475 +830,336 @@
                     </div>
                 </header>
                 
-                <div class="tabs__body contacts-tabs">
+                <div class="tabs__body">
 
-                    <div class="tabs__content contacts-tabs__first is-active is-hide-tablet"  id="tabpanel-1"
+                    <div class="tabs__content is-active is-hide-tablet about-history"  id="tabpanel-1"
                     aria-labelledby="tab-1"
                     tabindex="0" data-js-tabs-content-above
                     >
-                        <div class="contacts-tabs__first-slider">
-                            <div class="swiper contacts-slider">
-                                <div class="swiper-wrapper contacts-slider__wrapper">
-            
-                                  <div class="swiper-slide contacts-slider__slide">
-                                        <div class="contacts-slider__first">
-                                            <div class="contacts-slider__first-main">
-                                                <p class="contacts-slider__first-text">
-                                                    My name is Aliya Kadyrbekova, and I am 
-                                                    the founder of Milk Wealth. I 
-                                                    am building a career in medicine in the USA
+                            <div class="about-history__slider">
+                                <div class="swiper about-us-slider">
+                                    <div class="swiper-wrapper about-us-slider__wrapper">
+                                      <div class="swiper-slide about-us-slider__slide">
+                                            <div class="about-us-slider__first">
+                                                <div class="about-us-slider__first-main">
+                                                    <p class="about-us-slider__first-text">
+                                                        My name is Aliya Kadyrbekova, and I am 
+                                                        the founder of Milk Wealth. I 
+                                                        am building a career in medicine in the USA
+                                                    </p>
+                                                    <p class="about-us-slider__first-text">
+                                                        I come from Kazakhstan, and my family has 
+                                                        a long tradition of farming, raising cows, 
+                                                        donkeys, camels, and horses. From an early 
+                                                        age, I was surrounded by natural, eco-friendly 
+                                                        milk and colostrum — a product known for its 
+                                                        healing properties.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                      </div>
+                
+                                      <div class="swiper-slide about-us-slider__slide">
+                                        <div class="about-us-slider__second">
+                                            <div class="about-us-slider__second-main">
+                                                <p class="about-us-slider__second-text">
+                                                    Despite our strong traditions, I realized 
+                                                    that it was important not only to preserve 
+                                                    this knowledge but also to apply modern 
+                                                    technologies and scientific advancements 
+                                                    to ensure that our products are not only 
+                                                    beneficial but also safe and in line with 
+                                                    global standards. That’s how the idea for 
+                                                    Milk Wealth was born — a brand that blends 
+                                                    ancient Kazakh traditions with innovative 
+                                                    medical research.
                                                 </p>
-                                                <p class="contacts-slider__first-text">
-                                                    I come from Kazakhstan, and my family has 
-                                                    a long tradition of farming, raising cows, 
-                                                    donkeys, camels, and horses. From an early 
-                                                    age, I was surrounded by natural, eco-friendly 
-                                                    milk and colostrum — a product known for its 
-                                                    healing properties.
+                                                <p class="about-us-slider__second-text">
+                                                    My brand is built on a deep love for my homeland 
+                                                    and on a scientific approach. As a future doctor, 
+                                                    I understand the importance of evidence, 
+                                                    research, and quality control. That’s why 
+                                                    every product we create undergoes thorough 
+                                                    checks and independent testing to ensure its 
+                                                    safety and effectiveness. I want every customer 
+                                                    to feel confident knowing that they are choosing 
+                                                    healthy and safe products.
                                                 </p>
                                             </div>
                                         </div>
-                                  </div>
-            
-                                  <div class="swiper-slide contacts-slider__slide">
-                                    <div class="contacts-slider__second">
-                                        <div class="contacts-slider__second-main">
-                                            <p class="contacts-slider__second-text">
-                                                Despite our strong traditions, I realized 
-                                                that it was important not only to preserve 
-                                                this knowledge but also to apply modern 
-                                                technologies and scientific advancements 
-                                                to ensure that our products are not only 
-                                                beneficial but also safe and in line with 
-                                                global standards. That’s how the idea for 
-                                                Milk Wealth was born — a brand that blends 
-                                                ancient Kazakh traditions with innovative 
-                                                medical research.
-                                            </p>
-                                            <p class="contacts-slider__second-text">
-                                                My brand is built on a deep love for my homeland 
-                                                and on a scientific approach. As a future doctor, 
-                                                I understand the importance of evidence, 
-                                                research, and quality control. That’s why 
-                                                every product we create undergoes thorough 
-                                                checks and independent testing to ensure its 
-                                                safety and effectiveness. I want every customer 
-                                                to feel confident knowing that they are choosing 
-                                                healthy and safe products.
-                                            </p>
-                                        </div>
-                                    </div>
-                                  </div>         
-                                  
-                                  <div class="swiper-slide contacts-slider__slide">
-                                    
-                                  </div>
-                                </div>        
-                            </div>
-                        </div>
-                        <div class="reason__inner container overflow-x overflow-y">
-                            <header class="reason__header">
-                                <p class="reason__description">
-                                    5 more reasons to choose
-                                </p>
-                                <h2 class="reason__title h1" id="reason-title">
-                                    Milk Wealth
-                                </h2>
-                            </header>
-                            <div class="reason__body">
-                                <ul class="reason__list">
-                                    <li class="reason__item">
-                                        <div class="reason__card">
-                                            <span class="reason__card-number">
-                                                #1
-                                            </span>
-                                            <div class="reason__card-body">
-                                                <h3 class="reason__card-title">
-                                                    Natural immuno- <br>globulin levels
-                                                </h3>
-                                                <div class="reason__card-description">
-                                                    <p>
-                                                        Milk Wealth contains 30% immunoglobulins, meeting the 
-                                                        standards for natural colostrum. 
-                                                        We do not use additives or stimulants to 
-                                                        artificially increase their level.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <img 
-                                                src="./images/reason/1.png" 
-                                                alt="" 
-                                                class="reason__item-img reason__item-img--green"
-                                                width="238"
-                                                height="635"
-                                                loading="lazy"
-                                            >
-                                        </div>
-            
-                                    </li>
-                                    <li class="reason__item">
-                                        <div class="reason__card">
-                                            <span class="reason__card-number">
-                                                #2
-                                            </span>
-                                            <div class="reason__card-body">
-                                                <h3 class="reason__card-title">
-                                                    Safaty and holistic <br> practices
-                                                </h3>
-                                                <div class="reason__card-description">
-                                                    <p>
-                                                        We do not use mRNA vaccines or antibiotics, 
-                                                        making our colostrum safe and suitable for 
-                                                        supporting health within holistic practices
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <img 
-                                                src="./images/reason/2.png " 
-                                                alt="" 
-                                                class="reason__item-img reason__item-img--orange"
-                                                width="238"
-                                                height="635"
-                                                loading="lazy"
-                                            >
-                                        </div>
-                                    </li>
-                                    <li class="reason__item">
-                                        <div class="reason__card">
-                                            <span class="reason__card-number">
-                                                #3
-                                            </span>
-                                            <div class="reason__card-body">
-                                                <h3 class="reason__card-title">
-                                                    Grass fed & <br> Pasture-Raised
-                                                </h3>
-                                                <div class="reason__card-description">
-                                                    <p>
-                                                        Our colostrum comes from grass-fed and 
-                                                        Pasture-Raised cows, camels, mares and 
-                                                        donkeys that consume large amounts of 
-                                                        milk calories. 
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <img 
-                                                src="./images/reason/3.png" 
-                                                alt="" 
-                                                class="reason__item-img reason__item-img--red"
-                                                width="238"
-                                                height="635"
-                                                loading="lazy"
-                                            >
-                                        </div>
-                                    </li>
-                                    <li class="reason__item">
-                                        <div class="reason__card">
-                                            <span class="reason__card-number">
-                                                #4
-                                            </span>
-                                            <div class="reason__card-body">
-                                                <h3 class="reason__card-title">
-                                                    Calf first & foal first
-                                                </h3>
-                                                <div class="reason__card-description">
-                                                    <p>
-                                                        We always leave enough milk for 
-                                                        calves, camels, foals and donkeys.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="reason__item">
-                                        <div class="reason__card">
-                                            <span class="reason__card-number">
-                                                #5
-                                            </span>
-                                            <div class="reason__card-body">
-                                                <h3 class="reason__card-title">
-                                                    The product undergoes independent third-party evaluation
-                                                </h3>
-                                                <div class="reason__card-description">
-                                                    <p>
-                                                        We carefully monitor that the quality of 
-                                                        our colostrum always remains high, 
-                                                        so we involve independent experts in the assessment.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <img 
-                                                src="./images/reason/4.png" 
-                                                alt="" 
-                                                class="reason__item-img reason__item-img--blue"
-                                                width="238"
-                                                height="635"
-                                                loading="lazy"
-                                            >
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="reason__cow-wrapper">
-                                    <div class="reason__cow-description">
-                                        <img
-                                            src="./images/reason/gmo.svg" 
-                                            alt="" 
-                                            class="reason__cow-cloud"
-                                            width="445"
-                                            height="231">
-                                    </div>
-                                    <img 
-                                        src="./images/reason/cow.svg" 
-                                        alt="cow" 
-                                        class="reason__cow-image"
-                                        width="538"
-                                        height="530"
-                                        >
+                                      </div> 
+
+                                    </div>    
+                                    <div class="swiper-pagination"></div>    
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="contacts-tabs__first-cloud">
+                            <div class="reason__inner reason__inner--about-us container overflow-x overflow-y">
+                                <header class="reason__header">
+                                    <h2 class="reason__title h1" id="reason-title">
+                                        Milk Wealth
+                                    </h2>
+                                    <p class="reason__description">
+                                        Values
+                                    </p>
+                                </header>
+                                <div class="reason__body">
+                                    <ul class="reason__list reason__list--about-us">
+                                        <li class="reason__item">
+                                            <div class="reason__card">
+                                                <span class="reason__card-number">
+                                                    #1
+                                                </span>
+                                                <div class="reason__card-body">
+                                                    <h3 class="reason__card-title">
+                                                        Scientific Approach and Proven Effectiveness
+                                                    </h3>
+                                                    <div class="reason__card-description">
+                                                        <p>
+                                                            I firmly believe that only through scientific 
+                                                            research and testing can we be confident in 
+                                                            the quality of a product. Every Milk Wealth 
+                                                            product undergoes independent verification 
+                                                            to ensure its safety and effectiveness. 
+                                                            We make no exceptions.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <img 
+                                                    src="./images/reason/1.png" 
+                                                    alt="" 
+                                                    class="reason__item-img reason__item-img--green"
+                                                    width="238"
+                                                    height="635"
+                                                    loading="lazy"
+                                                >
+                                            </div>
+                
+                                        </li>
+                                        <li class="reason__item">
+                                            <div class="reason__card">
+                                                <span class="reason__card-number">
+                                                    #2
+                                                </span>
+                                                <div class="reason__card-body">
+                                                    <h3 class="reason__card-title">
+                                                        Tradition and <br> Innovation
+                                                    </h3>
+                                                    <div class="reason__card-description">
+                                                        <p>
+                                                            My family has instilled in me a 
+                                                            deep respect for tradition, but 
+                                                            I also understand the importance 
+                                                            of integrating new technologies.
+                                                             We are proud to preserve Kazakh 
+                                                             traditions while applying cutting-edge 
+                                                             medical research to create our products.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <img 
+                                                    src="./images/reason/2.png " 
+                                                    alt="" 
+                                                    class="reason__item-img reason__item-img--orange"
+                                                    width="238"
+                                                    height="635"
+                                                    loading="lazy"
+                                                >
+                                            </div>
+                                        </li>
+                                        <li class="reason__item">
+                                            <div class="reason__card">
+                                                <span class="reason__card-number">
+                                                    #3
+                                                </span>
+                                                <div class="reason__card-body">
+                                                    <h3 class="reason__card-title">
+                                                        Animal and  <br>      Environmental Care
+                                                    </h3>
+                                                    <div class="reason__card-description">
+                                                        <p>
+                                                            Our animals graze in the pristine 
+                                                            steppes of Kazakhstan, where GMOs 
+                                                            and genetic modifications are not 
+                                                            used. We believe that animal health 
+                                                            directly impacts the quality of the 
+                                                            milk, and we strive to ensure that 
+                                                            our products are as natural as possible.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <img 
+                                                    src="./images/reason/3.png" 
+                                                    alt="" 
+                                                    class="reason__item-img reason__item-img--red"
+                                                    width="238"
+                                                    height="635"
+                                                    loading="lazy"
+                                                >
+                                            </div>
+                                        </li>
+                                        <li class="reason__item">
+                                            <div class="reason__card">
+                                                <span class="reason__card-number">
+                                                    #4
+                                                </span>
+                                                <div class="reason__card-body">
+                                                    <h3 class="reason__card-title">
+                                                        Responsibility and <br> Sustainability
+                                                    </h3>
+                                                    <div class="reason__card-description">
+                                                        <p>
+                                                            We are committed to minimizing our environmental 
+                                                            impact and follow sustainability principles 
+                                                            throughout every stage of production. This includes 
+                                                            a responsible approach to supplier selection0, 
+                                                            adherence to high-quality standards, and maintaining 
+                                                            harmony between tradition and innovation.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="reason__item">
+                                            <div class="reason__card">
+                                                <span class="reason__card-number">
+                                                    #5
+                                                </span>
+                                                <div class="reason__card-body">
+                                                    <h3 class="reason__card-title">
+                                                        Professionalism and Commitment to Health
+                                                    </h3>
+                                                    <div class="reason__card-description">
+                                                        <p>
+                                                            As a future doctor, I personally oversee 
+                                                            every stage of production to ensure that 
+                                                            all our products meet the highest standards. 
+                                                            We are not just creating products; we are 
+                                                            providing real health solutions, backed by
+                                                            time and science.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <img 
+                                                    src="./images/reason/4.png" 
+                                                    alt="" 
+                                                    class="reason__item-img reason__item-img--blue-about"
+                                                    width="238"
+                                                    height="635"
+                                                    loading="lazy"
+                                                >
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
 
-                        </div>
+                            <div class="about-history__cloud">
+                                <div class="about-history__cloud-wrapper">
+                                    <div class="about-history__cloud-text">
+                                        <p>
+                                            My mission is to pass on knowledge about 
+                                            the importance of taking care of your 
+                                            health by paying attention to natural, 
+                                            environmentally friendly products.
+                                        </p>
+                                        <p>
+                                            We are always striving for excellence, 
+                                            combining a scientific approach with the 
+                                            traditions of my people to create truly 
+                                            unique and effective products.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
 
                     <div class="tabs__content is-hide-tablet" id="tabpanel-2"
                     aria-labelledby="tab-2"
                     tabindex="0" data-js-tabs-content-above
                     >
-                        <div class="tabs__second-inner">
-                            <div class="tabs__second-body">
+                            <div class="swiper about-us-slider">
+                                <div class="swiper-wrapper about-us-slider__wrapper">
+                                  <div class="swiper-slide about-us-slider__slide">
+                                        <div class="about-us-slider__first about-us-slider__first--history ">
+                                            <div class="about-us-slider__first-main about-us-slider__first-main--history ">
+                                                <p class="about-us-slider__first-text about-us-slider__first-text--history ">
+                                                    Colostrum is the first and main “shield” of nature, 
+                                                    which ensures the baby’s safety and health from the 
+                                                    first minutes of life.
+                                                </p>
+                                                <p class="about-us-slider__first-text about-us-slider__first-text--history">
+                                                    It is produced by mammals in the first 24–72 
+                                                    hours after birth. This is a unique natural 
+                                                    complex that is saturated with immunoglobulins, 
+                                                    vitamins, enzymes and growth factors.
+                                                </p>
+                                                <p class="about-us-slider__first-text about-us-slider__first-text--history">
+                                                    This is a useful substance that can 
+                                                    provide the body with 
+                                                    everything necessary for survival and growth.
+                                                </p>
+                                            </div>
+                                        </div>
+                                  </div>
+            
+                                  <div class="swiper-slide about-us-slider__slide">
+                                    <div class="about-us-slider__second about-us-slider__second--history">
+                                        <div class="about-us-slider__second-main about-us-slider__second-main--history ">
+                                            <h3 class="about-us-slider__second-main-title">
+                                                For newborn babies, colostrum plays an irreplaceable role:
+                                            </h3>
+                                            <ul class="about-us-slider__second-main-list">
+                                                <li class="about-us-slider__second-main-item">
+                                                    <p class="about-us-slider__second-text about-us-slider__second-text--history">
+                                                        forms immunity. It contains antibodies that 
+                                                        protect against infections and form the basis 
+                                                        of the immune system
+                                                    </p>
+                                                </li>
+                                                <li class="about-us-slider__second-main-item">
+                                                    <p class="about-us-slider__second-text about-us-slider__second-text--history">
+                                                        provides growth and development. Growth factors 
+                                                        in colostrum stimulate the development of 
+                                                        tissues, muscles and organs.
+                                                    </p>
+                                                </li>
+                                            </ul>
 
-                                <div class="tabs__second-row">
-                                    <div class="tabs__second-elem">
-                                        <img 
-                                            src="./images/tabs/1.svg" 
-                                            alt=""
-                                            class="tabs__second-image"
-                                            width="239"
-                                            height="81"
-                                            loading="lazy"
-                                        >
-                                        <h3 class="tabs__second-title">
-                                            Respiratory <br> infections
-                                        </h3>
+                                        </div>
                                     </div>
+                                  </div> 
 
-                                    <div class="tabs__second-elem">
-                                        <img 
-                                            src="./images/tabs/cow.svg" 
-                                            alt=""
-                                            class="tabs__second-image"
-                                            width="239"
-                                            height="470"
-                                            loading="lazy"
-                                        >
+                                  <div class="swiper-slide about-us-slider__slide">
+                                    <div class="about-us-slider__second about-us-slider__second--history">
+                                        <div class="about-us-slider__second-main about-us-slider__second-main--history ">
+                                            <h3 class="about-us-slider__second-main-title">
+                                                For newborn babies, colostrum plays an irreplaceable role:
+                                            </h3>
+                                            <ul class="about-us-slider__second-main-list">
+                                                <li class="about-us-slider__second-main-item">
+                                                    <p class="about-us-slider__second-text about-us-slider__second-text--history">
+                                                        forms immunity. It contains antibodies that 
+                                                        protect against infections and form the basis 
+                                                        of the immune system
+                                                    </p>
+                                                </li>
+                                                <li class="about-us-slider__second-main-item">
+                                                    <p class="about-us-slider__second-text about-us-slider__second-text--history">
+                                                        provides growth and development. Growth factors 
+                                                        in colostrum stimulate the development of 
+                                                        tissues, muscles and organs.
+                                                    </p>
+                                                </li>
+                                            </ul>
+
+                                        </div>
                                     </div>
+                                  </div> 
 
-                                    <div class="tabs__second-elem">
-                                        <img 
-                                            src="./images/tabs/2.svg" 
-                                            alt=""
-                                            class="tabs__second-image"
-                                            width="154"
-                                            height="151"
-                                            loading="lazy"
-                                        >
-                                        <h3 class="tabs__second-title">
-                                            Respiratory tract <br> infections
-                                        </h3>
-                                    </div>
-                                </div>
-
-                                <div class="tabs__second-row">
-                                    <div class="tabs__second-elem">
-                                        <img 
-                                            src="./images/tabs/3.svg" 
-                                            alt=""
-                                            class="tabs__second-image"
-                                            width="186"
-                                            height="169"
-                                            loading="lazy"
-                                        >
-                                        <h3 class="tabs__second-title">
-                                            Immune support
-                                        </h3>
-                                    </div>
-
-                                    <div class="tabs__second-elem">
-                                        <img 
-                                            src="./images/tabs/4.svg" 
-                                            alt=""
-                                            class="tabs__second-image"
-                                            width="194"
-                                            height="167"
-                                            loading="lazy"
-                                        >
-                                        <h3 class="tabs__second-title">
-                                            Sport nutrition
-                                        </h3>
-                                    </div>
-                                </div>
-
-                                <div class="tabs__second-row">
-                                    <div class="tabs__second-elem">
-                                        <img 
-                                            src="./images/tabs/5.svg" 
-                                            alt=""
-                                            class="tabs__second-image"
-                                            width="122"
-                                            height="179"
-                                            loading="lazy"
-                                        >
-                                        <h3 class="tabs__second-title">
-                                            Diegal infections
-                                        </h3>
-                                    </div>
-
-                                    <div class="tabs__second-elem">
-                                        <img 
-                                            src="./images/tabs/6.svg" 
-                                            alt=""
-                                            class="tabs__second-image"
-                                            width="72"
-                                            height="181"
-                                            loading="lazy"
-                                        >
-                                        <h3 class="tabs__second-title">
-                                            Breast milk <br> fortification
-                                        </h3>
-                                    </div>
-                                </div>
-
-                                <div class="tabs__second-row">
-                                    <div class="tabs__second-elem">
-                                        <img 
-                                            src="./images/tabs/7.svg" 
-                                            alt=""
-                                            class="tabs__second-image"
-                                            width="186"
-                                            height="169"
-                                            loading="lazy"
-                                        >
-                                        <h3 class="tabs__second-title">
-                                            Functional foods
-                                        </h3>
-                                    </div>
-
-                                    <div class="tabs__second-elem">
-                                        <img 
-                                            src="./images/tabs/8.svg" 
-                                            alt=""
-                                            class="tabs__second-image"
-                                            width="239"
-                                            height="107"
-                                            loading="lazy"
-                                        >
-                                        <h3 class="tabs__second-title">
-                                            Wound healing
-                                        </h3>
-                                    </div>
-                                </div>
-
-                                <div class="tabs__second-row">
-                                    <div class="tabs__second-elem">
-                                        <img 
-                                            src="./images/tabs/9.svg" 
-                                            alt=""
-                                            class="tabs__second-image"
-                                            width="177"
-                                            height="177"
-                                            loading="lazy"
-                                        >
-                                        <h3 class="tabs__second-title">
-                                            Gastrointestinal <br> infections
-                                        </h3>
-                                    </div>
-
-                                    <div class="tabs__second-elem">
-                                        <img 
-                                            src="./images/tabs/10.svg" 
-                                            alt=""
-                                            class="tabs__second-image"
-                                            width="215"
-                                            height="177"
-                                            loading="lazy"
-                                        >
-                                        <h3 class="tabs__second-title">
-                                            Polyclonal antibodies
-                                        </h3>
-                                    </div>
-                                </div>
-
-                                <img 
-                                    src="./images/tabs/drop.svg" 
-                                    alt="" 
-                                    class="tabs__second-body-img"
-                                    loading="lazy"
-                                    width="598"
-                                    height="1146"
-                                    >
+                                </div>    
+                                <div class="swiper-pagination"></div>    
                             </div>
-
-                            <div class="tabs__second-extra">
-                                <ul class="tabs__second-list">
-                                    <li class="tabs__second-item">
-                                        <h3 class="tabs__second-item-title">
-                                            Immunity system support
-                                        </h3>
-                                        <div class="tabs__second-text">
-                                            <p>
-                                                The richness of immunoglobulins (IgG, IgA, and IgM) and 
-                                                lactoferrin helps boost the immune system and gut health, 
-                                                providing protection from infections, including upper 
-                                                respiratory illnesses. It also alleviates allergy 
-                                                symptoms and helps maintain immune balance. Bovine 
-                                                colostrum enhances natural immunity and restorative 
-                                                sleep, acting as a powerful defense against external 
-                                                pathogens and internal challenges to the immune system.
-                                            </p>
-                                        </div>
-                                    </li>
-
-                                    <li class="tabs__second-item">
-                                        <h3 class="tabs__second-item-title">
-                                            Brain and mental health
-                                        </h3>
-                                        <div class="tabs__second-text">
-                                            <p>
-                                                Milk Wealth Colostrum contains proline-rich polypeptides 
-                                                (PRPs) that improve cognitive performance, especially in 
-                                                older people. These peptides work by modulatingbrain-derived 
-                                                neurotrophic factor (BDNF), which is important for brain 
-                                                health and cognitive function. This unique property of 
-                                                colostrum makes it a valuable addition to any diet, 
-                                                providing mental clarity, improving memory and overall 
-                                                brain health benefits for people of all ages.
-                                            </p>
-                                        </div>
-                                    </li>
-
-                                    <li class="tabs__second-item">
-                                        <h3 class="tabs__second-item-title">
-                                            Sport and beauty
-                                        </h3>
-                                        <div class="tabs__second-text">
-                                            <p>
-                                                Milk Wealth Colostrum promotes hair 
-                                                growth and supports healthy skin and nails 
-                                                due to its rich content of growth factors, 
-                                                immunoglobulins, and essential nutrients. 
-                                                This unique natural combination makes it an 
-                                                ideal supplement for athletes, providing 
-                                                significant benefits for muscle recovery and 
-                                                performance. It boostsmuscle growth and 
-                                                reduces inflammation.
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="tabs__content is-hide-tablet" id="tabpanel-3"
@@ -1381,9 +1255,10 @@
                     </div>
 
                 </div>
-            </div>
-
+            </div> 
         </section>
+
+        
     </main>
 
     <footer class="footer">

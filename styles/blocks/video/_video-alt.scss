@@ -1,18 +1,26 @@
 @use '../../helpers' as *; 
 
 .video-alt {
+    height: fluid(1152, 1080);
+
+    @include mobile {
+        height: rem(1080);
+    }
+
+    @include mobile-s {
+        height: rem(600);
+    }
+
     &__inner {
         position: relative;
+        width: 100%;
+        height: 100%;
     }
 
    &__body {
         width: 100%;
-        max-height: fluid(1152, 1080);
+        height: 100%;
         object-fit: cover;
-
-        @include mobile {
-            height: rem(1080);
-        }
    } 
 
    &__panel {

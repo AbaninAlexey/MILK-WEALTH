@@ -114,15 +114,28 @@
             bottom: rem(60);
             column-gap: rem(10);
         }
+
+        &--bg-bullet {
+            .swiper-pagination-bullet {
+                background-color: #BDBCBC;
+
+                &-active {
+                    background-color: var(--font-color);
+                }
+            }
+            
+        }
         
     }
 
     .swiper-pagination-bullet {
         background-color: var(--color-stock);
         opacity: 1;
+        margin: 0 !important;
+        
+        
 
         @include square(rem(25));
-        margin: 0;
 
         @include mobile {
             @include square(rem(20));

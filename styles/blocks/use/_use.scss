@@ -22,6 +22,10 @@
         @include mobile {
             row-gap: rem(20);
         }
+
+        @include mobile-s {
+            padding-left: rem(40);
+        }
     }
 
     &__header {
@@ -67,7 +71,7 @@
         @include mobile-s {
             grid-template-columns: rem(300);
             align-items: center;
-            justify-content: center;
+            justify-content: start;
         }
     }
 

@@ -85,4 +85,13 @@ const thumbsSlider = new Swiper(".thumbs-slider", {
     },
   });
 
+  new Swiper('.about-us-slider', {
+    slidesPerView: 1,
+    direction: 'horizontal',
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
 

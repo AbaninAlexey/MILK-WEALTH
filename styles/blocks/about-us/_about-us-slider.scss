@@ -1,0 +1,259 @@
+@use '../../helpers' as *; 
+
+.about-us-slider {
+    height: fluid(1098, 686);
+    width: 100vw;
+
+    @include mobile {
+        padding-bottom: rem(30);
+    }
+
+    @include mobile-s {
+        height: rem(450);
+    }
+
+    &__slide {
+        height: 100%;
+    }
+
+    &__first {
+        width: 100%;
+        height: 100%;
+        background: 
+            url(../images/about-us-slider/1.jpg)
+            no-repeat 
+            center/cover
+        ;
+        display: flex;
+        align-items: start;
+        justify-content: end;
+        
+
+        @include mobile {
+            background: 
+            url(../images/about-us-slider/1-mobile.jpg)
+            no-repeat 
+            center/cover
+        ;
+        }
+
+        
+        &--history {
+            background: 
+                url(../images/about-us-slider/2.jpg)
+                no-repeat 
+                center/cover
+        ;
+
+            @include mobile {
+                background: 
+                url(../images/about-us-slider/2-mobile.jpg)
+                no-repeat 
+                center/cover
+                ;
+            }
+
+        }
+
+            &-main {
+                height: 100%;
+                width: fluid(799, 390);
+                background-color: var(--white);
+                padding: fluid(60, 36);
+                font-weight: 500;
+
+                @include mobile-s {
+                    max-width: rem(180);
+                    width: 100%;
+                    padding: rem(15);
+                }
+
+                &--history {
+                    background-color: var(--font-color);
+                    color: var(--white);
+                    height: fluid(960, 582);
+                }
+            }
+
+            &-text {
+                width: fluid(553, 264);
+                font-size: fluid(40, 23);
+
+                &--history {
+                    width: fluid(574,266);
+                }
+
+
+                @include mobile-s {
+                    max-width: max-content;
+                    width: 100%;
+                    font-size: rem(14);
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: rem(10);
+                }
+            }
+        }
+
+    &__second {
+        width: 100%;
+        height: 100%;
+        background: 
+            url(../images/about-us-slider/1.jpg)
+            no-repeat 
+            center/cover
+        ;
+        display: flex;
+        align-items: start;
+        justify-content: end;
+
+        &--history {
+            background: 
+                url(../images/about-us-slider/3.jpg)
+                no-repeat 
+                center/cover
+            ;
+
+            @include mobile {
+                background: 
+                url(../images/about-us-slider/3-mobile.jpg)
+                no-repeat 
+                center/cover
+            ;
+            }
+
+        }
+
+        &-main {
+            height: 100%;
+            width: fluid(1205, 640);
+            background-color: var(--white);
+            padding: fluid(60, 36);
+            font-weight: 500;
+
+            &-title {
+                font-size: fluid(40, 23);
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                list-style-position: inside;
+                padding-left: 20px;
+                
+            }
+
+            &-item {
+                list-style: disc;
+            }
+
+            @include tablet {
+                width: 100%;
+            }
+
+            @include mobile-s {
+                padding: rem(15);
+            }
+
+            &--history {
+                background-color: var(--font-color);
+                color: var(--white);
+                width: fluid(799, 390);
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                row-gap: rem(10);
+                height: fluid(960, 582);
+
+                @include tablet {
+                    width: fluid(799, 390);
+                }
+
+                @include mobile-s {
+                    height: rem(400);
+                    width: rem(250);
+                }
+                
+            }
+
+        }
+
+        &-text {
+            width: fluid(900, 457);
+            font-size: fluid(40, 23);
+            margin-bottom: rem(10);
+
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+            
+
+            &--history {
+                width: fluid(574,266);
+                display: inline;
+                
+            }
+
+            @include tablet {
+                max-width: max-content;
+                width: 100%;
+            }
+
+            @include mobile-s {
+                font-size: rem(14);
+            }
+
+        }
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: flex;
+        column-gap: rem(34);
+        justify-content: center;
+        bottom: fluid(120, 30) !important;
+
+        @include tablet {
+            bottom: rem(60);
+            column-gap: rem(10);
+        }
+
+        &--bg-bullet {
+            .swiper-pagination-bullet {
+                background-color: #BDBCBC;
+
+                &-active {
+                    background-color: var(--font-color);
+                }
+            }
+            
+        }
+        
+    }
+
+    .swiper-pagination-bullet {
+        background-color: var(--color-stock);
+        opacity: 1;
+        margin: 0 !important;
+
+        @include square(rem(25));
+
+        @include mobile {
+            @include square(rem(20));
+        }
+
+        @include mobile-s {
+            @include square(rem(15));
+        }
+
+        &-active {
+            background-color: var(--font-color);
+        }
+    }
+}
