@@ -46,7 +46,7 @@
     }
 
     &__button {
-        padding-block:fluid(17, 17);
+        padding-block: rem(17);
         padding-inline: rem(20);
         color: var(--white);
         background-color: var(--cows-green);

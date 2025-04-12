@@ -68,8 +68,11 @@
     &__title {
         position: relative;
         list-style: none;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: 100%;
+
     }
 }

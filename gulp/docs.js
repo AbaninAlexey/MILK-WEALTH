@@ -16,7 +16,7 @@ import imageminOptipng from 'imagemin-optipng';
 import imageminSvgo from 'imagemin-svgo';
 import changed  from 'gulp-changed';
 import prefixer from 'gulp-autoprefixer';
-import csso from 'gulp-csso';
+import cleanCSS from 'gulp-clean-css';
 import htmlClean from 'gulp-htmlclean';
 
 const { src, dest, series, parallel, watch } = gulp;
@@ -68,8 +68,17 @@ function stylesDocs() {
           cascade: false
         }))
         .pipe(sassCompiler().on('error', sassCompiler.logError)) 
-        .pipe(csso())
-        .pipe(sourcemaps.write())
+        .pipe(cleanCSS({
+          level: {
+            1: {
+              specialComments: 0 
+            },
+            2: {
+              all: false 
+            }
+          }
+        }))
+        .pipe(sourcemaps.write('.')) 
         .pipe(dest('./docs/styles'));
 };
 
@@ -86,7 +95,7 @@ function imagesDocs() {
   };
 
 function videosDocs() {
-  return src('./src/videos/*')
+  return src('./src/videos/*', { encoding: false })
   .pipe(changed ('./docs/videos/'))
   .pipe(dest('./docs/videos/'));
 };

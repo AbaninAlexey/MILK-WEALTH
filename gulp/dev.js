@@ -11,6 +11,11 @@ import webpackConfig from '../webpack.config.js';
 import * as sass from 'sass'
 import * as fs from 'fs';
 import changed, { compareContents } from 'gulp-changed';
+import newer from 'gulp-newer';
+import imagemin from 'gulp-imagemin';
+import imageminMozjpeg from 'imagemin-mozjpeg';
+import imageminOptipng from 'imagemin-optipng';
+import imageminSvgo from 'imagemin-svgo';
 
 const { src, dest, series, parallel, watch } = gulp;
 const sassCompiler = gulpSass(sass); 
@@ -63,8 +68,9 @@ function stylesDev() {
 
 
 function imagesDev() {
+    const destFolder = 'build/images/';
     return src('src/images/**/*.{jpg,jpeg,png,svg}', { encoding: false })
-      .pipe(changed('build/images/'))
+      .pipe(newer(destFolder))
       // .pipe(imagemin([
       //   imageminMozjpeg({ quality: 70 }),
       //   imageminOptipng({ optimizationLevel: 5 }),
