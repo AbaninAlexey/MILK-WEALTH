@@ -1,0 +1,24 @@
+@use '../../helpers' as *; 
+
+.cloud {
+    &__inner {
+        margin-top: rem(-500);
+
+        
+        @include laptop {
+            margin-top: rem(-350);
+        }
+
+        @include tablet {
+            margin-top: rem(-270);
+        }
+
+        @include mobile {
+            margin-top: rem(-300);
+        }
+
+        @include mobile-s {
+            margin-top: rem(-250);
+        }
+    }
+}

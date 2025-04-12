@@ -1,0 +1,9 @@
+@use '../helpers' as *; 
+
+.radios {
+    &__item {
+        display: flex;
+        column-gap: rem(10);
+        align-items: start;
+    }
+}

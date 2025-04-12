@@ -1,0 +1,51 @@
+@use 'helpers' as *;
+
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+    @include visually-hidden;
+}
+
+.hidden-mobile {
+ @include mobile {
+    display: none !important;
+ }
+}
+
+.visible-mobile {
+    @include mobile-above {
+        display: none !important;
+    }
+}
+
+
+.visible-tablet {
+    @include tablet-above {
+        display: none !important;
+    }
+}
+
+.container-padding-block {
+    padding-block: fluid(120, 80) fluid(120, 80);
+
+    @include mobile-s {
+        padding-block: rem(40) rem(40);
+    }
+}
+
+.overflow-x {
+    overflow-x: hidden;
+}
+
+.overflow-y {
+    overflow-y: hidden;
+}
+
+.overflow {
+    overflow: hidden;
+}
+

@@ -1,0 +1,278 @@
+@use '../../helpers' as *; 
+
+.rating {
+    padding-block: rem(80) rem(200);
+
+    @include laptop {
+        padding-block: rem(80) rem(80);
+    }
+
+    @include tablet {
+        padding-block: rem(80);
+    }
+
+    @include mobile-s {
+        padding-block: rem(40);
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(45);
+
+        @include mobile {
+            row-gap: rem(21);
+        }
+    }
+
+    &__main {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+
+        @include laptop {
+            display: contents;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: fluid(40,20);
+
+        @include laptop {
+            order: 3;
+            padding-top: rem(50);
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: rem(20);
+
+        @include tablet {
+            row-gap: rem(15);
+        }
+
+        @include mobile {
+            padding-top: rem(20);
+        }
+
+        @include mobile-s {
+            padding-top: rem(30);
+        }
+
+
+    }
+
+    &__title {
+        text-align: center;
+        font-family: var(--font-family);
+        font-size: fluid(60, 29);
+
+        @include tablet {
+            br {
+                display: none;
+            }
+        }
+
+        @include tablet {
+            font-size: rem(29);
+        }
+
+        @include mobile-s {
+            font-size: rem(20);
+        }
+    }
+
+
+    &__cow {
+
+        @include mobile {
+            order: 1;
+        }
+
+        @include tablet {
+            padding: 0;
+        }
+
+        &-img {
+            display: flex;
+            margin-top: rem(22);
+            width: fluid(539, 311);
+
+            @include laptop {
+                margin-left: fluid(100, -17);
+            }
+
+
+            @include tablet {
+                width: fluid(400, 311);
+            }
+
+            @include mobile {
+                max-width: rem(311);
+            }
+
+            @include mobile-s {
+                max-width: rem(200);
+            }
+
+        }
+
+        &-body {
+            display: flex;
+            align-items: start;
+            width: auto;
+
+        }
+
+        &-description {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: fluid(-86, -35);
+            color: var(--white);
+            width: fluid(279, 220);
+            height: fluid(298, 235);
+            background: url(../images/rating/blue-cloud.svg) no-repeat center/cover;
+
+            @include mobile-s {
+                width: rem(130);
+                height: rem(140);
+                font-weight: 400;
+            }
+
+            &-text {
+                position: absolute;
+                right: fluid(22,17);
+                top: fluid(72,59);
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: fluid(22, 17);
+                line-height: 1.5;
+                width: fluid(209, 164);
+                height: auto;
+
+                @include mobile-s {
+                    font-size: rem(13);
+                    width: rem(100);
+                    height: auto;
+                    top: rem(20);
+                    right: rem(10);
+                }
+            }
+        }
+    }
+
+    &__number {
+        position: relative;
+        background-color: var(--cows-green);
+        padding: fluid(37, 15) 0  fluid(47) fluid(289, 44);
+        font-family: var(--font-family);
+        font-size: rem(50);
+
+
+        @include mobile {
+            display: flex;
+            order: 2;
+        }
+
+        @include mobile-s {
+            padding: rem(15) rem(10) rem(20);
+        }
+
+        &-text {
+            @include fluid-text(50, 20);
+
+            @include laptop {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;  
+                font-size: rem(20);
+            }
+
+            @include mobile-s {
+                @include fluid-text(20, 15);
+            }
+        }
+
+    
+        &-one {
+            @include fluid-text(100, 50);
+            overflow: hidden;
+
+            @include mobile {
+                display: flex;
+                justify-content: center;
+                font-size: rem(50);
+            }
+
+            @include mobile-s {
+                @include fluid-text(30, 20);
+            }
+
+        }
+
+        &-img {
+            position: absolute;
+            bottom: rem(-83);
+            right: fluid(214, 46);
+            width: fluid(755, 433);
+        
+
+            @include mobile-s {
+                max-width: rem(250);
+                bottom: rem(-50);
+                right: rem(10);
+            }
+
+            
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: rem(30);
+        text-align: center;
+
+        @include laptop {
+            flex-direction: column;
+            row-gap: rem(20);
+        }
+        
+        @include mobile {
+            order: 4;
+            column-gap: rem(20);
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        font-size: fluid(25, 20);
+        font-family: var(--second-family);
+        font-weight: 800;
+        align-items: center;
+        justify-content: center;
+        width: fluid(408, 50);
+        height: rem(60);
+
+        @include laptop {
+           width: rem(461);
+        }
+
+
+        @include mobile-s {
+            font-size: rem(15);
+            max-width: rem(320);
+        }
+    }
+}

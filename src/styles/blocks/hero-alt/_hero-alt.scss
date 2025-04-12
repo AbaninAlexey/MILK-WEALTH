@@ -1,0 +1,98 @@
+@use '../../helpers' as *; 
+
+.hero-alt {
+    height: fluid(1085, 960);
+    background: url(../images/hero-alt/bg.jpg) no-repeat center / cover;
+
+    @include mobile-s {
+        height: rem(700);
+    }
+
+
+        @include mobile {
+            background-position: 30%;
+            background: url(../images/hero-alt/bg-mobile.jpg) no-repeat center / cover;
+        }
+
+
+        &--camel {
+            background: url(../images/hero-alt/bg-camel-page.jpg) no-repeat center / cover;
+    
+            @include mobile {
+                background: url(../images/hero-alt/bg-camel-page-mobile.jpg) no-repeat center / cover;
+            }
+        }
+
+    &__body {
+        display: flex;
+        justify-content: end;
+        color: var(--white);
+        flex-direction: column;
+
+
+
+        &-wrapper {
+            padding-top: rem(153);
+            margin-left: auto;
+
+            @include mobile {
+                margin-inline: auto;
+                padding-top: rem(0);
+            }
+        }
+
+        
+
+        @include tablet {
+            justify-content: center;
+            padding: rem(72) rem(40) 0;
+            margin-right: 0;
+        }
+
+        @include mobile-s {
+            justify-content: start;
+            padding: rem(40) rem(20) 0;
+            min-height: rem(600);
+        }
+        
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+
+        &-main {
+            font-family: var(--third-family);
+            font-weight: 700;
+        }
+    }
+
+    &__subtitle {
+        font-family: var(--font-family);
+        font-weight: 500;
+        text-align: center;
+
+        @include mobile {
+            font-size: rem(40);
+        }
+
+        @include mobile-s {
+            font-size: rem(30);
+        }
+
+        
+        &:last-child {
+            padding-top: rem(35);
+
+            @include tablet {
+                padding-top: rem(40);
+            }
+
+            @include mobile-s {
+                padding-top: rem(20);
+            }
+        }
+    }
+}

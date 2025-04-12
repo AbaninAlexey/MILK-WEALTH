@@ -1,0 +1,28 @@
+@use '../../helpers' as *; 
+
+.soc1als {
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: rem(46);
+
+        &--small {
+            column-gap: rem(34);
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: var(--white);
+
+        &--small {
+            @include square(rem(30));
+        }
+    }
+
+    @include tablet-above {
+        display: none;
+    }
+}

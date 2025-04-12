@@ -1,0 +1,57 @@
+@use 'helpers' as *;
+
+:root {
+    --bonkey-blue: #8ea4cf;
+	--camel-orange: #fc936f;
+	--bomnine-pink: #fa7598;
+	--cows-green: #81ac98;
+	--main-grey: #323e48;
+	--white: #fff;
+	--light-pink: #f2c4e1;
+	--light-blue: #bdc0d7;
+	--middle-blue: #a3b2ce;
+	--bonvine-pink: #fa7598;
+	--middle-pink: #ee89a8;
+	--middle-orange: #f0a683;
+	--light-orange: #fbbd8e;
+	--light-green: #c3dfd3;
+	--middle-green: #b4e1b7;
+	--middle-green-new: #a1c8b6;
+	--dark: #323e48;
+	--dark-alt: #111315;
+
+	--font-color: #323E48;
+	--font-color-dark: #1C3039;
+
+	--color-accent: #FFB303;
+	--color-gray: #F5F5F5;
+	--color-stock: #D9D9D9;
+
+	--color-play-button: #FEA680;
+
+    --gradient: linear-gradient(
+        45deg,
+        var(--color-dark-15) 64%,
+        var(--color-accent) 136%
+
+    );
+
+    --font-family: "Black Han Sans", sans-serif;
+    --second-family: "Asap", sans-serif;
+    --third-family: "Platypi", sans-serif;
+    --font-inter: "Inter", sans-serif;
+
+    --container-width: #{rem(1720)};
+    --container-padding-x: #{rem(100)};
+
+	@include mobile {
+		--container-padding-x: #{rem(90)};
+	}
+
+	@include mobile-s {
+		--container-padding-x: #{rem(20)};
+	}
+
+
+    --transition-duration: 0.2s;
+}

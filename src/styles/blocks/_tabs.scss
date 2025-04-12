@@ -1,0 +1,955 @@
+@use '../helpers' as *; 
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(60);
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+
+        &.container {
+            @include tablet {
+                padding-inline: 0;
+            }
+        }
+
+        &--padding {
+            padding-top: fluid(120, 80);
+
+            @include tablet {
+                padding-bottom: rem(80);
+            }
+        }
+    }
+
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: rem(30);
+        justify-content: center;
+        width: 100%;
+        
+
+        @include laptop {
+            column-gap: rem(14);
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: rem(30);
+        }
+    }
+
+    &__button {
+        padding-block:fluid(17, 17);
+        padding-inline: rem(20);
+        color: var(--white);
+        background-color: var(--cows-green);
+        border-radius: rem(10);
+        font-size: rem(20);
+        font-weight: 700;
+        border: 0;
+        width: 100%;
+        height: 100%;
+
+        &--camel {
+            background-color: var(--camel-orange); 
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: rem(40);
+            width: 100%;
+            max-width: 100vw;
+            
+            &.container {
+                @include tablet-above {
+                    padding-inline: 0;
+                }
+            }
+        }
+
+
+        &-text {
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+            &::after {
+                content: "";
+                display: block;
+                width: rem(12);
+                height: rem(20);
+                margin-left: rem(15);
+                background: url(../images/tabs/arrow-right-white.svg) no-repeat center/cover;
+
+                @include laptop {
+                    margin-left: rem(0);
+                }
+            }
+
+            
+        }
+
+        &.is-active {
+            background-color: var(--light-green);
+            color: var(--font-color);
+            transition-duration: 0.1s;
+
+            .tabs__button-text {
+                &::after {
+                    content: "";
+                    display: block;
+                    width: rem(20);
+                    height: rem(12);
+                    margin-left: rem(15);
+                    background: url(../images/tabs/arrow-right-active.svg) no-repeat center/cover;
+                }
+            }
+
+        }
+
+        
+
+        
+        &--camel {
+            &.is-active {
+                background-color: var(--light-orange);  
+            }
+        }
+
+        &--about-us {
+            &.is-active {
+                background-color: var(--font-color);  
+                color: var(--white);
+            }
+
+            .tabs__button-text {
+                &::after {
+                    content: "";
+                    display: block;
+                    width: rem(20);
+                    height: rem(12);
+                    margin-left: rem(15);
+                    background: url(../images/tabs/arrow-down-white.svg) no-repeat center/cover !important;
+                }
+            }
+        }
+        
+
+        @include hover {
+            color: var(--color-accent);
+        }
+
+    }
+
+    &__content {
+        width: 100%;
+        &.is-hide-tablet-above {
+            @include tablet-above {
+                display: none;
+            }
+        }
+
+        &.is-hide-tablet {
+            @include tablet-above {
+                display: block;
+            }
+        }
+
+        &:not(.is-active) {
+            display: none;
+        }
+
+        &:focus-visible {
+            outline-offset: -1rem;
+        }
+    }
+
+    &__body {
+        width: 100%;
+
+
+            @include tablet {
+                @include visually-hidden;
+
+        }
+    }
+
+
+    &__first-list {
+        display: grid;
+        flex-direction: column;
+        row-gap: rem(20);
+        column-gap: rem(30);
+        grid-template-columns: repeat(3, 1fr);
+
+        &--about {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+        }
+
+        @include laptop {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__first-term {
+        color: var(--cows-green);
+    }
+
+    &__first-item {
+        display: flex;
+        column-gap: rem(15);
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: rem(25);
+        
+    }
+
+    &__first-plus {
+        width: rem(18);
+        height: rem(18);
+        padding-top: rem(5);
+    }
+
+    &__third-bold {
+        font-family: var(--font-family);
+    }
+
+    &__third-inner {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        column-gap: rem(30);
+
+        @include tablet {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            row-gap: rem(20);
+        }
+    }
+
+    &__third-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        row-gap: fluid(40, 20);
+        font-size: fluid(40, 25);
+    }
+
+    &__fourth-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+        justify-content: space-between;
+        gap: rem(30);
+
+        @include laptop {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__fourth-item {
+        display: flex;
+        column-gap: rem(20);
+        row-gap: rem(20);
+        justify-content: space-between;
+        align-items: start;
+        font-size: fluid(40,30);
+        font-weight: 500;
+
+        @include laptop {
+            justify-content: start;
+            align-items: center;
+        }
+
+
+
+        &:first-child {
+            display: grid;
+            align-items: start;
+            justify-content: start;
+
+
+
+                grid-template-areas: 'image text'
+                                '.  small-text';
+
+                .tabs__fourth-image {
+                    grid-area: image;
+                }
+
+                .tabs__fourth-text {
+                    grid-area: text;
+                }
+
+                .tabs__fourth-small-text {
+                    grid-area: small-text;
+                    font-size: rem(30);
+                }
+            
+
+            
+        }
+    }
+
+    &__fourth-image {
+        max-height: fluid(85, 59);
+
+        &:first-child {
+            max-width: fluid(53, 37);
+        }
+
+        &:nth-child(2) {
+            max-width: fluid(28, 20);
+        }
+    }
+
+    &__second-inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(135);
+
+        @include mobile-s {
+            row-gap: rem(60);
+        }
+    }
+
+    &__second-body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &-img {
+            position: absolute;
+            top: fluid(509, 409);
+            left: fluid(560, -33);
+            order: -1;
+            height: fluid(1146,1008);
+            max-width: fluid(598, 527);
+
+            @include mobile-s {
+                max-width: rem(330);
+                height: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+            }
+        }
+    }
+
+    &__second-list {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        column-gap: rem(25);
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: rem(40);
+        }
+    }
+
+    &__second-item {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(20);
+    }
+
+
+    &__second-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        order: 1;
+
+        &:first-child {
+            margin-bottom: fluid(65, 61);
+            position: relative;
+            justify-content: center;
+
+            @include mobile-s {
+                margin-bottom: rem(30);
+            }
+
+
+            .tabs__second-elem {
+
+
+                &:first-child {
+                    position: absolute;
+                    top: rem(235);
+                    left: fluid(370, -27);
+
+                    @include mobile-s {
+                        top: rem(190);
+                    }
+
+
+
+                    .tabs__second-image {
+                        position: relative;
+                        width: fluid(239, 156);
+                        height: fluid(81, 53);
+
+                        @include mobile-s {
+                            max-width: rem(80);
+                            height: auto;
+                        }
+
+                    }
+
+                    .tabs__second-title {
+                        width: fluid(272, 150);
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #000000;
+                            width: fluid(344, 149);
+                            height: rem(1);
+                            rotate: 53deg;
+                            left: fluid(150, 110);
+                            top: fluid(177, 120);
+
+                            @include mobile-s {
+                                width: rem(80);
+                                top: rem(70);
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    .tabs__second-image {
+                            width: fluid(239, 190);
+                            height: fluid(470, 376);
+
+                            @include mobile-s {
+                                max-width: rem(130);
+                                height: auto;
+                                margin-bottom: rem(40);
+                            }
+                    }
+                }
+
+                &:nth-child(3) {
+                    position: absolute;
+                    top: fluid(174, 179);
+                    right: fluid(344, -29);
+
+                    .tabs__second-image {
+                        width: fluid(154, 100);
+                        height: fluid(151, 98);
+
+                        @include mobile-s {
+                            max-width: rem(45);
+                            height: auto;
+                        }
+                    }
+
+                    .tabs__second-title {
+                        width: fluid(272, 183);
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #000000;
+                            width: fluid(344, 118);
+                            height: rem(1);
+                            rotate: 130deg;
+                            right: fluid(170, 130);
+                            top: fluid(160, 130);
+
+                            @include mobile-s {
+                                width: rem(80);
+                                top: rem(70);
+                                right: rem(100);
+                                
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &:nth-child(2) {
+            margin-bottom: fluid(188, 36);
+            justify-content: space-between;
+            position: relative;
+            height: fluid(220, 160);
+
+            @include mobile-s {
+                margin-bottom: rem(20);
+                height: rem(80);
+            }
+
+            .tabs__second-elem {
+                
+                &:first-child {
+                    position: absolute;
+                    top: rem(6);
+                    left: fluid(284, -35);
+
+                    .tabs__second-title {
+                        width: fluid(272, 180);
+                        position: relative;
+
+                        @include mobile-s {
+                            max-width: rem(100);
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #000000;
+                            width: fluid(249, 116);
+                            height: rem(1);
+                            rotate: 20deg;
+                            left: fluid(180, 70);
+                            top: fluid(70, 120);
+
+                            @include tablet {
+                                rotate: 60deg;
+                            }
+
+                            @include mobile-s {
+                                width: rem(60);
+                                top: rem(30);
+                                rotate: 20deg;
+                                left: rem(80);
+
+                            }
+                        }
+                    }
+
+                    .tabs__second-image {
+                        width: fluid(186, 91);
+                        height: fluid(169, 82);
+
+                        @include mobile-s {
+                            max-width: rem(50);
+                            height: auto;
+                        }
+                }
+                }
+
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 0;
+                    right: fluid(253, -23);
+
+                    .tabs__second-title {
+                        width: fluid(272, 170);
+
+                        @include mobile-s {
+                            max-width: rem(80);
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #000000;
+                            width: fluid(250, 118);
+                            height: rem(1);
+                            rotate: 150deg;
+                            right: fluid(170, 70);
+                            top: fluid(300, 200);
+
+                            @include mobile-s {
+                                width: rem(60);
+                                top: rem(70);
+                            }
+                        }
+                    }
+
+                    .tabs__second-image {
+                            width: fluid(194, 103);
+                            height: fluid(167, 88);
+
+                            @include mobile-s {
+                                max-width: rem(60);
+                                height: auto;
+                            }
+                    }
+                }
+
+            }
+        }
+
+        &:nth-child(3) {
+            margin-bottom: rem(120);
+            justify-content: space-between;
+            position: relative;
+            height: fluid(256, 166);
+
+            @include laptop {
+                margin-bottom: rem(579);
+
+            }
+
+            @include mobile-s {
+                margin-bottom: rem(380);
+                height: rem(80);
+            }
+
+            .tabs__second-elem {
+                
+                &:first-child {
+                    position: absolute;
+                    top: rem(0);
+                    left: fluid(185, -58);
+
+                    @include mobile-s {
+                        left: rem(-40);
+                    }
+
+                    .tabs__second-title {
+                        width: fluid(272, 168);
+
+                        @include mobile-s {
+                            width: rem(120);
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #000000;
+                            width: fluid(249, 80);
+                            height: rem(1);
+                            rotate: -10deg;
+                            left: fluid(180, 70);
+                            top: fluid(230, 120);
+
+                            @include laptop {
+                                rotate: 20deg;
+                                left: fluid(180, 70);
+                                top: fluid(250, 120);
+                            }
+
+                            @include tablet {
+                                rotate: 250deg;
+                                left: rem(30);
+                                top: rem(240);
+                            }
+
+                            @include mobile-s {
+                                width: rem(60);
+                                top: rem(140);
+                                left: rem(60);
+                                rotate: 230deg;
+
+                            }
+                        }
+                    }
+
+                    .tabs__second-image {
+                        width: fluid(122, 64);
+                        height: fluid(176, 94);
+
+                        @include mobile-s {
+                            max-width: rem(40);
+                            height: auto;
+                        }
+                }
+                }
+
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 0;
+                    right: fluid(209, -58);
+
+                    .tabs__second-title {
+                        width: fluid(272, 168);
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #000000;
+                            width: fluid(250, 118);
+                            height: rem(1);
+                            rotate: 170deg;
+                            right: fluid(170, 30);
+                            top: fluid(300, 200);
+
+                            @include tablet {
+                                rotate: 110deg;
+                                width: fluid(150, 118);
+                                top: fluid(300, 250);
+                            }
+
+                            @include mobile-s {
+                                top: rem(130);
+                                width: rem(60);
+                                rotate: 140deg;
+                                right: rem(100);
+                            }
+                        }
+                    }
+
+                    .tabs__second-image {
+                            width: fluid(71, 38);
+                            height: fluid(180, 95);
+
+                            @include mobile-s {
+                                max-width: rem(20);
+                                height: auto;
+                            }
+                    }
+                }
+
+            }
+        }
+
+        &:nth-child(4) {
+            margin-bottom: fluid(90, -5);
+            justify-content: space-between;
+            position: relative;
+            height: fluid(256, 166);
+
+            @include mobile-s {
+                max-height: rem(120);
+            }
+
+            .tabs__second-elem {
+                
+                &:first-child {
+                    position: absolute;
+                    top: rem(0);
+                    left: fluid(260, -48);
+
+                    @include mobile-s {
+                        left: rem(-20);
+                    }
+
+                    .tabs__second-title {
+                        width: fluid(272, 150);
+
+                        @include mobile-s {
+                            width: rem(120);
+                        }
+                        
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #000000;
+                            width: fluid(250, 118);
+                            height: rem(1);
+                            rotate: -10deg;
+                            left: fluid(170, 30);
+                            top: fluid(200, 120);
+
+                            @include laptop {
+                                rotate: 110deg;
+                                width: fluid(150, 118);
+                                top: rem(-70);
+                            }
+                        }
+
+                        
+                    }
+
+                    .tabs__second-image {
+                        width: fluid(186, 93);
+                        height: fluid(169, 84);
+
+                        @include mobile-s {
+                            max-width: rem(50);
+                            height: auto;
+                        }
+                }
+                }
+
+                &:nth-child(2) {
+                    position: absolute;
+                    top: fluid(60, 21);
+                    right: fluid(209, -58);
+
+                    .tabs__second-title {
+                        width: fluid(272, 150);
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #000000;
+                            width: fluid(160, 118);
+                            height: rem(1);
+                            rotate: 10deg;
+                            right: fluid(260, 30);
+                            top: fluid(70, 60);
+
+                            @include laptop {
+                                rotate: 70deg;
+                                width: fluid(150, 118);
+                                top: rem(-70);
+                            }
+                        }
+                    }
+
+                    .tabs__second-image {
+                            width: fluid(239, 107);
+                            height: fluid(111, 50);
+
+                            @include mobile-s {
+                                max-width: rem(60);
+                                height: auto;
+                            }
+                    }
+                }
+
+            }
+        }
+
+        &:nth-child(5) {
+            margin-bottom: fluid(90, -5);
+            justify-content: space-between;
+            position: relative;
+            height: fluid(222, 176);
+
+            @include mobile-s {
+                height: rem(100);
+            }
+
+            .tabs__second-elem {
+                
+                &:first-child {
+                    position: absolute;
+                    top: rem(0);
+                    left: fluid(327, 0);
+
+                    @include mobile-s {
+                        left: rem(-20);
+                    }
+
+                    .tabs__second-title {
+                        width: fluid(324, 220);
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #000000;
+                            width: fluid(250, 118);
+                            height: rem(1);
+                            rotate: 130deg;
+                            left: fluid(220, 170);
+                            top: rem(20);
+
+                            @include laptop {
+                                rotate: 100deg;
+                                width: rem(200);
+                                top: rem(-70);
+                                left: rem(70);
+                            }
+
+                            @include mobile-s {
+                                width: rem(130);
+                                left: rem(80);
+                                top: rem(-90);
+                            }
+                        }
+                    }
+
+                    .tabs__second-image {
+                        width: fluid(177, 96);
+                        height: fluid(177, 96);
+
+                        @include mobile-s {
+                            max-width: rem(50);
+                            height: auto;
+                        }
+                }
+                }
+
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 0;
+                    right: fluid(295, 0);
+                    
+                    @include mobile-s {
+                        right: rem(-20);
+                    }
+
+                    .tabs__second-title {
+                        width: fluid(324, 222);
+
+                        @include mobile-s {
+                            width: rem(120);
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #000000;
+                            width: fluid(200, 118);
+                            height: rem(1);
+                            rotate: 30deg;
+                            right: fluid(240, 170);
+                            top: rem(20);
+
+                            @include laptop {
+                                rotate: 70deg;
+                                width: rem(200);
+                                right: rem(80);
+                                top: rem(-70);
+                            }
+
+                            @include mobile-s {
+                                width: rem(150);
+                                right: rem(60);
+                            }
+                        }
+                    }
+
+                    .tabs__second-image {
+                            width: fluid(215, 127);
+                            height: fluid(177, 105);
+
+                            @include mobile-s {
+                                max-width: rem(70);
+                                height: auto;
+                            }
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__second-elem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: rem(15);
+    }
+
+    &__second-title {
+        text-align: center;
+        font-size: fluid(25, 23);
+        font-family: var(--font-family);
+
+        @include mobile-s {
+            font-size: rem(14);
+            font-weight: 400;
+        }
+    }
+
+
+}

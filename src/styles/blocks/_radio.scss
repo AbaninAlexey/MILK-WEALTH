@@ -1,0 +1,29 @@
+@use '../helpers' as *; 
+
+.radio {
+    display: flex;
+
+
+    &__label {
+        font-size: rem(20);
+        color: var(--white);
+        display: table;
+    }
+
+    &__input {
+        appearance: none;
+        margin: 0;
+        min-width: rem(23);
+        height: rem(23);
+        background-color: var(--white);
+        border-radius: rem(5);
+        cursor: pointer;
+
+        &:checked {
+            background-color: var(--white);
+            background-image: url(../images/contacts/checked.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}

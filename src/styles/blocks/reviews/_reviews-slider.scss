@@ -1,0 +1,8 @@
+@use '../../helpers' as *; 
+
+.reviews-slider {
+    &__slide,.swiper-slide {
+        width: auto !important;
+    }
+
+}

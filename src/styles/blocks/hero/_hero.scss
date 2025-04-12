@@ -1,0 +1,84 @@
+@use '../../helpers' as *; 
+
+.hero {
+    background: linear-gradient(170deg, rgba(255, 255, 255, 0.868) 0%, rgba(0,0,0,0) 90%), 
+        url(../images/hero/bg.jpg)
+        no-repeat center / cover
+    ;
+
+        @include mobile {
+            background: 
+                url(../images/hero/bg-mobile.png)
+                no-repeat center / cover
+            ;
+        }
+
+    &__body {
+        display: flex;
+        padding-top: rem(374);
+        padding-left: rem(245);
+        justify-content: start;
+        align-items: start;
+        height: rem(1080);
+
+        @include tablet {
+            justify-content: center;
+            padding-top: rem(223);
+            padding-inline: rem(40);
+            margin-right: 0;
+        }
+        
+
+        @include mobile {
+            padding-top: rem(223);
+        }
+
+        @include mobile-s {
+            height: rem(720);
+            padding-top: rem(130);
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: fluid(123, 85);
+
+        @include mobile-s {
+            font-size: rem(60);
+        }
+
+        &-main {
+            font-family: var(--third-family);
+            font-weight: 700;
+        }
+    }
+
+    &__subtitle {
+        font-family: var(--font-family);
+        font-size: fluid(50, 35);
+
+        &:first-child {
+            height: rem(40);
+
+            @include mobile-s {
+                height: auto;
+                font-size: rem(25);
+            }
+        }
+        
+        &:last-child {
+            padding-top: rem(30);
+
+            @include tablet {
+                padding-top: rem(40);
+            }
+
+            @include mobile-s {
+                padding-top: rem(20);
+                font-size: rem(25);
+            }
+        }
+    }
+}
