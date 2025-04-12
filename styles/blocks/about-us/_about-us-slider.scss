@@ -124,6 +124,13 @@
             }
 
         }
+        &--manufactury {
+            height: fluid(1094, 640);
+
+            @include mobile-s {
+                height: rem(450);
+            }
+        }
 
         &-main {
             height: 100%;
@@ -132,8 +139,18 @@
             padding: fluid(60, 36);
             font-weight: 500;
 
+            &-wrapper {
+                width: fluid(571, 271);
+
+                @include mobile {
+                    width: fit-content;
+                }
+            }
+
             &-title {
                 font-size: fluid(40, 23);
+                font-weight: 900;
+                margin-bottom: rem(10);
             }
 
             &-list {
@@ -142,8 +159,21 @@
                 justify-content: start;
                 align-items: start;
                 list-style-position: inside;
-                padding-left: 20px;
+                padding-left: rem(50);
+                font-weight: 500;
+
+                @include mobile-s {
+                    padding-left: rem(25);
+                }
                 
+            }
+
+            &-text {
+                font-size: fluid(40,23);
+
+                @include mobile-s {
+                    font-size: rem(14);
+                }
             }
 
             &-item {
@@ -178,6 +208,17 @@
                     width: rem(250);
                 }
                 
+            }
+
+            &--manufactury {
+                @include tablet {
+                    width: fluid(799, 390);
+                }
+
+                @include mobile-s {
+                    height: rem(400);
+                    width: rem(250);
+                }
             }
 
         }

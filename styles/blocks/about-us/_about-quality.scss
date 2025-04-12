@@ -1,0 +1,29 @@
+@use '../../helpers' as *; 
+
+.about-quality {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: fluid(82, 54);
+    padding-block: fluid(123, 60) fluid(150, 60);
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: fluid(20,10);
+    }
+
+    &__title {
+      font-family: var(--third-family);
+      text-align: center;
+
+      &-extra {
+        font-size: fluid(40, 35);
+        color: var(--cows-green);
+        font-family: var(--font-family);
+      }
+    }
+}

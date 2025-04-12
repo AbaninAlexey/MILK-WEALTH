@@ -194,6 +194,11 @@
         column-gap: rem(30);
         grid-template-columns: repeat(3, 1fr);
 
+        &--about {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+        }
+
         @include laptop {
             grid-template-columns: repeat(1, 1fr);
         }
