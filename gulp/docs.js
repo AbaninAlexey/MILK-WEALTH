@@ -52,7 +52,7 @@ function htmlDocs() {
           prefix: '@@',
           basepath: '@file'
         }))
-        .pipe(htmlClean())
+        // .pipe(htmlClean())
         .pipe(dest('./docs/'));
 };
 
@@ -68,7 +68,7 @@ function stylesDocs() {
           cascade: false
         }))
         .pipe(sassCompiler().on('error', sassCompiler.logError)) 
-        .pipe(csso())
+        // .pipe(csso())
         .pipe(sourcemaps.write())
         .pipe(dest('./docs/styles'));
 };
@@ -77,16 +77,16 @@ function stylesDocs() {
 function imagesDocs() {
     return src('./src/images/**/*.{jpg,jpeg,png,svg}', { encoding: false })
       .pipe(changed ('./docs/images/'))
-      .pipe(imagemin([
-        imageminMozjpeg({ quality: 70 }),
-        imageminOptipng({ optimizationLevel: 5 }),
-        imageminSvgo()
-      ], { verbose: true }))
+      // .pipe(imagemin([
+      //   imageminMozjpeg({ quality: 70 }),
+      //   imageminOptipng({ optimizationLevel: 5 }),
+      //   imageminSvgo()
+      // ], { verbose: true }))
       .pipe(dest('./docs/images/'));
   };
 
 function videosDocs() {
-  return src('./src/videos/*')
+  return src('./src/videos/*', { encoding: false })
   .pipe(changed ('./docs/videos/'))
   .pipe(dest('./docs/videos/'));
 };
