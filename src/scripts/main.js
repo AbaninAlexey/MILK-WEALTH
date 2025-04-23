@@ -1,4 +1,5 @@
-
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 import Header from "./Header.js";
 import TabsCollection from "./Tabs.js";
 import VideoPlayerCollection from "./VideoPlayer.js";

@@ -26,18 +26,18 @@
 
     &__inner {
         display: flex;
-        width: 100vw;
-        max-width: 400%;
-        margin: 0 auto;
+        white-space: nowrap;
         overflow: hidden;
+        width: 100%;
+        position: relative;
     }
     
 
     &__item {
-        flex-shrink: 0;
         animation: running-animation 70s linear infinite;
-        white-space: nowrap;
         font-size: rem(90);
+        will-change: transform;
+        flex-shrink: 0;
 
         @include mobile {
             font-size: rem(70);
@@ -48,14 +48,17 @@
         }
 
         &--orange {
-            padding-left: rem(530);
+            &:first-child {
+                margin-left: rem(530);
+
+                @include mobile {
+                    margin-left: rem(230);
+                }
+            }
             font-weight: 700;
             color: var(--camel-orange);
             font-family: var(--third-family);
 
-            @include mobile {
-                padding-left: rem(230);
-            }
 
         }
 
@@ -76,10 +79,9 @@
  
 @keyframes running-animation {
     0% {
-        transform: translateZ(0);
-    }
- 
-    100% {
-        transform: translate3d(-100%, 0, 0);
-    }
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
 }

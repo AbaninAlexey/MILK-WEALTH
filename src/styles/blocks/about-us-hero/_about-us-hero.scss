@@ -17,11 +17,10 @@
             background: url(../images/about-us-hero/bg-mobile.jpg) no-repeat center/cover;
         }
 
-
         &-wrapper {
             display: flex;
             justify-content: end;
-            margin-left: auto;
+            margin-right: auto;
             padding-top: fluid(225, 72);
 
             @include mobile {
@@ -104,7 +103,7 @@
         justify-content: center;
         width: auto;
         z-index: 3;
-        margin-top: rem(-780);
+        margin-top: rem(-710);
 
         @media (width < 1830px) {
             margin-top: rem(-660);
@@ -157,15 +156,9 @@
             z-index: 21;
             top: fluid(289,130);
             font-weight: 400;
-
-            @include mobile-s {
-                top: rem(100);
-            }
-
-            @media (width < 500px) {
-                top: 50%;
-                translate: 0 -50%;
-            }
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
         }
 
         &-title {

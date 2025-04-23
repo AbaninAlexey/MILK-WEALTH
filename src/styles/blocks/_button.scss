@@ -15,6 +15,10 @@
     &--burger-menu {
             padding-block: rem(12) rem(12);
             width: fluid(262, 200);
+            font-size: rem(20);
+            font-weight: 400;
+            max-height: rem(44);
+            
 
             @include laptop {
                 max-width: rem(170);
@@ -24,6 +28,11 @@
             @include tablet {
                 padding-block: rem(15) rem(15);
                 width: rem(300);
+            }
+
+            @include mobile {
+                max-width: rem(300);
+                font-size: rem(20);
             }
        
     }

@@ -18,11 +18,7 @@
     &__inner {
         display: flex;
         flex-direction: column;
-        row-gap: rem(45);
-
-        @include mobile {
-            row-gap: rem(21);
-        }
+        row-gap: fluid(45, 10);
     }
 
     &__main {
@@ -43,7 +39,7 @@
 
         @include laptop {
             order: 3;
-            padding-top: rem(50);
+            padding-top: rem(80);
         }
     }
 
@@ -102,7 +98,7 @@
 
         &-img {
             display: flex;
-            margin-top: rem(22);
+            margin-top: rem(17);
             width: fluid(539, 311);
 
             @include laptop {
@@ -116,6 +112,7 @@
 
             @include mobile {
                 max-width: rem(311);
+                margin-top: rem(70);
             }
 
             @include mobile-s {
@@ -173,7 +170,7 @@
     &__number {
         position: relative;
         background-color: var(--cows-green);
-        padding: fluid(37, 15) 0  fluid(47) fluid(289, 44);
+        padding: fluid(37, 10) 0  fluid(36, 20) fluid(289, 44);
         font-family: var(--font-family);
         font-size: rem(50);
 
@@ -181,6 +178,7 @@
         @include mobile {
             display: flex;
             order: 2;
+            height: rem(103);
         }
 
         @include mobile-s {
@@ -222,8 +220,12 @@
         &-img {
             position: absolute;
             bottom: rem(-83);
-            right: fluid(214, 46);
+            right: fluid(214, 70);
             width: fluid(755, 433);
+
+            @include mobile {
+                bottom: rem(-60);
+            }
         
 
             @include mobile-s {
@@ -264,6 +266,11 @@
         justify-content: center;
         width: fluid(408, 50);
         height: rem(60);
+
+        &--small-height {
+            height: rem(44);
+            font-size: rem(20);
+        }
 
         @include laptop {
            width: rem(461);

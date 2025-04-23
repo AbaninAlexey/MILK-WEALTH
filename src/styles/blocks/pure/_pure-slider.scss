@@ -24,6 +24,10 @@
   z-index: 6;
 
   @include mobile {
+    top: 110%;
+  }
+
+  @include mobile-s {
     top: 117%;
   }
 
@@ -33,6 +37,10 @@
   left: 0;
   background: url(../images/pure/left.svg) no-repeat center/cover;
   left:  rem(-45);
+
+  @include mobile {
+    left: rem(20);
+  }
 
   @include mobile-s {
     left: rem(-25);
@@ -44,7 +52,12 @@
   right: rem(-45);
   background: url(../images/pure/right.svg) no-repeat center/cover;
 
+  @include mobile {
+    right: rem(20);
+  }
+
   @include mobile-s {
     right: rem(-25);
   }
+
 }

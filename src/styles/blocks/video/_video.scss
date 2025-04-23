@@ -110,7 +110,7 @@
    }
 
    &__play-button {
-    position: absolute;
+    position: absolute !important;
     color: var(--color-play-button);
     border-radius: 50%;
     border: 0;

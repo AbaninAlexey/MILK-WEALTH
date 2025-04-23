@@ -57,9 +57,7 @@ function htmlDev() {
 function stylesDev() { 
   return src('src/styles/main.scss')
         .pipe(changed('build/styles/'))
-        .pipe(plumber(
-          plumberConfig('scss')
-        ))
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sassCompiler().on('error', sassCompiler.logError)) 
         .pipe(sourcemaps.write())

@@ -1,6 +1,7 @@
 @use '../../helpers' as *; 
 
 .reason {
+    position: relative;
     background-color: var(--color-gray);
 
     &__inner {
@@ -30,11 +31,44 @@
         }
     }
 
+    &__details {
+        position: absolute;
+        bottom: rem(46);
+        right: rem(100);
+        width: rem(262);
+        height: rem(44);
+
+        @include mobile {
+            bottom: rem(0);
+            width: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        @include mobile-s {
+            height: auto;
+        }
+
+        &-title {
+            @include mobile {
+                width: 100%;
+                border-radius: 0;
+            }
+
+            @include mobile-s {
+                max-width: 100%;
+                border-radius: 0;
+                max-height: rem(30);
+            }
+        }
+    }
+
     &__body {
         display: grid;
         align-items: center;
         justify-content: center;
         row-gap: rem(102);
+        position: relative;
 
         @include tablet {
             row-gap: rem(60);

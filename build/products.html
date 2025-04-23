@@ -5,8 +5,6 @@
     <meta name="viewport"  content="width=device-width, user-scalable = no, initial-scale=1.0, maximum-scale=1.0">
     <title>Milk Wealth - Products</title>
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/main.bundle.js" type="module"></script>
 </head>
 <body>
@@ -79,9 +77,32 @@
                             </li>
                         </ul>
                     </nav>
-                    <a href="#" class="header__link button button--burger-menu">
-                        Buy on amazon
-                    </a>
+                    <details class="details-list">
+                        <summary class="details-list__title header__link button button--burger-menu" >
+                            <span class="details-list__arrow details-list__arrow--menu ">
+                                Buy online
+                            </span>
+                        </summary>
+                        <ul class="details-list__list details-list__list--menu">
+                            <li class="details-list__item">
+                                <a href="#" class="details-list__link details-list__link--menu" target="_blank">
+                                    Shopify
+                                </a>
+                            </li>
+
+                            <li class="details-list__item">
+                                <a href="#" class="details-list__link details-list__link--menu" target="_blank">
+                                    AMAZON
+                                </a>
+                            </li>
+
+                            <li class="details-list__item">
+                                <a href="#" class="details-list__link details-list__link--menu" target="_blank">
+                                    Walmart
+                                </a>
+                            </li>
+                        </ul>
+            </details>
                     <div class="header__soc1als soc1als">
                         <ul class="soc1als__list">
                             <li class="soc1als__item">
@@ -204,7 +225,7 @@
 
                 <img 
                     class="stories-popup__image" 
-                    src="" 
+                    src="/images/stories/1.jpg" 
                     alt="Story"
                     width="640"
                     height="1000"
@@ -388,16 +409,7 @@
                     <div class="pure__slider-child-wrapper">
                         <div class="swiper thumbs-slider pure-slider-mini">
                             <div class="swiper-wrapper pure-slider-mini__wrapper">
-                                
-                              <div class="swiper-slide pure-slider-mini__slide">
-                                <div class="pure-slider-mini__content">
-                                    <img 
-                                        class="pure-slider-mini__image"
-                                        src="./images/pure/1.png" 
-                                        alt=""
-                                    >
-                                </div>
-                              </div>
+                            
         
                               <div class="swiper-slide pure-slider-mini__slide">
                                 <div class="pure-slider-mini__content">
@@ -430,12 +442,49 @@
                                     >
                                 </div>
                               </div>
+
+                              <div class="swiper-slide pure-slider-mini__slide">
+                                <div class="pure-slider-mini__content">
+                                    <img 
+                                        class="pure-slider-mini__image"
+                                        src="./images/pure/1.png" 
+                                        alt=""
+                                    >
+                                </div>
+                              </div>
         
                               
                             </div>        
     
                         </div>
                     </div>
+
+                    <details class="details-list pure__details">
+                        <summary class="details-list__title button--camel-orange button--pudding rating__button button ">
+                            <span class="details-list__arrow">
+                                BUY ONLINE 
+                            </span>
+                        </summary>
+                        <ul class="details-list__list details-list__list--shadow">
+                            <li class="details-list__item">
+                                <a href="#" class="details-list__link" target="_blank">
+                                    Shopify
+                                </a>
+                            </li>
+
+                            <li class="details-list__item">
+                                <a href="#" class="details-list__link" target="_blank">
+                                    AMAZON
+                                </a>
+                            </li>
+
+                            <li class="details-list__item">
+                                <a href="#" class="details-list__link" target="_blank">
+                                    Walmart
+                                </a>
+                            </li>
+                        </ul>
+                    </details>
                     
                 </div>
 
@@ -1635,8 +1684,35 @@
                             height="530"
                             >
                     </div>
+
                 </div>
             </div>
+            <details class="details-list reason__details">
+                <summary class="details-list__title reason__details-title button--camel-orange rating__button  rating__button--small-height button details-list__title--small-height">
+                    <span class="details-list__arrow">
+                        BUY ONLINE 
+                    </span>
+                </summary>
+                <ul class="details-list__list details-list__list--shadow  details-list__list--reason">
+                    <li class="details-list__item">
+                        <a href="#" class="details-list__link" target="_blank">
+                            Shopify
+                        </a>
+                    </li>
+
+                    <li class="details-list__item">
+                        <a href="#" class="details-list__link" target="_blank">
+                            AMAZON
+                        </a>
+                    </li>
+
+                    <li class="details-list__item">
+                        <a href="#" class="details-list__link" target="_blank">
+                            Walmart
+                        </a>
+                    </li>
+                </ul>
+            </details>
         </section>
 
         <section class="section family" aria-labelledby="family-title">

@@ -4,6 +4,7 @@
 @use 'globals';
 @use 'variables';
 
+@use 'blocks/rating/details-list';
 @use 'blocks/header/header';
 @use 'blocks/header/stories';
 @use 'blocks/header/logo';
@@ -16,7 +17,6 @@
 @use 'blocks/cloud/cloud';
 @use 'blocks/cloud/cloud-slider';
 @use 'blocks/rating/rating';
-@use 'blocks/rating/details-list';
 @use 'blocks/rating/rating-stars';
 @use 'blocks/family/family';
 @use 'blocks/stroke/stroke';

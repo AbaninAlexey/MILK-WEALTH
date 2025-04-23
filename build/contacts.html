@@ -5,8 +5,6 @@
     <meta name="viewport"  content="width=device-width, user-scalable = no, initial-scale=1.0, maximum-scale=1.0">
     <title>Milk Wealth - Contacts</title>
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/main.bundle.js" type="module"></script>
 </head>
 <body>
@@ -79,9 +77,32 @@
                             </li>
                         </ul>
                     </nav>
-                    <a href="#" class="header__link button button--burger-menu">
-                        Buy on amazon
-                    </a>
+                    <details class="details-list">
+                        <summary class="details-list__title header__link button button--burger-menu">
+                            <span class="details-list__arrow details-list__arrow--menu ">
+                                Buy online
+                            </span>
+                        </summary>
+                        <ul class="details-list__list details-list__list--menu">
+                            <li class="details-list__item">
+                                <a href="#" class="details-list__link details-list__link--menu" target="_blank">
+                                    Shopify
+                                </a>
+                            </li>
+
+                            <li class="details-list__item">
+                                <a href="#" class="details-list__link details-list__link--menu" target="_blank">
+                                    AMAZON
+                                </a>
+                            </li>
+
+                            <li class="details-list__item">
+                                <a href="#" class="details-list__link details-list__link--menu" target="_blank">
+                                    Walmart
+                                </a>
+                            </li>
+                        </ul>
+            </details>
                     <div class="header__soc1als soc1als">
                         <ul class="soc1als__list">
                             <li class="soc1als__item">
@@ -204,7 +225,7 @@
 
                 <img 
                     class="stories-popup__image" 
-                    src="" 
+                    src="/images/stories/1.jpg" 
                     alt="Story"
                     width="640"
                     height="1000"

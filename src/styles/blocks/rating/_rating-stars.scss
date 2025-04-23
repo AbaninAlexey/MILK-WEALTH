@@ -9,9 +9,13 @@
 
     &__stars {
         display: flex;
-        align-items: center;
+        align-items: end;
         justify-content: center;
         column-gap: rem(4); 
+
+        @include mobile-s {
+            align-items: center;
+        }
 
         &-text {
             &--small-mobile {
@@ -21,13 +25,22 @@
 
     }
 
+    &__rating {
+        font-size: fluid(23, 18);
+
+        @include mobile-s {
+            font-size: rem(15);
+            margin-left: rem(6);
+        }
+    }
+
     &__star {
         @include mobile {
             @include square(rem(25))
         }
         
         @include mobile-s {
-            @include square(rem(15))
+            @include square(rem(20))
         }
     }
 

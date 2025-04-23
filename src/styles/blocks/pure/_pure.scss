@@ -19,6 +19,13 @@
 
     }
 
+    &__details {
+        @include laptop {
+            order: 5;
+            margin-top: rem(60);
+        }
+    }
+
     &__slider-main-wrapper {
         width: fluid(845, 564);
         height: fluid(903, 613);
@@ -61,6 +68,8 @@
         width: 100%;
         flex-direction: column;
         row-gap: rem(80);
+        justify-content: center;
+        align-items: center;
 
         @media(width <= 1700px) {
             display: contents;

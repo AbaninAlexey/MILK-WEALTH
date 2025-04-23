@@ -108,10 +108,10 @@
         display: flex;
         column-gap: rem(34);
         justify-content: center;
-        bottom: rem(120);
+        bottom: rem(120) !important;
 
         @include tablet {
-            bottom: rem(60);
+            bottom: rem(60) !important;
             column-gap: rem(10);
         }
 
