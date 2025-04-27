@@ -64,6 +64,16 @@
         padding-block: fluid(67, 60) rem(87);
         padding-inline: fluid(176, 139) fluid(160, 139);
 
+        &--popup {
+            padding-block: rem(40);
+            padding-inline: rem(40);
+            width: 50vw;
+
+            @include tablet {
+                width: 90vw;
+            }
+        }
+
 
         &-title {
             font-family: var(--font-family);

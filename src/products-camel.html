@@ -301,8 +301,8 @@
             </div>
         </section>
 
-        <section class="section pure container">
-            <div class="pure__inner">
+        <section class="section pure container" data-js-popup-root>
+            <div class="pure__inner container-mobile">
                 <div class="pure__slider-main-wrapper pure__slider-main-wrapper--camel">
                     <div class="swiper pure-slider">
                         <div class="swiper-wrapper pure-slider__wrapper">
@@ -457,32 +457,61 @@
                         </div>
                     </div>
                     
-                    <!-- <details class="details-list pure__details">
-                        <summary class="details-list__title button--camel-orange button--pudding rating__button button ">
-                            <span class="details-list__arrow">
-                                BUY ONLINE 
-                            </span>
-                        </summary>
-                        <ul class="details-list__list details-list__list--shadow">
-                            <li class="details-list__item">
-                                <a href="#" class="details-list__link" target="_blank">
-                                    Shopify
-                                </a>
-                            </li>
-
-                            <li class="details-list__item">
-                                <a href="#" class="details-list__link" target="_blank">
-                                    AMAZON
-                                </a>
-                            </li>
-
-                            <li class="details-list__item">
-                                <a href="#" class="details-list__link" target="_blank">
-                                    Walmart
-                                </a>
-                            </li>
-                        </ul>
-                    </details> -->
+                    <button 
+                    class="button 
+                    pure__button-popup  
+                    button--camel-orange 
+                    " 
+                    type="button"
+                    data-js-popup-open-button
+                >
+                    <span class="details-list__arrow pure__button-arrow">
+                        BUY ONLINE 
+                    </span>
+                </button>
+                <div class="pure__popup" data-js-popup-window>
+                    <div class="pure__popup-wrapper">
+                        <form action="" class="contacts__form contacts__form--popup">
+                            <h2 class="contacts__form-title h3">
+                                Notify about admission
+                            </h2>
+        
+                            <div class="contacts__main">
+                                <div class="contacts__field field">
+                                    <label for="name-product" class="field__label visually-hidden">your name</label>
+                                    <input  class="field__input" id="name-product" name="name-product" placeholder="your name">
+                                </div>
+        
+                                <div class="contacts__field field">
+                                    <label for="email-product" class="field__label visually-hidden">your email</label>
+                                    <input  class="field__input" id="email-product" name="email-product" placeholder="your email" type="email" required>
+                                </div>
+    
+                            </div>
+        
+                            <fieldset class="contacts__request-types radios">
+                                <legend class="radios__title visually-hidden">Request Type</legend>
+        
+                                <label  class="radios__item radio">
+                                    <input type="checkbox" class="radio__input" name="request-type" value="Say Hi" checked>
+                                     <span class="radio__label">
+                                        By clicking on the button you agree to 
+                                        the personal data processing policy
+                                    </ы>
+                                </label>
+                                
+                            </fieldset>
+        
+                            <button class="contacts__button button" type="submit">
+                                Notify products arrival
+                            </button>
+                        </form>
+                        <button class="reason__popup-button" data-js-popup-close-button>
+                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.9459 0.00439453L7.91992 5.03039L2.89392 0.00439453L0.919922 1.97839L5.94592 7.00439L0.919922 12.0304L2.89392 14.0044L7.91992 8.97839L12.9459 14.0044L14.9199 12.0304L9.89392 7.00439L14.9199 1.97839L12.9459 0.00439453Z" fill="#2E3A59"/>
+                                </svg>                            
+                        </button>
+                    </div>
                 </div>
 
 

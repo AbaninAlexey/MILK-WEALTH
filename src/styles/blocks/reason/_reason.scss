@@ -63,7 +63,7 @@
 
         &-wrapper {
             width: rem(300);
-            height: rem(227);
+            height: rem(174);
             position: relative;
         }
 
@@ -184,7 +184,7 @@
         }
 
         @include mobile-s {
-            height: rem(400);
+            height: rem(464);
             margin-right: rem(0);
         }
     }
@@ -222,7 +222,7 @@
         @include mobile-s {
             width: rem(250);
             height: auto;
-            right: rem(-40);
+            right: rem(20);
         }
     }
 
@@ -264,10 +264,12 @@
         top: rem(94);
 
         @include mobile-s {
-            width: 19rem;
-            height: 7rem;
-            left: rem(5);
-            top: rem(44);
+            width: rem(250);
+            height: auto;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+
         }
 
         &--camel {
