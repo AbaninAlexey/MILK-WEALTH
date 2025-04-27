@@ -99,8 +99,7 @@
             
 
             @include mobile-s {
-                max-width: rem(360);
-                width: 100%;
+                width: rem(360);
                 height: auto;
             }
 
@@ -295,9 +294,10 @@
             }
 
             @include mobile-s {
-                max-width: rem(250);
+                width: rem(260);
+                height: auto;
                 left: rem(0);
-                bottom: rem(260);
+                bottom: rem(170);
             }
         }
     }
