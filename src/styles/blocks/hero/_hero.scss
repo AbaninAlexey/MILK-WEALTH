@@ -69,11 +69,7 @@
         }
         
         &:last-child {
-            padding-top: rem(30);
-
-            @include tablet {
-                padding-top: rem(40);
-            }
+            padding-top: rem(40);
 
             @include mobile-s {
                 padding-top: rem(20);

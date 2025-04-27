@@ -3,57 +3,189 @@
 
 .cloud-slider {
 
-    &__bg {
-
+    &__slide {
         &:nth-child(1) {
-            background: 
+            .cloud-slider__bg {
+                background: 
                 transparent url(../images/cloud/1.jpg) 
+                no-repeat center / cover
+                ;
+
+                @include mobile {
+                    background: 
+                    transparent url(../images/cloud/1-mobile.jpg) 
+                    no-repeat center / cover
+                    ;
+                }
+
+                &--two {
+
+                    background: 
+                        transparent url(../images/cloud/21.jpg) 
+                        no-repeat center/cover
+                    ;
+
+                    @include mobile {
+                        background: 
+                        transparent url(../images/cloud/21-mobile.jpg) 
+                        no-repeat right/cover
+                    ;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            .cloud-slider__bg {
+                background: 
+                transparent url(../images/cloud/2.jpg) 
+                    no-repeat center / cover
+                ;
+
+                @include mobile {
+                    background: 
+                    transparent url(../images/cloud/2-mobile.jpg) 
+                    no-repeat center / cover
+                ;
+                }
+
+                &--two {
+                    background: 
+                        transparent url(../images/cloud/22.jpg) 
+                        no-repeat center / cover
+                    ;
+    
+                    @include mobile {
+                        background: 
+                        transparent url(../images/cloud/22-mobile.jpg) 
+                        no-repeat right/cover
+                    ;
+                    }
+                }
+            }
+
+        }
+
+        &:nth-child(3) {
+            .cloud-slider__bg {
+                .cloud-slider__content {
+                    padding-top: fluid(653, 288);
+                }
+    
+                background: 
+                    transparent url(../images/cloud/3.jpg) 
+                    no-repeat center / cover
+                ;
+    
+                @include mobile {
+                    background: 
+                    transparent url(../images/cloud/3-mobile.jpg) 
+                    no-repeat center / cover
+                ;
+                }
+
+                &--two {
+                    background: 
+                        transparent url(../images/cloud/23.jpg) 
+                        no-repeat center / cover
+                    ;
+    
+                    @include mobile {
+                        background: 
+                        transparent url(../images/cloud/23-mobile.jpg) 
+                        no-repeat right/cover
+                    ;
+                    }
+                }
+            }
+
+        }
+
+        &:nth-child(4) {
+            .cloud-slider__bg {
+                background: 
+                transparent url(../images/cloud/4.jpg) 
                 no-repeat center / cover
             ;
 
             @include mobile {
                 background: 
-                transparent url(../images/cloud/1-mobile.jpg) 
+                transparent url(../images/cloud/4-mobile.jpg) 
                 no-repeat center / cover
             ;
             }
+
+            &--two {
+                background: 
+                    transparent url(../images/cloud/24.jpg) 
+                    no-repeat center / cover
+                ;
+
+                @include mobile {
+                    background: 
+                    transparent url(../images/cloud/24-mobile.jpg) 
+                    no-repeat right / cover
+                ;
+                }
+            }
+
+            }
+
         }
 
+        &:nth-child(5) {
+            .cloud-slider__bg {
+                background: 
+                transparent url(../images/cloud/5.jpg) 
+                no-repeat center / cover
+            ;
 
-        @include laptop {
-            background-position: 100%;
+            @include mobile {
+                background: 
+                transparent url(../images/cloud/5-mobile.jpg) 
+                no-repeat center / cover
+            ;
+            }
+
+            &--two {
+                background: 
+                    transparent url(../images/cloud/25.jpg) 
+                    no-repeat center / cover
+                ;
+
+                @include mobile {
+                    background: 
+                    transparent url(../images/cloud/25-mobile.jpg) 
+                    no-repeat right / cover
+                ;
+                }
+                }
+            }
+        }
+    }
+
+    &__bg {
+
+        &--two {
+            .cloud-slider__content {
+                padding-top: fluid(903, 288);
+            }
         }
         
     }
 
-    &__bg--two {
-        background: 
-            transparent url(../images/cloud/21.jpg) 
-            no-repeat center / cover
-        ;
-
-        @include laptop {
-            background-position: 100%;
-        }
-
-        @include mobile {
-            background: 
-            transparent url(../images/cloud/21-mobile.jpg) 
-            no-repeat center / cover
-        ;
-        }
-        
-    }
 
     &__wrapper {
         display: flex;
-        align-items: end;
+        align-items: start;
         justify-content: start;
         width: fluid(1950, 1100);
         height: fluid(1442, 756);
 
+
+
         &--height {
-            height: fluid(1442, 895);
+            height: fluid(1706, 895);
         }
 
         @include mobile-s {
@@ -67,9 +199,13 @@
         flex-direction: column;
         width: fluid(845, 460);
         row-gap: rem(40);
-        padding-bottom: fluid(245, 140);
         justify-content: start;
         align-items: start;
+        padding-top: fluid(847,288);
+
+        @include mobile {
+            padding-bottom: 0;
+        }
 
         @include mobile-s {
             width: fluid(350, 300);
@@ -82,6 +218,7 @@
         font-family: var(--font-family);
         font-weight: 400;
         text-align: start;
+        font-size: fluid(70,35);
 
         @include mobile-s {
             font-size: rem(30);

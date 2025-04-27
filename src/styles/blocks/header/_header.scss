@@ -6,14 +6,35 @@
     z-index: 10;
     width: 100%;
 
+
     &--fixed {
         position: fixed;
+    }
+
+    &__button {
+        &::before {
+            @include hover {
+                background-color: var(--color-accent);
+            }
+        }
     }
 
     &__body {
         background-color: var(--font-color);
         padding-block: rem(38) rem(38);
         transition-duration: 0.5s;
+
+        @keyframes scrolling-header {
+            to {
+                padding-block: rem(15) rem(15);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        animation-name: scrolling-header;
+        animation-fill-mode: both;
+        animation-timeline: scroll();
+        animation-range: 0 rem(200);
 
         &.in-top-position {
             background-color: transparent;
@@ -50,6 +71,9 @@
             margin-bottom: rem(171);
         }
 
+        @include mobile-s {
+            margin-bottom: rem(30);
+        }
 
     }
 
@@ -95,6 +119,10 @@
             margin-bottom: rem(80);
         }
 
+        @include mobile-s {
+            margin-bottom: rem(30);
+        }
+
         &-list {
             display: flex;
             align-items: center;
@@ -128,10 +156,6 @@
             
             &.in-top-position {
                 color: var(--font-color);
-            }
-
-            @include laptop {
-                font-size: rem(15);
             }
 
             @include hover {

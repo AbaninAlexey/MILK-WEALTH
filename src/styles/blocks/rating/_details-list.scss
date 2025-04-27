@@ -11,8 +11,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        column-gap: rem(5);
-        
+        align-self: center;
+        column-gap: rem(10);
+        text-align: center;
+        transition-duration: var(--transition-duration);
+
         &::after {
             content: "";
             display: block;
@@ -20,6 +23,7 @@
             width: rem(12);
             height: rem(20);
             background: url(../images/tabs/arrow-right.svg) no-repeat center/contain;
+            transition-duration: var(--transition-duration);
         }
 
         &--menu {
@@ -46,7 +50,7 @@
                 .details-list__arrow {
                     &--menu {
                         &::after {
-                            background: url(../images/tabs/arrow-right-active.svg) no-repeat center/contain;
+                            background: url(../images/tabs/arrow-right.svg) no-repeat center/contain;
                         }
                     }
                 }
@@ -55,12 +59,23 @@
 
         .details-list__arrow  {
             &::after {
-                content: "";
-                background: url(../images/tabs/arrow-right-active.svg) no-repeat center/contain;
+                rotate: 90deg;
             }
 
             &--menu {
                 color: var(--font-color);
+            }
+
+            &--top-arrow {
+                &::after {
+                    height: rem(12);
+                    width: rem(20);
+                    content: "";
+                    background: url(../images/tabs/arrow-right-active.svg) 
+                                no-repeat center/contain
+                    ;
+                    rotate: -180deg;
+                }
             }
 
         }
@@ -82,6 +97,10 @@
         z-index: 1;
 
         &--reason {
+            bottom: rem(35);
+            top: auto;
+            border-radius: rem(10) rem(10) 0 0;
+            padding-block: rem(30) rem(33);
 
             @include mobile-s {
                 top: rem(20);
@@ -89,14 +108,18 @@
 
         }
         
-        
 
         &--shadow {
             box-shadow: 0 5px 10px 0 rgba(50, 62, 72, 0.15);
         }
 
+        &--shadow-reason {
+            box-shadow: 0 -5px 10px 0 rgba(50, 62, 72, 0.15);
+        }
+
         &--menu {
             top: rem(30);
+            
 
             @include mobile {
                 padding-block: rem(30) rem(23);

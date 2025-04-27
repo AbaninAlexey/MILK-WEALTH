@@ -100,6 +100,7 @@
         &-img {
             max-width: fluid(1940, 748);
             max-height: fluid(1360, 601);
+            object-fit: cover;
 
             &--rotate {
                 rotate: 180deg;

@@ -21,6 +21,90 @@
         }
     }
 
+    &__button{
+
+        &-popup {
+            border: 0;
+            border-radius: 0;
+            font-size: rem(20);
+            font-family: var(--second-family);
+            font-weight: 800;
+            margin-bottom: rem(-1);
+    
+            &.is-active {
+                background-color: var(--light-orange);
+
+                span {
+                    &::after {
+                        rotate: -90deg;
+                        transition-duration: var(--transition-duration);
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__popup {
+        &:not(.is-active) {
+            opacity: 0;
+            visibility: hidden;
+        }
+        transition: 0.3s ease;
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(50, 62, 72, 0.4);
+        z-index: 10;
+
+        &-wrapper {
+            width: rem(300);
+            height: rem(227);
+            position: relative;
+        }
+
+        &-button {
+            position: absolute;
+            top: rem(20);
+            right: rem(20);
+            padding: 0;
+            width: auto;
+            height: auto;
+            z-index: 10;
+            border: none;
+            background: 0;
+            display: flex;
+
+            svg {
+                transition-duration: var(--transition-duration);
+                color: var(--font-color);
+            }
+
+            @include hover {
+                svg {
+                    color: var(--color-accent);
+                    transition-duration: var(--transition-duration);
+                    rotate: 180deg;
+                }
+            }
+            
+        }
+
+        &-list {
+            width: inherit;
+            height: inherit;
+            z-index: 10;
+            inset: auto;
+            border-radius: rem(10);
+            background-color: var(--white);
+            transition-duration: var(--transition-duration);
+        }
+    }
+
     &__title {
         font-family: var(--third-family);
         text-align: center;
@@ -46,7 +130,7 @@
         }
 
         @include mobile-s {
-            height: auto;
+            height: rem(40);
         }
 
         &-title {
@@ -58,7 +142,7 @@
             @include mobile-s {
                 max-width: 100%;
                 border-radius: 0;
-                max-height: rem(30);
+                max-height: rem(50);
             }
         }
     }
@@ -111,6 +195,10 @@
         bottom: rem(-2);
         width: fluid(538, 466);
         height: fluid(530, 459);
+
+        @include mobile-s {
+            bottom: rem(20);
+        }
 
         &--camel {
             right: rem(-97);
