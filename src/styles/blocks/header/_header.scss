@@ -31,10 +31,13 @@
             }
         }
 
-        animation-name: scrolling-header;
-        animation-fill-mode: both;
-        animation-timeline: scroll();
-        animation-range: 0 rem(200);
+        @include mobile-above {
+            animation-name: scrolling-header;
+            animation-fill-mode: both;
+            animation-timeline: scroll();
+            animation-range: 0 rem(200);
+        }
+
 
         &.in-top-position {
             background-color: transparent;

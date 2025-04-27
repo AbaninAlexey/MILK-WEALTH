@@ -86,7 +86,11 @@ function stylesDocs() {
 function imagesDocs() {
     return src('./src/images/**/*.{jpg,jpeg,png,svg}', { encoding: false })
       .pipe(changed ('./docs/images/'))
-      .pipe(imagemin())
+      .pipe(imagemin([
+        imageminMozjpeg({ quality: 90 }),
+        imageminOptipng({ optimizationLevel: 3 }),
+        imageminSvgo()
+      ], { verbose: true }))
       .pipe(dest('./docs/images/'));
   };
 

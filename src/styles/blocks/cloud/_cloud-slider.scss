@@ -18,6 +18,12 @@
                     ;
                 }
 
+                @include mobile-s {
+                    background-position:  70%;
+                }
+
+                           
+
                 &--two {
 
                     background: 
@@ -47,6 +53,10 @@
                     transparent url(../images/cloud/2-mobile.jpg) 
                     no-repeat center / cover
                 ;
+                }
+
+                @include mobile-s {
+                    background-position:  70%;
                 }
 
                 &--two {
@@ -84,6 +94,10 @@
                 ;
                 }
 
+                @include mobile-s {
+                    background-position:  100%;
+                }
+
                 &--two {
                     background: 
                         transparent url(../images/cloud/23.jpg) 
@@ -115,6 +129,10 @@
             ;
             }
 
+            @include mobile-s {
+                background-position:  80%;
+            }
+
             &--two {
                 background: 
                     transparent url(../images/cloud/24.jpg) 
@@ -143,8 +161,12 @@
             @include mobile {
                 background: 
                 transparent url(../images/cloud/5-mobile.jpg) 
-                no-repeat center / cover
+                no-repeat right / cover
             ;
+            }
+
+            @include mobile-s {
+                background-position:  80%;
             }
 
             &--two {
@@ -171,6 +193,8 @@
                 padding-top: fluid(903, 288);
             }
         }
+
+
         
     }
 
@@ -221,7 +245,7 @@
         font-size: fluid(70,35);
 
         @include mobile-s {
-            font-size: rem(30);
+            font-size: rem(25);
         }
 
         
@@ -230,6 +254,10 @@
     &__description {
         max-width: fluid(700, 359);
         text-align: start;
+
+        @include mobile-s {
+            max-width: rem(230);
+        }
 
         &--width {
             max-width: fluid(700, 460);
