@@ -196,8 +196,10 @@
         width: fluid(538, 466);
         height: fluid(530, 459);
 
-        @include mobile-s {
-            bottom: rem(20);
+        &--product {
+            @include mobile-s {
+                bottom: rem(20);
+            }
         }
 
         &--camel {

@@ -124,6 +124,10 @@
             @include mobile {
                 padding-block: rem(30) rem(23);
             }
+
+            @include mobile-s {
+                padding-block: rem(22) rem(15);
+            }
         }
 
     }
