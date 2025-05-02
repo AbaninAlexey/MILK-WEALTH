@@ -7,6 +7,10 @@
         padding-inline: 0;
     }
 
+    &__subtitle {
+        @include animate(50%, 0);
+    }
+
     &__inner {
         display: flex;
         align-items: center;
@@ -150,6 +154,8 @@
         width: fluid(808, 441);
         height: fluid(229, 120);
 
+        @include animate(0, 50%);
+
 
         @media(width <= 1700px) {
             order: 3;
@@ -214,8 +220,14 @@
                 color: var(--camel-orange);
             }
 
+            &:first-child {
+                @include animate(50%, 0);
+            }
+
             &:last-child {
                 margin-top: rem(35);
+
+                @include animate(-50%, 0);
 
                 @include mobile {
                     margin-top: rem(30);
@@ -226,8 +238,10 @@
         &-main {
             color: var(--font-color);
             font-family: var(--third-family);
+            @include animate(50%, 0);
         }
     }
+
 
 
 }

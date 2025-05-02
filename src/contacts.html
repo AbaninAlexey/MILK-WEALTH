@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./styles/main.css">
     <script src="./scripts/main.bundle.js" type="module"></script>
 </head>
-<body>
-    <header class="header" data-js-header>
+<body data-js-animate-root>
+    <header class="header " data-js-header data-js-animate-item>
         <div class="header__body " data-js-header-body>
             <div class="header__body-inner container">
                 <div class="header__logo-wrapper ">
@@ -260,9 +260,9 @@
         </div>
     </header>
 
-    <main>
+    <main >
         <div class="extra extra--top-padding container extra--dark">
-            <nav class="extra__nav">
+            <nav class="extra__nav" data-js-animate-item>
                 <ul class="extra__list">
                   <li class="extra__item">
                         <a href="./index.html" class="extra__link">
@@ -278,10 +278,10 @@
         <section class="section contacts overflow" aria-labelledby="contacts-title">
             <div class="contacts__inner container">
                 <div class="contacts__body">
-                        <h1 class="contacts__title h2" id="contacts-title">
+                        <h1 class="contacts__title h2" id="contacts-title" data-js-animate-item>
                             Our contacts
                         </h1>
-                        <address class="contacts__address">
+                        <address class="contacts__address" data-js-animate-item>
                             <p>
                                 Prospect Kabanbay Batyr 6/4, 2, Yesil District, 
                                 Astana City, 010000, Republic of Kazakhstan
@@ -303,7 +303,7 @@
                         </address>
 
                 </div>
-                <div class="contacts__wrapper">
+                <div class="contacts__wrapper"  data-js-animate-item>
                     <form action="" class="contacts__form">
                         <h2 class="contacts__form-title h3">
                             Ask your question
@@ -349,7 +349,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" data-js-animate-item>
         <div class="footer__inner container">
             <div class="footer__wrapper">
                 <div class="footer__logo-wrapper logo">

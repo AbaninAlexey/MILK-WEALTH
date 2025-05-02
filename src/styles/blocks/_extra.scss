@@ -2,7 +2,7 @@
 
 
 .extra {
-    padding-top: rem(40);
+    padding-top: rem(160);
     color: var(--white);
 
 
@@ -27,6 +27,10 @@
             content: " / ";
           }
 
+    }
+
+    &__nav {
+        @include animate(0, -50%, 1s);
     }
 
     &__link {

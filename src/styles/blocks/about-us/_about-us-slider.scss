@@ -61,6 +61,7 @@
                 background-color: var(--white);
                 padding: fluid(60, 36);
                 font-weight: 500;
+                
 
                 @include mobile-s {
                     max-width: rem(180);
@@ -78,6 +79,14 @@
             &-text {
                 width: fluid(553, 264);
                 font-size: fluid(40, 23);
+
+                &:nth-child(1) {
+                    @include animate(50%, -0);
+                }
+
+                &:nth-child(2) {
+                    @include animate(50%, -0, 1s, 0.3s);
+                }
 
                 &--history {
                     width: fluid(574,266);

@@ -55,6 +55,8 @@
         height: rem(960);
         margin-bottom: fluid(119, 118);
 
+        @include animate(50%, 0, 1s);
+
         &--margin {
             margin-bottom: fluid(119, 37);
         }

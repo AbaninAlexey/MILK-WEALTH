@@ -35,6 +35,8 @@
         font-family: var(--font-family);
         font-weight: 500;
 
+        @include animate(-50%, 0, 1s);
+
         &-logo {
             margin-top: rem(-25);
 
@@ -76,6 +78,7 @@
     }
 
     &__item {
+        @include animate(-50%, 0, 1s);
 
         @include mobile-s {
             font-size: rem(20);

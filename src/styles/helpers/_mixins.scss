@@ -77,3 +77,21 @@
         background-color: var(--color-dark-15);
     }
 }
+
+@mixin animate($x: -100%, 
+                $y: 0,
+                $time: 1s,
+                $delay: 0s
+                ) {
+    transition: all $time ease $delay !important;
+
+    &:not(.animate) {
+        transform: translate($x, $y);
+        opacity: 0;
+    }
+    
+    &.animate {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}

@@ -107,9 +107,7 @@ function serverDev(done) {
 function scriptsDev() {
   return src('./src/scripts/*.js')
     .pipe(changed('./build/scripts/'))
-    .pipe(plumber(
-      plumberConfig('scripts')
-    ))
+    .pipe(plumber())
     .pipe(webpack(webpackConfig))
     .pipe(dest('./build/scripts/'))
 }

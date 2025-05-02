@@ -1,7 +1,7 @@
 @use '../../helpers' as *; 
 
 .hero-alt {
-    height: fluid(1085, 960);
+    height: fluid(1205, 895);
     background: url(../images/hero-alt/bg.jpg) no-repeat center / cover;
 
     @include mobile-s {
@@ -29,11 +29,19 @@
         color: var(--white);
         flex-direction: column;
 
+        &--camel {
+            padding-top: rem(72) !important;
+        }
 
 
         &-wrapper {
             padding-top: rem(153);
             margin-left: auto;
+
+            &--camel {
+                padding-top: rem(299);
+
+            }
 
             @include mobile {
                 margin-inline: auto;
@@ -49,7 +57,7 @@
             margin-right: 0;
         }
 
-        @include mobile-s {
+        @include mobile {
             justify-content: start;
             padding: rem(40) rem(20) 0;
             min-height: rem(600);
@@ -66,6 +74,7 @@
         &-main {
             font-family: var(--third-family);
             font-weight: 700;
+            @include animate(50%,0);
         }
     }
 
@@ -82,9 +91,13 @@
             font-size: rem(30);
         }
 
+        &:first-child {
+            @include animate(50%,0);
+        }
         
         &:last-child {
             padding-top: rem(35);
+            @include animate(-50%,0);
 
             @include tablet {
                 padding-top: rem(40);

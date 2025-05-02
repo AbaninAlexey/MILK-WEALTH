@@ -47,4 +47,6 @@
 @use 'blocks/about-us/about-us-slider';
 @use 'blocks/about-us/about-quality';
 
-
+.hide {
+    display: none;
+}

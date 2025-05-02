@@ -70,6 +70,8 @@
         font-family: var(--font-family);
         font-size: fluid(60, 29);
 
+        @include animate(50%, 0%, 1s, 0s);
+
         @include tablet {
             br {
                 display: none;
@@ -86,6 +88,10 @@
     }
 
 
+    &__subtitle {
+        @include animate(0, 50%, 0.5s, 0.2s);
+    }
+
     &__cow {
 
         @include mobile {
@@ -100,6 +106,8 @@
             display: flex;
             margin-top: rem(17);
             width: fluid(539, 311);
+
+            @include animate(-50%, 0, 1s);
 
             @include laptop {
                 margin-left: fluid(100, -17);
@@ -139,6 +147,8 @@
             height: fluid(298, 235);
             background: url(../images/rating/blue-cloud.svg) no-repeat center/cover;
 
+            @include animate(50%, 0, 1s, 0.8s);
+
             @include mobile-s {
                 width: rem(130);
                 height: rem(140);
@@ -174,6 +184,7 @@
         font-family: var(--font-family);
         font-size: rem(50);
 
+        @include animate(-50%, 0%, 1s, 0s);
 
         @include mobile {
             display: flex;
@@ -266,6 +277,12 @@
         justify-content: center;
         width: fluid(408, 50);
         height: rem(60);
+
+        @include animate(0, 50%, 0.5s, 0.4s);
+
+        &--summary {
+            @include animate(0, 50%, 0.5s, 0.6s);
+        }
 
         &--small-height {
             height: rem(44);

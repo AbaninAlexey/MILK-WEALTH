@@ -56,6 +56,7 @@
         max-width: fluid(846, 460);
         width: 100%;
         font-size: fluid(40, 23);
+        @include animate(-50%,0);
 
         @include mobile-s {
             font-size: rem(18);
@@ -67,6 +68,8 @@
         font-family: var(--font-family);
         text-align: center;
         font-size: fluid(70, 25);
+
+        @include animate(50%,0);
 
         @include mobile-s {
             font-size: rem(20);

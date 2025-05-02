@@ -19,9 +19,15 @@
         font-family: var(--font-family);
         font-weight: 500;
 
+        @include animate(0, -70%, 1s);
+
         @include mobile-s {
             font-size: rem(30);
         }
+    }
+
+    &__body {
+        @include animate(0, 0, 1s);
     }
 
 }

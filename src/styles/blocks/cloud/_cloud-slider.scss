@@ -5,6 +5,14 @@
 
     &__slide {
         &:nth-child(1) {
+            .cloud-slider__description {
+                @include animate(0, 100%, 1s);
+            }
+
+            .cloud-slider__title {
+                @include animate(0, -100%, 1s);
+            }
+
             .cloud-slider__bg {
                 background: 
                 transparent url(../images/cloud/1.jpg) 
@@ -243,6 +251,7 @@
         font-weight: 400;
         text-align: start;
         font-size: fluid(70,35);
+
 
         @include mobile-s {
             font-size: rem(25);

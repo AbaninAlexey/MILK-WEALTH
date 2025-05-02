@@ -107,6 +107,8 @@
             top: fluid(287,94);
             font-weight: 400;
 
+            @include animate(0, -50%);
+
             @include mobile-s {
                 top: rem(50);
             }

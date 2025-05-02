@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
 
+
         &-slider {
             padding-block: fluid(60, 30);   
             height: 100%;
@@ -55,6 +56,15 @@
                 font-family: var(--font-family);
                 text-align: center;
                 @include fluid-text(50, 25);
+
+                p {
+                    &:nth-child(1) {
+                        @include animate(-50%, 0);
+                    }
+                    &:nth-child(2) {
+                        @include animate(50%, 0);
+                    }
+                }
 
                 @include mobile-s {
                     font-size: rem(20);

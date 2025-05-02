@@ -4,6 +4,8 @@
     background-color: var(--font-color);
     color: var(--white);
 
+    @include animate(0, 50%, 1s);
+
     &__inner {
         display: flex;
         flex-direction: column;

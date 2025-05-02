@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./styles/main.css">
     <script src="./scripts/main.bundle.js" type="module"></script>
 </head>
-<body>
-    <header class="header" data-js-header>
+<body data-js-animate-root>
+    <header class="header header--fixed-desctop" data-js-header data-js-animate-item>
         <div class="header__body " data-js-header-body>
             <div class="header__body-inner container">
                 <div class="header__logo-wrapper ">
@@ -262,7 +262,7 @@
 
     <main>
         <div class="extra visible-mobile extra--dark container">
-            <nav class="extra__nav">
+            <nav class="extra__nav" data-js-animate-item>
                 <ul class="extra__list">
                   <li class="extra__item">
                         <a href="./index.html" class="extra__link">
@@ -275,10 +275,10 @@
                 </ul>
               </nav>
         </div>
-        <section class="section hero-alt hero-alt--camel" aria-labelledby="hero-title">
+        <section class="section hero-alt hero-alt--camel overflow" aria-labelledby="hero-title">
             <div class="hero-alt__body hero-alt__body--camel container">
                 <div class="extra hidden-mobile">
-                    <nav class="extra__nav">
+                    <nav class="extra__nav" data-js-animate-item>
                         <ul class="extra__list">
                           <li class="extra__item">
                                 <a href="./index.html" class="extra__link">
@@ -293,21 +293,21 @@
                 </div>
                 <div class="hero-alt__body-wrapper hero-alt__body-wrapper--camel">
                     <h1 class="hero-alt__title" id="hero-title">
-                        <span class="hero-alt__subtitle h3">First camel</span>
-                        <span class="hero-alt__title-main">Colostrum</span>
-                        <span class="hero-alt__subtitle h3">coming soon</span>
+                        <span class="hero-alt__subtitle h3" data-js-animate-item>First camel</span>
+                        <span class="hero-alt__title-main" data-js-animate-item>Colostrum</span>
+                        <span class="hero-alt__subtitle h3" data-js-animate-item>coming soon</span>
                     </h1>
                 </div>
             </div>
         </section>
 
-        <section class="section pure container" data-js-popup-root>
+        <section class="section pure container overflow" data-js-popup-root>
             <div class="pure__inner container-mobile">
                 <div class="pure__slider-main-wrapper pure__slider-main-wrapper--camel">
                     <div class="swiper pure-slider">
                         <div class="swiper-wrapper pure-slider__wrapper">
                           <div class="swiper-slide pure-slider__slide">
-                            <div class="pure-slider__content">
+                            <div class="pure-slider__content" data-js-animate-item>
                                 <img 
                                     class="pure-slider__image "
                                     src="./images/pure/1-camel.png" 
@@ -356,12 +356,12 @@
 
                 <div class="pure__body">
                     <div class="pure__body-wrapper">
-                        <h2 class="pure__title" id="pure-title">
-                            <span class="pure__title-subtitle pure__title-subtitle--camel h3">Pure</span>
-                            <span class="pure__title-main h1">Colostrum</span>
-                            <span class="pure__title-subtitle pure__title-subtitle--camel h3">Immuno* Boost</span>
+                        <h2 class="pure__title" id="pure-title" data-js-animate-item>
+                            <span class="pure__title-subtitle pure__title-subtitle--camel h3" data-js-animate-item>Pure</span>
+                            <span class="pure__title-main h1" data-js-animate-item>Colostrum</span>
+                            <span class="pure__title-subtitle pure__title-subtitle--camel h3" data-js-animate-item>Immuno* Boost</span>
                         </h2>
-                        <div class="pure__subtitle rating-stars">
+                        <div class="pure__subtitle rating-stars" data-js-animate-item>
                             <p class="rating-stars-text rating-stars-text--small-mobile ">
                                 56 rating on amazon 
                             </p>
@@ -405,7 +405,7 @@
                         </div>
                     </div>
 
-                    <div class="pure__slider-child-wrapper">
+                    <div class="pure__slider-child-wrapper" data-js-animate-item>
                         <div class="swiper thumbs-slider pure-slider-mini">
                             <div class="swiper-wrapper pure-slider-mini__wrapper">
                                 
@@ -518,9 +518,9 @@
             </div>
         </section>
 
-        <section class="section family" aria-labelledby="family-title">
+        <section class="section family overflow" aria-labelledby="family-title">
             <div class="family__inner family__inner--camel">
-                    <div class="family__card family__card--camel">  
+                    <div class="family__card family__card--camel" data-js-animate-item>  
                         <div class="family__card-body">
                             <h2 class="family__title" id="family-title">
                                 About camel <br> colostrum 
@@ -556,6 +556,7 @@
                             aria-controls="tabpanel-1"
                             data-js-tabs-button
                             aria-selected="true"
+                            data-js-animate-item
 
                            >
                               <span class="tabs__button-text">
@@ -567,7 +568,7 @@
                            aria-labelledby="tab-1"
                            tabindex="0" data-js-tabs-content
                            >
-                               <ul class="tabs__first-list">
+                               <ul class="tabs__first-list" data-js-animate-item>
                                    <li class="tabs__first-item">
                                        <img src="./images/tabs/plus.svg" alt="" class="tabs__first-plus">
                                        <p class="tabs__first-body">
@@ -683,6 +684,7 @@
                             data-js-tabs-button
                             aria-selected="false"
                             tabindex="-1"
+                            data-js-animate-item
                            >
                                <span class="tabs__button-text">
                                    More about colostrum
@@ -938,6 +940,7 @@
                             data-js-tabs-button
                             aria-selected="false"
                             tabindex="-1"
+                            data-js-animate-item
                            >
                                <span class="tabs__button-text">
                                    Ingredients & supplements
@@ -992,6 +995,7 @@
                             data-js-tabs-button
                             aria-selected="false"
                             tabindex="-1"
+                            data-js-animate-item
                            >
                                <span class="tabs__button-text">
                                    Recommended use
@@ -1064,7 +1068,7 @@
                     aria-labelledby="tab-1"
                     tabindex="0" data-js-tabs-content-above
                     >
-                        <ul class="tabs__first-list">
+                        <ul class="tabs__first-list" data-js-animate-item>
                             <li class="tabs__first-item">
                                 <img src="./images/tabs/plus.svg" alt="" class="tabs__first-plus">
                                 <p class="tabs__first-body">
@@ -1505,7 +1509,7 @@
             </div>
 
             <div class="info-alt__extra overflow-x">
-                <div class="info-alt__extra-wrapper ">
+                <div class="info-alt__extra-wrapper" data-js-animate-item>
                     <h1 class="info-alt__extra-title">
                         <img   
                             src="./images/info-alt//freeze.svg" 
@@ -1527,24 +1531,24 @@
             </div>
         </section>
 
-        <section class="section technology technology--camel" aria-labelledby="technology-title">
+        <section class="section technology technology--camel overflow" aria-labelledby="technology-title">
             <h2 class="visually-hidden" id="technology-title">
                 Our technology
             </h2>
             <div class="technology__inner">
-                <p class="technology__text-main h2">
+                <p class="technology__text-main h2" data-js-animate-item>
                     Due to Freeze-Dried technology, we preserve up 
                     to 91% of immunoglobulins and vitamins for 
                     your strong immunity, health and beauty
                 </p>
 
-                <p class="technology__text">
+                <p class="technology__text" data-js-animate-item>
                     Moisture is removed at lower temperatures (around 85-120°F) 
                     under vacuum, rather than using higher temperatures (260-320°F) 
                     that can damage essential vitamins, enzymes and proteins.
                 </p>
 
-                <p class="technology__text-main h2">
+                <p class="technology__text-main h2" data-js-animate-item>
                     What no other drying method can achieve.
                 </p>
             </div>
@@ -1553,10 +1557,10 @@
         <sections class="section reason" aria-labelledby="reason-title">
             <div class="reason__inner container overflow-x overflow-y">
                 <header class="reason__header">
-                    <p class="reason__description reason__description--camel">
+                    <p class="reason__description reason__description--camel" data-js-animate-item>
                         5 more reasons to choose
                     </p>
-                    <h2 class="reason__title h1" id="reason-title">
+                    <h2 class="reason__title h1" id="reason-title" data-js-animate-item>
                         Milk Wealth
                     </h2>
                 </header>
@@ -1564,14 +1568,14 @@
                     <ul class="reason__list">
                         <li class="reason__item">
                             <div class="reason__card">
-                                <span class="reason__card-number">
+                                <span class="reason__card-number" data-js-animate-item>
                                     #1
                                 </span>
                                 <div class="reason__card-body">
-                                    <h3 class="reason__card-title">
+                                    <h3 class="reason__card-title" data-js-animate-item>
                                         Natural immuno- <br>globulin levels
                                     </h3>
-                                    <div class="reason__card-description">
+                                    <div class="reason__card-description" data-js-animate-item>
                                         <p>
                                             Milk Wealth contains 30% immunoglobulins, meeting the 
                                             standards for natural colostrum. 
@@ -1587,20 +1591,20 @@
                                     width="238"
                                     height="635"
                                     loading="lazy"
+                                    data-js-animate-item
                                 >
                             </div>
-
                         </li>
                         <li class="reason__item">
                             <div class="reason__card">
-                                <span class="reason__card-number">
+                                <span class="reason__card-number" data-js-animate-item>
                                     #2
                                 </span>
                                 <div class="reason__card-body">
-                                    <h3 class="reason__card-title">
+                                    <h3 class="reason__card-title" data-js-animate-item>
                                         Safaty and holistic <br> practices
                                     </h3>
-                                    <div class="reason__card-description">
+                                    <div class="reason__card-description" data-js-animate-item>
                                         <p>
                                             We do not use mRNA vaccines or antibiotics, 
                                             making our colostrum safe and suitable for 
@@ -1615,19 +1619,20 @@
                                     width="238"
                                     height="635"
                                     loading="lazy"
+                                     data-js-animate-item
                                 >
                             </div>
                         </li>
                         <li class="reason__item">
                             <div class="reason__card">
-                                <span class="reason__card-number">
+                                <span class="reason__card-number" data-js-animate-item>
                                     #3
                                 </span>
                                 <div class="reason__card-body">
-                                    <h3 class="reason__card-title">
+                                    <h3 class="reason__card-title" data-js-animate-item>
                                         Grass fed & <br> Pasture-Raised
                                     </h3>
-                                    <div class="reason__card-description">
+                                    <div class="reason__card-description" data-js-animate-item>
                                         <p>
                                             Our colostrum comes from grass-fed and 
                                             Pasture-Raised cows, camels, mares and 
@@ -1643,19 +1648,20 @@
                                     width="238"
                                     height="635"
                                     loading="lazy"
+                                    data-js-animate-item
                                 >
                             </div>
                         </li>
                         <li class="reason__item">
                             <div class="reason__card">
-                                <span class="reason__card-number">
+                                <span class="reason__card-number" data-js-animate-item>
                                     #4
                                 </span>
                                 <div class="reason__card-body">
-                                    <h3 class="reason__card-title">
+                                    <h3 class="reason__card-title" data-js-animate-item>
                                         Calf first & foal first
                                     </h3>
-                                    <div class="reason__card-description">
+                                    <div class="reason__card-description" data-js-animate-item>
                                         <p>
                                             We always leave enough milk for 
                                             calves, camels, foals and donkeys.
@@ -1666,14 +1672,14 @@
                         </li>
                         <li class="reason__item">
                             <div class="reason__card">
-                                <span class="reason__card-number">
+                                <span class="reason__card-number" data-js-animate-item>
                                     #5
                                 </span>
                                 <div class="reason__card-body">
-                                    <h3 class="reason__card-title">
+                                    <h3 class="reason__card-title" data-js-animate-item>
                                         The product undergoes independent third-party evaluation
                                     </h3>
-                                    <div class="reason__card-description">
+                                    <div class="reason__card-description" data-js-animate-item>
                                         <p>
                                             We carefully monitor that the quality of 
                                             our colostrum always remains high, 
@@ -1688,12 +1694,13 @@
                                     width="238"
                                     height="635"
                                     loading="lazy"
+                                    data-js-animate-item
                                 >
                             </div>
                         </li>
                     </ul>
                     <div class="reason__cow-wrapper">
-                        <div class="reason__cow-description reason__cow-description--camel">
+                        <div class="reason__cow-description reason__cow-description--camel" data-js-animate-item>
                             <img
                                 src="./images/reason/camel-text.svg" 
                                 alt="low allergen" 
@@ -1709,15 +1716,16 @@
                             width="629"
                             height="549"
                             loading="lazy"
+                            data-js-animate-item
                             >
                     </div>
                 </div>
             </div>
         </sections>
 
-        <section class="section family" aria-labelledby="family-title">
+        <section class="section family overflow" aria-labelledby="family-title">
             <div class="family__inner family__inner--camel-second">
-                    <div class="family__card family__card--camel family__card--margin ">  
+                    <div class="family__card family__card--camel family__card--margin " data-js-animate-item>  
                         <div class="family__card-body">
                             <h2 class="family__title" id="family-title">
                                 Immuno <br>
@@ -1875,10 +1883,10 @@
         
         <section class="section reviews overflow-x" aria-labelledby="reviews-title">
             <div class="reviews__inner">
-                <h2 class="reviews__title h2" id="reviews-title">
+                <h2 class="reviews__title h2" id="reviews-title" data-js-animate-item>
                     Our customers say <br> about colostrum
                 </h2>
-                <div class="reviews__body">
+                <div class="reviews__body" data-js-animate-item>
                     <div class="reviews-slider swiper">
                         <div class="swiper-wrapper reviews-slider__wrapper">
     
@@ -2307,7 +2315,7 @@
        
     </main>
 
-    <footer class="footer">
+    <footer class="footer" data-js-animate-item>
         <div class="footer__inner container">
             <div class="footer__wrapper">
                 <div class="footer__logo-wrapper logo">

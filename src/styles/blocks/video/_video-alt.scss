@@ -48,6 +48,8 @@
         text-align: center;
         font-size: fluid(70, 50);
 
+        @include animate(0, -50%, 1s);
+
         @include mobile-s {
             font-size: rem(35);
         }
@@ -59,12 +61,14 @@
     border: 0;
     padding: 0;
     background-color: var(--font-color);
+    @include animate(0, 0, 1s);
 
     @include flex-center;
     @include square(fluid(130, 90));
    }
 
    &__description {
+    @include animate(0, 50%, 1s);
      p {
         text-align: center;
      }

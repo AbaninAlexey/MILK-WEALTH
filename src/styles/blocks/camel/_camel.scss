@@ -53,9 +53,13 @@
 
         &:first-child {
             height: rem(36);
+
+            @include animate(-50%, 0, 1s);
         }
         &:last-child {
             margin-top: rem(30);
+
+            @include animate(50%, 0, 1s);
 
             @include mobile-s {
                 margin-top: rem(10);
@@ -69,6 +73,8 @@
         height: fluid(110, 78);
         display: flex;
         align-items: center;
+
+        @include animate(-50%, 0, 1s);
 
         @include mobile-s {
             font-size: rem(50);
@@ -93,6 +99,8 @@
             width: fluid(514, 434);
             height: fluid(689, 362);
 
+            @include animate(0, 50%, 1s);
+
             @media (width < rem(1700)) {
                 @include visually-hidden;
             }
@@ -102,7 +110,8 @@
                 @media (width > rem(1699.99)) {
                     @include visually-hidden;
                 } 
-                
+
+                @include animate(0, 50%, 1s, 1s);
                 margin-left: fluid(550,26);
                 margin-top: rem(37);
                 width: fluid(700,494);
@@ -155,6 +164,8 @@
             left: fluid(776, 253);
             transform: translateX(0%);
 
+            @include animate(-50%, 0, 1s);
+
             @media (width < rem(1700)) {
                 left: fluid(835, 339);
                 bottom: fluid(-152, -83);
@@ -185,6 +196,7 @@
         }
 
         &-description-two {
+            @include animate(-50%, 0, 1s);
             position: absolute;
             display: flex;
             align-items: center;
@@ -194,33 +206,34 @@
             height: fluid(295, 151);
             top: fluid(450, 380);
             left: fluid(1123, 308);
-            transform: translateX(0%);
             z-index: 2;
 
             @media (width < rem(1700)) {
                 left: fluid(960, 394);
                 top: auto;
-                bottom: rem(20);
-                transform: translateY(100%);
+                bottom: rem(-240);
+
             }
 
+
             @include laptop {
-                bottom: rem(10);
+                bottom: rem(-210);
             }
 
             @include tablet {
-                bottom: rem(-10);
+                bottom: rem(-190);
             }
 
             @include mobile {
-                bottom: rem(-17);
+                bottom: rem(-170);
             }
 
             @include mobile-s {
                 left: rem(220);
-                bottom: rem(105);
+                bottom: rem(-45);
                 width: rem(120);
             }
+
 
                 &-text {
                     text-align: center;
@@ -251,6 +264,8 @@
         justify-content: end;
         height: fluid(185, 103);
 
+        @include animate(-50%, 0, 0.7s);
+
         @media (width < rem(1700)) {
             order: 3;
             margin-top: fluid(188, 154);
@@ -270,6 +285,8 @@
             padding-right: fluid(248, 77);
             font-size: fluid(40,20);
 
+            @include animate(50%, 0, 1s, 0.6s);
+
             @include mobile-s {
                 padding-right: rem(10);
                 padding-block: rem(15);
@@ -286,6 +303,8 @@
             translate: 0% 100%;
             width: fluid(778, 448);
             height: fluid(671,400);
+
+            @include animate(-50%, 0, 1s, 0.2s);
 
             @include mobile {
                 bottom: rem(290);
@@ -326,6 +345,8 @@
         font-weight: 700;
         font-family: var(--secont-family);
         z-index: 3;
+
+        @include animate(0, 70%, 1s);
 
         @media (width < rem(1700)) {
             width: 100%;

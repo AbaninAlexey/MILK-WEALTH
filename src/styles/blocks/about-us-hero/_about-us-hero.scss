@@ -11,7 +11,7 @@
         align-items: start;
         justify-content: start;
         background: url(../images/about-us-hero/bg.jpg) no-repeat center/cover;
-        height: fluid(1693, 918);
+        height: fluid(1813, 918);
 
         @include mobile {
             background: url(../images/about-us-hero/bg-mobile.jpg) no-repeat center/cover;
@@ -39,9 +39,15 @@
         justify-content: center;
         align-items: center;
 
+        &-extra {
+            @include animate(100%, 0);
+        }
+
         &-main {
             font-size: fluid(110, 85);
             font-family: var(--third-family);
+
+            @include animate(-50%, 0);
 
             br {
                 @include mobile-above {
@@ -165,6 +171,8 @@
             font-weight: 400;
             text-align: center;
             width: fluid(1082, 461);
+
+            @include animate(0, -50%);
 
             @include fluid-text(120, 50);
 

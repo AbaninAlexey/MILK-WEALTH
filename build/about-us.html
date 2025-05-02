@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./styles/main.css">
     <script src="./scripts/main.bundle.js" type="module"></script>
 </head>
-<body>
-    <header class="header" data-js-header>
+<body data-js-animate-root>
+    <header class="header header--fixed-desctop " data-js-header data-js-animate-item>
         <div class="header__body " data-js-header-body>
             <div class="header__body-inner container">
                 <div class="header__logo-wrapper ">
@@ -262,7 +262,7 @@
 
     <main>
         <div class="extra visible-mobile extra--dark container">
-            <nav class="extra__nav">
+            <nav class="extra__nav" data-js-animate-item>
                 <ul class="extra__list">
                   <li class="extra__item">
                         <a href="./index.html" class="extra__link">
@@ -279,7 +279,7 @@
         <section class="about-us-hero section" aria-labelledby="about-us-hero-title">
             <div class="about-us-hero__inner container">
                 <div class="extra hidden-mobile">
-                    <nav class="extra__nav">
+                    <nav class="extra__nav" data-js-animate-item>
                         <ul class="extra__list">
                           <li class="extra__item">
                                 <a href="./index.html" class="extra__link">
@@ -294,10 +294,10 @@
                 </div>
                 <div class="about-us-hero__inner-wrapper ">
                     <h2 class="about-us-hero__title" id="about-us-hero-title">
-                        <span class="about-us-hero__title-extra h3">
+                        <span class="about-us-hero__title-extra h3" data-js-animate-item>
                             About
                         </span>
-                        <span class="about-us-hero__title-main">
+                        <span class="about-us-hero__title-main" data-js-animate-item>
                             Milk <br> Wealth 
                         </span>
                     </h2>
@@ -305,7 +305,7 @@
             </div>
             <div class="about-us-hero__extra overflow-x">
                 <div class="about-us-hero__extra-wrapper ">
-                    <h1 class="about-us-hero__extra-title">
+                    <h1 class="about-us-hero__extra-title" data-js-animate-item>
                         Our goal is to provide people with high-quality 
                         100% natural bovine colostrum
                     </h1>
@@ -337,7 +337,7 @@
                             aria-controls="tabpanel-1"
                             data-js-tabs-button
                             aria-selected="true"
-
+                            data-js-animate-item
                            >
                               <span class="tabs__button-text">
                                     Milk wealth history
@@ -354,13 +354,13 @@
                                         <div class="swiper-wrapper about-us-slider__wrapper">
                                         <div class="swiper-slide about-us-slider__slide">
                                                 <div class="about-us-slider__first">
-                                                    <div class="about-us-slider__first-main">
-                                                        <p class="about-us-slider__first-text">
+                                                    <div class="about-us-slider__first-main" >
+                                                        <p class="about-us-slider__first-text" data-js-animate-item>
                                                             My name is Aliya Kadyrbekova, and I am 
                                                             the founder of Milk Wealth. I 
                                                             am building a career in medicine in the USA
                                                         </p>
-                                                        <p class="about-us-slider__first-text">
+                                                        <p class="about-us-slider__first-text" data-js-animate-item>
                                                             I come from Kazakhstan, and my family has 
                                                             a long tradition of farming, raising cows, 
                                                             donkeys, camels, and horses. From an early 
@@ -409,10 +409,10 @@
 
                                 <div class="reason__inner reason__inner--about-us container overflow-x overflow-y">
                                     <div class="reason__header">
-                                        <h2 class="reason__title h1">
+                                        <h2 class="reason__title h1" data-js-animate-item>
                                             Milk Wealth
                                         </h2>
-                                        <p class="reason__description">
+                                        <p class="reason__description" data-js-animate-item>
                                             Values
                                         </p>
                                     </div>
@@ -420,14 +420,14 @@
                                         <ul class="reason__list reason__list--about-us">
                                             <li class="reason__item">
                                                 <div class="reason__card">
-                                                    <span class="reason__card-number">
+                                                    <span class="reason__card-number" data-js-animate-item>
                                                         #1
                                                     </span>
                                                     <div class="reason__card-body">
-                                                        <h3 class="reason__card-title">
+                                                        <h3 class="reason__card-title" data-js-animate-item>
                                                             Scientific Approach and Proven Effectiveness
                                                         </h3>
-                                                        <div class="reason__card-description">
+                                                        <div class="reason__card-description" data-js-animate-item>
                                                             <p>
                                                                 I firmly believe that only through scientific 
                                                                 research and testing can we be confident in 
@@ -445,6 +445,7 @@
                                                         width="238"
                                                         height="635"
                                                         loading="lazy"
+                                                        data-js-animate-item
                                                     >
 
                                                     <img 
@@ -454,20 +455,21 @@
                                                         width="582"
                                                         height="308"
                                                         loading="lazy"
+                                                        data-js-animate-item
                                                     >
                                                 </div>
                     
                                             </li>
                                             <li class="reason__item">
                                                 <div class="reason__card">
-                                                    <span class="reason__card-number">
+                                                    <span class="reason__card-number" data-js-animate-item>
                                                         #2
                                                     </span>
                                                     <div class="reason__card-body">
-                                                        <h3 class="reason__card-title">
+                                                        <h3 class="reason__card-title" data-js-animate-item>
                                                             Tradition and <br> Innovation
                                                         </h3>
-                                                        <div class="reason__card-description">
+                                                        <div class="reason__card-description" data-js-animate-item>
                                                             <p>
                                                                 My family has instilled in me a 
                                                                 deep respect for tradition, but 
@@ -486,19 +488,20 @@
                                                         width="238"
                                                         height="635"
                                                         loading="lazy"
+                                                        data-js-animate-item
                                                     >
                                                 </div>
                                             </li>
                                             <li class="reason__item">
                                                 <div class="reason__card">
-                                                    <span class="reason__card-number">
+                                                    <span class="reason__card-number" data-js-animate-item>
                                                         #3
                                                     </span>
                                                     <div class="reason__card-body">
-                                                        <h3 class="reason__card-title">
+                                                        <h3 class="reason__card-title" data-js-animate-item>
                                                             Animal and  <br>      Environmental Care
                                                         </h3>
-                                                        <div class="reason__card-description">
+                                                        <div class="reason__card-description" data-js-animate-item>
                                                             <p>
                                                                 Our animals graze in the pristine 
                                                                 steppes of Kazakhstan, where GMOs 
@@ -517,6 +520,7 @@
                                                         width="238"
                                                         height="635"
                                                         loading="lazy"
+                                                        data-js-animate-item
                                                     >
                                                     <img 
                                                         src="./images/about-us/spoon.svg" 
@@ -525,19 +529,20 @@
                                                         width="238"
                                                         height="635"
                                                         loading="lazy"
+                                                        data-js-animate-item
                                                     >
                                                 </div>
                                             </li>
                                             <li class="reason__item">
                                                 <div class="reason__card">
-                                                    <span class="reason__card-number">
+                                                    <span class="reason__card-number" data-js-animate-item>
                                                         #4
                                                     </span>
-                                                    <div class="reason__card-body">
-                                                        <h3 class="reason__card-title">
+                                                    <div class="reason__card-body" >
+                                                        <h3 class="reason__card-title" data-js-animate-item>
                                                             Responsibility and <br> Sustainability
                                                         </h3>
-                                                        <div class="reason__card-description">
+                                                        <div class="reason__card-description" data-js-animate-item>
                                                             <p>
                                                                 We are committed to minimizing our environmental 
                                                                 impact and follow sustainability principles 
@@ -552,14 +557,14 @@
                                             </li>
                                             <li class="reason__item">
                                                 <div class="reason__card">
-                                                    <span class="reason__card-number">
+                                                    <span class="reason__card-number" data-js-animate-item>
                                                         #5
                                                     </span>
                                                     <div class="reason__card-body">
-                                                        <h3 class="reason__card-title">
+                                                        <h3 class="reason__card-title" data-js-animate-item>
                                                             Professionalism and Commitment to Health
                                                         </h3>
-                                                        <div class="reason__card-description">
+                                                        <div class="reason__card-description" data-js-animate-item>
                                                             <p>
                                                                 As a future doctor, I personally oversee 
                                                                 every stage of production to ensure that 
@@ -577,6 +582,7 @@
                                                         width="238"
                                                         height="635"
                                                         loading="lazy"
+                                                        data-js-animate-item
                                                     >
                                                     <img 
                                                         src="./images/reason/1.png" 
@@ -585,6 +591,7 @@
                                                         width="238"
                                                         height="635"
                                                         loading="lazy"
+                                                        data-js-animate-item
                                                     >
                                                 </div>
                                             </li>
@@ -595,13 +602,13 @@
                                 <div class="about-history__cloud">
                                     <div class="about-history__cloud-wrapper">
                                         <div class="about-history__cloud-text">
-                                            <p>
+                                            <p data-js-animate-item>
                                                 My mission is to pass on knowledge about 
                                                 the importance of taking care of your 
                                                 health by paying attention to natural, 
                                                 environmentally friendly products.
                                             </p>
-                                            <p>
+                                            <p data-js-animate-item>
                                                 We are always striving for excellence, 
                                                 combining a scientific approach with the 
                                                 traditions of my people to create truly 
@@ -614,13 +621,14 @@
 
                         <div class="tabs__button-wrapper container">
                             <button
-                            class="tabs__button" type="button"
+                            class="tabs__button " type="button"
                             id="tab-2"
                             role="tab"
                             aria-controls="tabpanel-1"
                             data-js-tabs-button
                             aria-selected="false"
                             tabindex="-1"
+                            data-js-animate-item
                            >
                                <span class="tabs__button-text">
                                     Why colostrum?
@@ -730,6 +738,7 @@
                             data-js-tabs-button
                             aria-selected="false"
                             tabindex="-1"
+                            data-js-animate-item
                            >
                                <span class="tabs__button-text">
                                     Manufactury
@@ -842,6 +851,7 @@
                             data-js-tabs-button
                             aria-selected="false"
                             tabindex="-1"
+                            data-js-animate-item
                            >
                                <span class="tabs__button-text">
                                     3rd party tested
@@ -866,12 +876,12 @@
                                       <div class="swiper-slide about-us-slider__slide">
                                             <div class="about-us-slider__first">
                                                 <div class="about-us-slider__first-main">
-                                                    <p class="about-us-slider__first-text">
+                                                    <p class="about-us-slider__first-text" data-js-animate-item>
                                                         My name is Aliya Kadyrbekova, and I am 
                                                         the founder of Milk Wealth. I 
                                                         am building a career in medicine in the USA
                                                     </p>
-                                                    <p class="about-us-slider__first-text">
+                                                    <p class="about-us-slider__first-text" data-js-animate-item>
                                                         I come from Kazakhstan, and my family has 
                                                         a long tradition of farming, raising cows, 
                                                         donkeys, camels, and horses. From an early 
@@ -920,10 +930,10 @@
 
                             <div class="reason__inner reason__inner--about-us container overflow-x overflow-y">
                                 <header class="reason__header">
-                                    <h2 class="reason__title h1" >
+                                    <h2 class="reason__title h1" data-js-animate-item>
                                         Milk Wealth
                                     </h2>
-                                    <p class="reason__description">
+                                    <p class="reason__description" data-js-animate-item> 
                                         Values
                                     </p>
                                 </header>
@@ -931,14 +941,14 @@
                                     <ul class="reason__list reason__list--about-us">
                                         <li class="reason__item">
                                             <div class="reason__card">
-                                                <span class="reason__card-number">
+                                                <span class="reason__card-number" data-js-animate-item>
                                                     #1
                                                 </span>
                                                 <div class="reason__card-body">
-                                                    <h3 class="reason__card-title">
+                                                    <h3 class="reason__card-title" data-js-animate-item>
                                                         Scientific Approach and Proven Effectiveness
                                                     </h3>
-                                                    <div class="reason__card-description">
+                                                    <div class="reason__card-description" data-js-animate-item>
                                                         <p>
                                                             I firmly believe that only through scientific 
                                                             research and testing can we be confident in 
@@ -956,20 +966,21 @@
                                                     width="238"
                                                     height="635"
                                                     loading="lazy"
+                                                    data-js-animate-item
                                                 >
                                             </div>
                 
                                         </li>
                                         <li class="reason__item">
                                             <div class="reason__card">
-                                                <span class="reason__card-number">
+                                                <span class="reason__card-number" data-js-animate-item>
                                                     #2
                                                 </span>
                                                 <div class="reason__card-body">
-                                                    <h3 class="reason__card-title">
+                                                    <h3 class="reason__card-title" data-js-animate-item>
                                                         Tradition and <br> Innovation
                                                     </h3>
-                                                    <div class="reason__card-description">
+                                                    <div class="reason__card-description" data-js-animate-item>
                                                         <p>
                                                             My family has instilled in me a 
                                                             deep respect for tradition, but 
@@ -988,19 +999,20 @@
                                                     width="238"
                                                     height="635"
                                                     loading="lazy"
+                                                    data-js-animate-item
                                                 >
                                             </div>
                                         </li>
                                         <li class="reason__item">
                                             <div class="reason__card">
-                                                <span class="reason__card-number">
+                                                <span class="reason__card-number" data-js-animate-item>
                                                     #3
                                                 </span>
                                                 <div class="reason__card-body">
-                                                    <h3 class="reason__card-title">
+                                                    <h3 class="reason__card-title" data-js-animate-item>
                                                         Animal and  <br>      Environmental Care
                                                     </h3>
-                                                    <div class="reason__card-description">
+                                                    <div class="reason__card-description" data-js-animate-item>
                                                         <p>
                                                             Our animals graze in the pristine 
                                                             steppes of Kazakhstan, where GMOs 
@@ -1019,19 +1031,20 @@
                                                     width="238"
                                                     height="635"
                                                     loading="lazy"
+                                                    data-js-animate-item
                                                 >
                                             </div>
                                         </li>
                                         <li class="reason__item">
                                             <div class="reason__card">
-                                                <span class="reason__card-number">
+                                                <span class="reason__card-number" data-js-animate-item>
                                                     #4
                                                 </span>
                                                 <div class="reason__card-body">
-                                                    <h3 class="reason__card-title">
+                                                    <h3 class="reason__card-title" data-js-animate-item>
                                                         Responsibility and <br> Sustainability
                                                     </h3>
-                                                    <div class="reason__card-description">
+                                                    <div class="reason__card-description" data-js-animate-item>
                                                         <p>
                                                             We are committed to minimizing our environmental 
                                                             impact and follow sustainability principles 
@@ -1046,14 +1059,14 @@
                                         </li>
                                         <li class="reason__item">
                                             <div class="reason__card">
-                                                <span class="reason__card-number">
+                                                <span class="reason__card-number" data-js-animate-item>
                                                     #5
                                                 </span>
                                                 <div class="reason__card-body">
-                                                    <h3 class="reason__card-title">
+                                                    <h3 class="reason__card-title" data-js-animate-item>
                                                         Professionalism and Commitment to Health
                                                     </h3>
-                                                    <div class="reason__card-description">
+                                                    <div class="reason__card-description" data-js-animate-item>
                                                         <p>
                                                             As a future doctor, I personally oversee 
                                                             every stage of production to ensure that 
@@ -1071,6 +1084,7 @@
                                                     width="238"
                                                     height="635"
                                                     loading="lazy"
+                                                    data-js-animate-item
                                                 >
                                             </div>
                                         </li>
@@ -1081,13 +1095,13 @@
                             <div class="about-history__cloud">
                                 <div class="about-history__cloud-wrapper">
                                     <div class="about-history__cloud-text">
-                                        <p>
+                                        <p data-js-animate-item>
                                             My mission is to pass on knowledge about 
                                             the importance of taking care of your 
                                             health by paying attention to natural, 
                                             environmentally friendly products.
                                         </p>
-                                        <p>
+                                        <p data-js-animate-item>
                                             We are always striving for excellence, 
                                             combining a scientific approach with the 
                                             traditions of my people to create truly 
@@ -1299,7 +1313,7 @@
         
     </main>
 
-    <footer class="footer">
+    <footer class="footer" data-js-animate-item>
         <div class="footer__inner container">
             <div class="footer__wrapper">
                 <div class="footer__logo-wrapper logo">

@@ -5,12 +5,14 @@ import TabsCollection from "./Tabs.js";
 import VideoPlayerCollection from "./VideoPlayer.js";
 import Stories from "./Stories.js";
 import PopupCollection from "./Popup.js";
+import AnimateItemsCollection from "./AnimateItems.js";
 
 new Header()
 new TabsCollection()
 new VideoPlayerCollection()
 new Stories()
-new PopupCollection
+new PopupCollection()
+new AnimateItemsCollection()
 
 const thumbsSlider = new Swiper(".thumbs-slider", {
     direction: "horizontal", 

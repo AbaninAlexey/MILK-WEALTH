@@ -24,6 +24,8 @@
         font-family: var(--font-family);
         font-weight: 400;
 
+        @include animate(0, -50%, 1s);
+
         @include mobile {
             max-width: fluid(300, 478);
         }
@@ -64,12 +66,36 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        // row-gap: rem(30);
         height: rem(180);
+
+        &:nth-child(1) {
+            @include animate(0, 50%, 0.5s);
+        }
+
+        &:nth-child(2) {
+            @include animate(0, 50%, 0.8s);
+        }
+
+        &:nth-child(3) {
+            @include animate(0, 50%, 1.1s);
+        }
+
+        &:nth-child(4) {
+            @include animate(0, 50%, 1.4s);
+        }
+
+        &:nth-child(5) {
+            @include animate(0, 50%, 1.7s);
+        }
+
+        &:nth-child(6) {
+            @include animate(0, 50%, 2s);
+        }
 
         @include mobile-s {
             height: rem(150);
         }
+
     }
 
     &__description {
@@ -136,6 +162,8 @@
             text-align: center;
             max-width: fluid(1082, 456);
             width: 100%;
+
+            @include animate(-50%, 0, 1.5s);
 
             @include fluid-text(120, 50);
 

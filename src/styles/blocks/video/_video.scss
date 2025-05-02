@@ -104,6 +104,8 @@
         padding-top: fluid(303, 60);
         font-size: fluid(70, 50);
 
+        @include animate(0, -100%, 1s);
+
         @include mobile-s {
             font-size: rem(35);
         }
@@ -116,6 +118,8 @@
     border: 0;
     padding: 0;
     background-color: var(--font-color);
+
+    @include animate(0, 100%, 1s);
 
     @include abs-center;
     @include flex-center;
