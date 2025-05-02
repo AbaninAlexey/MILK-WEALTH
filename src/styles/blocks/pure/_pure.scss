@@ -43,7 +43,7 @@
             border-radius: rem(10);
             order: 5;
 
-            @include laptop {
+            @media (width < 1700px) {
                 margin-top: rem(60);
             }
 
@@ -134,6 +134,8 @@
         width: fluid(845, 564);
         height: fluid(903, 613);
         position: relative;
+        
+        @include animate(0,0);
 
         &--camel {
             width: fluid(724, 481);
