@@ -68,7 +68,7 @@
                 font-size: rem(25);
             }
 
-            @include animate(100%, 0, 0.7s);
+            @include animate(50%, 0, 0.7s);
         }
         
         &:last-child {
@@ -79,7 +79,7 @@
                 font-size: rem(25);
             }
 
-            @include animate(100%, 0, 0.9s);
+            @include animate(50%, 0, 0.9s);
         }
     }
 }

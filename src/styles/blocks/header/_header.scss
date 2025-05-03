@@ -5,9 +5,15 @@
     top: 0;
     z-index: 10;
     width: 100%;
+    transition-duration: 1s;
 
-
-    @include animate(0, -50%, 1s);
+    &:not(.animate) {
+        opacity: 0;
+    }
+    
+    &.animate {
+        opacity: 1;
+    }
 
     &--fixed {
         position: fixed;
@@ -98,7 +104,7 @@
             width: 100%;
             z-index: 2;
             column-gap: rem(10);
-            translate: 0 !important;
+            translate: 0 ;
             height: 100vh;
 
             @include mobile-s {

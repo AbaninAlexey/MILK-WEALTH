@@ -70,7 +70,7 @@
         font-family: var(--font-family);
         font-size: fluid(60, 29);
 
-        @include animate(50%, 0%, 1s, 0s);
+        @include animate(0, -50%, 1s, 0s);
 
         @include tablet {
             br {
@@ -184,8 +184,6 @@
         font-family: var(--font-family);
         font-size: rem(50);
 
-        @include animate(-50%, 0%, 1s, 0s);
-
         @include mobile {
             display: flex;
             order: 2;
@@ -198,6 +196,8 @@
 
         &-text {
             @include fluid-text(50, 20);
+
+            @include animate(-50%,0);
 
             @include laptop {
                 display: flex;
@@ -233,6 +233,8 @@
             bottom: rem(-83);
             right: fluid(214, 70);
             width: fluid(755, 433);
+
+            @include animate(0,50%);
 
             @include mobile {
                 bottom: rem(-60);
