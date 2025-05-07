@@ -1,7 +1,6 @@
 class Stories  {
     imagesArr = [] 
     currentStory = 0 
-    storyTimeout 
 
     selectors = {
         root: '[data-js-header-stories]',
@@ -13,6 +12,7 @@ class Stories  {
         progressBar: '[data-js-stories-progress-bar]',
         image: '[data-js-stories-image]',
         storiesPopupImage: '[data-js-stories-popup-image]',
+        contentWrapper: '[data-js-stories-content-wrapper]',
     }
 
     stateClasses = {
@@ -28,89 +28,92 @@ class Stories  {
         this.closeButtonElement = this.rootElement.querySelector(this.selectors.closeButton)
         this.prevButtonElement = this.rootElement.querySelector(this.selectors.prevButton)
         this.nextButtonElement = this.rootElement.querySelector(this.selectors.nextButton)
-        this.progressBarElement = this.rootElement.querySelector(this.selectors.progressBar)
+        this.progressBarElements = this.rootElement.querySelectorAll(this.selectors.progressBar)
         this.imagesElement = this.rootElement.querySelectorAll(this.selectors.image)
+        this.contentWrapperElements = this.rootElement.querySelectorAll(this.selectors.contentWrapper)
         this.storiesPopupImageElement = this.rootElement.querySelector(this.selectors.storiesPopupImage)
+        this.timer = null
         this.bindEvents()
     }
 
-    bindEvents() {
-        this.pushImagesToArr()
-        this.storiesElement.forEach( (element, index) => {
-            element.addEventListener('click', () => {
-                this.showStoriesPopup(index)
-            })
-        })
-        this.closeButtonElement.addEventListener('click', this.closeStoriesPopup)
-        this.prevButtonElement.addEventListener('click', this.prevStory)
-        this.nextButtonElement.addEventListener('click', this.nextStory)
-    }
 
-    showStoriesPopup = (index) => {
-        this.currentStory = index;
-        this.storiesPopupElement.classList.toggle(this.stateClasses.isActive)
-        document.documentElement.classList.toggle(this.stateClasses.isLock)
-        this.loadStory()
-    }
-
-    closeStoriesPopup = () => {
-        this.storiesPopupElement.classList.toggle(this.stateClasses.isActive)
-        this.progressBarElement.style.transition = "none"
-        this.progressBarElement.style.width = "0%"
-        document.documentElement.classList.toggle(this.stateClasses.isLock)
-        clearTimeout(this.storyTimeout) 
-
-    }
-
-    loadStory  = () => {
-        clearTimeout(this.storyTimeout)
-        this.progressBarElement.style.width = "0%"
-        this.storiesPopupImageElement.classList.remove(this.stateClasses.isActive, this.stateClasses.next)
-
-        this.storiesPopupImageElement.src = this.imagesArr[this.currentStory].src 
-
-        setTimeout(() => {
-            this.storiesPopupImageElement.classList.add(this.stateClasses.next)
-            this.storiesPopupImageElement.style.transition = "1s";
-            this.storiesPopupImageElement.classList.add(this.stateClasses.isActive)
-            this.storiesPopupImageElement.classList.remove(this.stateClasses.next)
-        }, 50); 
-
-        setTimeout(() => {
-            this.progressBarElement.style.width = "100%"; 
-            this.progressBarElement.style.transition = "width 5s linear"
-        }, 20);
-    
-        this.storyTimeout = setTimeout(() => {
-            this.nextStory()
-        }, 5000);
-        
-        this.progressBarElement.style.transition = "none"
-        this.storiesPopupImageElement.style.transition = "none"
-    }
-
-    nextStory = () => {
-            if (this.currentStory < this.imagesArr.length - 1) {
-                this.currentStory++
-                this.loadStory()    
-            } else {
-                this.closeStoriesPopup()
+    toggleClassActive = (elem) => {
+        elem.forEach((elem, index) => {
+            if (elem.classList.contains(this.stateClasses.isActive)
+                &&
+                this.currentStory <= this.contentWrapperElements.length - 1
+            ) {
+                elem.classList.remove(this.stateClasses.isActive)
+                console.log(`Индекс удаления класса ${index}`)
+            } else if (index === this.currentStory) {
+                elem.classList.add(this.stateClasses.isActive)
+                console.log(`Индекс добавления класса ${index}`)
             }
+        })
     }
 
-    prevStory = () => {
-        if (this.currentStory > 0) {
-            this.currentStory--
-            this.loadStory()    
-        } else {
-            this.closeStoriesPopup()
-        }
-}
+    toggleClass = () => {
+        this.toggleClassActive(this.contentWrapperElements)
+        this.toggleClassActive(this.progressBarElements)
+    }
 
-    pushImagesToArr = () => {
-        this.imagesElement.forEach((image) => {
-            this.imagesArr.push(image)
-        })
+    changeSlide = () => {
+        if (this.timer) clearInterval(this.timer)
+        
+        let duration = 2000,
+            interval = 10,
+            step =  100 / (duration / interval),
+            width = 0
+        this.timer = setInterval(() => {
+            let activeBarChild = this.rootElement.querySelector('.stories-popup__progress-bar.is-active').firstElementChild
+            width += step;
+            activeBarChild.style.width = width + '%';
+
+            if (activeBarChild.style.width == '100%') {
+                if (this.currentStory < this.contentWrapperElements.length - 1) {
+                    this.currentStory++
+                } else {
+                    clearInterval(this.timer)
+                    return
+                    
+                }
+                width = 0
+                this.toggleClass()
+                console.log(`Индекс интервала ${this.currentStory}`)
+
+                if (this.currentStory == this.progressBarElements.length) {
+                    clearInterval(this.timer)
+                    return
+                }
+                
+            }
+
+        }, interval)
+        
+    }
+
+    openNextSlide = () => {
+        if ( this.currentStory < this.contentWrapperElements.length) {
+            this.currentStory++
+            this.toggleClass()
+            this.changeSlide()
+            console.log(`Вперед индекс ${this.currentStory}`)
+        }
+    }
+    
+    openPrevSlide = () => {
+        if ( this.currentStory > 0 && this.currentStory <= this.contentWrapperElements.length) {
+            this.currentStory--
+            this.toggleClass()
+            this.changeSlide()
+            console.log(`Назад индекс ${this.currentStory}`)
+        }
+    }
+
+    bindEvents() {
+        this.changeSlide()
+        this.prevButtonElement.addEventListener('click', this.openPrevSlide)
+        this.nextButtonElement.addEventListener('click', this.openNextSlide)
     }
 }
 
