@@ -1,5 +1,4 @@
 class Stories  {
-    imagesArr = [] 
     currentStory = 0 
 
     selectors = {
@@ -42,12 +41,11 @@ class Stories  {
             if (elem.classList.contains(this.stateClasses.isActive)
                 &&
                 this.currentStory <= this.contentWrapperElements.length - 1
+
             ) {
                 elem.classList.remove(this.stateClasses.isActive)
-                console.log(`Индекс удаления класса ${index}`)
             } else if (index === this.currentStory) {
                 elem.classList.add(this.stateClasses.isActive)
-                console.log(`Индекс добавления класса ${index}`)
             }
         })
     }
@@ -79,7 +77,6 @@ class Stories  {
                 }
                 width = 0
                 this.toggleClass()
-                console.log(`Индекс интервала ${this.currentStory}`)
 
                 if (this.currentStory == this.progressBarElements.length) {
                     clearInterval(this.timer)
@@ -93,25 +90,53 @@ class Stories  {
     }
 
     openNextSlide = () => {
-        if ( this.currentStory < this.contentWrapperElements.length) {
+        if ( this.currentStory < this.contentWrapperElements.length - 1) {
+            let activeBarChild = this.rootElement.querySelector('.stories-popup__progress-bar.is-active').firstElementChild
+            activeBarChild.style.width = '100%'
             this.currentStory++
             this.toggleClass()
             this.changeSlide()
-            console.log(`Вперед индекс ${this.currentStory}`)
         }
     }
     
     openPrevSlide = () => {
         if ( this.currentStory > 0 && this.currentStory <= this.contentWrapperElements.length) {
+            let activeBarChild = this.rootElement.querySelector('.stories-popup__progress-bar.is-active').firstElementChild
+            activeBarChild.style.width = '0%'
             this.currentStory--
             this.toggleClass()
             this.changeSlide()
-            console.log(`Назад индекс ${this.currentStory}`)
         }
     }
 
-    bindEvents() {
+    openStories = () => {
+        this.storiesPopupElement.classList.toggle(this.stateClasses.isActive)
         this.changeSlide()
+    }
+
+    closeStories = () => {
+        this.storiesPopupElement.classList.remove(this.stateClasses.isActive)
+        clearInterval(this.timer) 
+        this.currentStory = 0
+        this.toggleClass()
+        this.progressBarElements.forEach((bar,index) => {
+            bar.firstElementChild.style.width = '0'
+            if (!index == this.currentStory) {
+                bar.classList.remove(this.stateClasses.isActive)
+            }
+        })
+        this.contentWrapperElements.forEach((elem,index) => {
+            if (!index == this.currentStory) {
+                elem.classList.remove(this.stateClasses.isActive)
+            }
+        })
+    }
+
+    bindEvents() {
+        this.storiesElement.forEach((story, index) => {
+            story.addEventListener('click', this.openStories)
+        })
+        this.closeButtonElement.addEventListener('click', this.closeStories)
         this.prevButtonElement.addEventListener('click', this.openPrevSlide)
         this.nextButtonElement.addEventListener('click', this.openNextSlide)
     }
