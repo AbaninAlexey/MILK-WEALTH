@@ -10,7 +10,7 @@ import AnimateItemsCollection from "./AnimateItems.js";
 new Header()
 new TabsCollection()
 new VideoPlayerCollection()
-new Stories()
+// new Stories()
 new PopupCollection()
 new AnimateItemsCollection()
 
@@ -100,3 +100,19 @@ const thumbsSlider = new Swiper(".thumbs-slider", {
   });
 
 
+  const storyTriggers = document.querySelectorAll('[data-js-stories]')
+  const storyModals = document.querySelectorAll('[data-js-stories-popup]')
+  
+  storyTriggers.forEach((trigger, index) => {
+    trigger.addEventListener('click', () => {
+        const popup = storyModals[index]
+  
+        if (!popup) {
+            console.warn(`Нет попапа для сторис с индексом ${index}`)
+            return
+        }
+  
+        new Stories(popup, index)
+    })
+  })
+  

@@ -1,52 +1,71 @@
-class Stories  {
-    currentStory = 0 
+class Stories {
+    constructor(rootElement, modalIndex) {
+        this.rootElement = rootElement
+        this.modalIndex = modalIndex
+        this.currentStory = 0
+        this.timer = null
 
-    selectors = {
-        root: '[data-js-header-stories]',
-        stories: '[data-js-stories]',
-        storiesPopup: '[data-js-stories-popup]',
-        closeButton: '[data-js-stories-close-button]',
-        prevButton: '[data-js-stories-button-prev]',
-        nextButton: '[data-js-stories-button-next]',
-        progressBar: '[data-js-stories-progress-bar]',
-        image: '[data-js-stories-image]',
-        storiesPopupImage: '[data-js-stories-popup-image]',
-        contentWrapper: '[data-js-stories-content-wrapper]',
-    }
+        this.selectors = {
+            closeButton: '[data-js-stories-close-button]',
+            prevButton: '[data-js-stories-button-prev]',
+            nextButton: '[data-js-stories-button-next]',
+            progressBar: '[data-js-stories-progress-bar]',
+            contentWrapper: '[data-js-stories-content-wrapper]',
+        }
 
-    stateClasses = {
-        isActive: 'is-active',
-        next: 'next',
-        isLock: 'is-lock',
-    }
+        this.stateClasses = {
+            isActive: 'is-active',
+            isLock: 'is-lock',
+        }
 
-    constructor() {
-        this.rootElement = document.querySelector(this.selectors.root)
-        this.storiesElement = this.rootElement.querySelectorAll(this.selectors.stories)
-        this.storiesPopupElement = this.rootElement.querySelector(this.selectors.storiesPopup)
+        this.contentWrapperElements = this.rootElement.querySelectorAll(this.selectors.contentWrapper)
+        this.progressBarElements = this.rootElement.querySelectorAll(this.selectors.progressBar)
         this.closeButtonElement = this.rootElement.querySelector(this.selectors.closeButton)
         this.prevButtonElement = this.rootElement.querySelector(this.selectors.prevButton)
         this.nextButtonElement = this.rootElement.querySelector(this.selectors.nextButton)
-        this.progressBarElements = this.rootElement.querySelectorAll(this.selectors.progressBar)
-        this.imagesElement = this.rootElement.querySelectorAll(this.selectors.image)
-        this.contentWrapperElements = this.rootElement.querySelectorAll(this.selectors.contentWrapper)
-        this.storiesPopupImageElement = this.rootElement.querySelector(this.selectors.storiesPopupImage)
-        this.timer = null
+
         this.bindEvents()
+        this.openStories()
     }
 
+    bindEvents() {
+        this.closeButtonElement.addEventListener('click', this.closeStories)
+        this.prevButtonElement.addEventListener('click', this.openPrevSlide)
+        this.nextButtonElement.addEventListener('click', this.openNextSlide)
+    }
 
-    toggleClassActive = (elem) => {
-        elem.forEach((elem, index) => {
-            if (elem.classList.contains(this.stateClasses.isActive)
-                &&
-                this.currentStory <= this.contentWrapperElements.length - 1
+    openStories = () => {
+        this.rootElement.classList.add(this.stateClasses.isActive)
+        this.toggleClass()
+        this.changeSlide()
+        this.lockBody()
+    }
 
-            ) {
-                elem.classList.remove(this.stateClasses.isActive)
-            } else if (index === this.currentStory) {
-                elem.classList.add(this.stateClasses.isActive)
-            }
+    lockBody = () => {
+        document.documentElement.classList.toggle(this.stateClasses.isLock,
+            this.rootElement.classList.contains(this.stateClasses.isActive)
+         )
+    }
+
+    closeStories = () => {
+        clearInterval(this.timer)
+        this.rootElement.classList.remove(this.stateClasses.isActive)
+        this.currentStory = 0
+        this.toggleClass()
+        this.resetProgressBars()
+        this.lockBody()
+    }
+
+    resetProgressBars() {
+        this.progressBarElements.forEach(bar => {
+            const fill = bar.querySelector('.stories-popup__progress-bar-fill')
+            if (fill) fill.style.width = '0%'
+        })
+    }
+
+    toggleClassActive = (elements) => {
+        elements.forEach((element, index) => {
+            element.classList.toggle(this.stateClasses.isActive, index === this.currentStory)
         })
     }
 
@@ -57,88 +76,74 @@ class Stories  {
 
     changeSlide = () => {
         if (this.timer) clearInterval(this.timer)
-        
-        let duration = 2000,
-            interval = 10,
-            step =  100 / (duration / interval),
-            width = 0
-        this.timer = setInterval(() => {
-            let activeBarChild = this.rootElement.querySelector('.stories-popup__progress-bar.is-active').firstElementChild
-            width += step;
-            activeBarChild.style.width = width + '%';
 
-            if (activeBarChild.style.width == '100%') {
+        const duration = 2000
+        const interval = 10
+        const step = 100 / (duration / interval)
+        let width = 0
+
+        const activeBarChild = () =>
+            this.rootElement.querySelector('.stories-popup__progress-bar.is-active')?.firstElementChild
+
+        const animate = () => {
+            const bar = activeBarChild()
+            if (!bar) return
+
+            width += step
+            bar.style.width = width + '%'
+
+            if (width >= 100) {
+                clearInterval(this.timer)
+
                 if (this.currentStory < this.contentWrapperElements.length - 1) {
                     this.currentStory++
+                    this.toggleClass()
+                    this.changeSlide()
                 } else {
-                    clearInterval(this.timer)
-                    return
-                    
+                    this.closeStories()
+                    const nextModal = document.querySelectorAll('[data-js-stories-popup]')[this.modalIndex + 1]
+                    if (nextModal) {
+                        new Stories(nextModal, this.modalIndex + 1)
+                    }
                 }
-                width = 0
-                this.toggleClass()
-
-                if (this.currentStory == this.progressBarElements.length) {
-                    clearInterval(this.timer)
-                    return
-                }
-                
             }
+        }
 
-        }, interval)
-        
+        this.timer = setInterval(animate, interval)
     }
 
     openNextSlide = () => {
-        if ( this.currentStory < this.contentWrapperElements.length - 1) {
-            let activeBarChild = this.rootElement.querySelector('.stories-popup__progress-bar.is-active').firstElementChild
-            activeBarChild.style.width = '100%'
+        if (this.currentStory < this.contentWrapperElements.length - 1) {
+            const activeBarChild = this.rootElement.querySelector('.stories-popup__progress-bar.is-active')?.firstElementChild
+            if (activeBarChild) activeBarChild.style.width = '100%'
+
             this.currentStory++
             this.toggleClass()
             this.changeSlide()
+        } else {
+            this.closeStories()
+            const nextModal = document.querySelectorAll('[data-js-stories-popup]')[this.modalIndex + 1]
+            if (nextModal) {
+                new Stories(nextModal, this.modalIndex + 1)
+            }
         }
     }
-    
+
     openPrevSlide = () => {
-        if ( this.currentStory > 0 && this.currentStory <= this.contentWrapperElements.length) {
-            let activeBarChild = this.rootElement.querySelector('.stories-popup__progress-bar.is-active').firstElementChild
-            activeBarChild.style.width = '0%'
+        if (this.currentStory > 0) {
+            const activeBarChild = this.rootElement.querySelector('.stories-popup__progress-bar.is-active')?.firstElementChild
+            if (activeBarChild) activeBarChild.style.width = '0%'
+    
             this.currentStory--
             this.toggleClass()
             this.changeSlide()
+        } else {
+            this.closeStories()
+            const prevModal = document.querySelectorAll('[data-js-stories-popup]')[this.modalIndex - 1]
+            if (prevModal) {
+                new Stories(prevModal, this.modalIndex - 1)
+            }
         }
-    }
-
-    openStories = () => {
-        this.storiesPopupElement.classList.toggle(this.stateClasses.isActive)
-        this.changeSlide()
-    }
-
-    closeStories = () => {
-        this.storiesPopupElement.classList.remove(this.stateClasses.isActive)
-        clearInterval(this.timer) 
-        this.currentStory = 0
-        this.toggleClass()
-        this.progressBarElements.forEach((bar,index) => {
-            bar.firstElementChild.style.width = '0'
-            if (!index == this.currentStory) {
-                bar.classList.remove(this.stateClasses.isActive)
-            }
-        })
-        this.contentWrapperElements.forEach((elem,index) => {
-            if (!index == this.currentStory) {
-                elem.classList.remove(this.stateClasses.isActive)
-            }
-        })
-    }
-
-    bindEvents() {
-        this.storiesElement.forEach((story, index) => {
-            story.addEventListener('click', this.openStories)
-        })
-        this.closeButtonElement.addEventListener('click', this.closeStories)
-        this.prevButtonElement.addEventListener('click', this.openPrevSlide)
-        this.nextButtonElement.addEventListener('click', this.openNextSlide)
     }
 }
 
