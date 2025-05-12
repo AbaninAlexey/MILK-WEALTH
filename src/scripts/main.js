@@ -3,14 +3,14 @@ import 'swiper/css/bundle';
 import Header from "./Header.js";
 import TabsCollection from "./Tabs.js";
 import VideoPlayerCollection from "./VideoPlayer.js";
-import Stories from "./Stories.js";
+import StoriesInit from "./Stories.js";
 import PopupCollection from "./Popup.js";
 import AnimateItemsCollection from "./AnimateItems.js";
 
 new Header()
 new TabsCollection()
 new VideoPlayerCollection()
-// new Stories()
+new StoriesInit()
 new PopupCollection()
 new AnimateItemsCollection()
 
@@ -99,20 +99,3 @@ const thumbsSlider = new Swiper(".thumbs-slider", {
     },
   });
 
-
-  const storyTriggers = document.querySelectorAll('[data-js-stories]')
-  const storyModals = document.querySelectorAll('[data-js-stories-popup]')
-  
-  storyTriggers.forEach((trigger, index) => {
-    trigger.addEventListener('click', () => {
-        const popup = storyModals[index]
-  
-        if (!popup) {
-            console.warn(`Нет попапа для сторис с индексом ${index}`)
-            return
-        }
-  
-        new Stories(popup, index)
-    })
-  })
-  

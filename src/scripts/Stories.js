@@ -147,4 +147,29 @@ class Stories {
     }
 }
 
-export default Stories
+class StoriesInit {
+    constructor() {
+    this.storyTriggers = document.querySelectorAll('[data-js-stories]')
+    this.storyModals = document.querySelectorAll('[data-js-stories-popup]')
+    this.init()
+    }
+
+    init = () => {
+        this.storyTriggers.forEach((trigger, index) => {
+            trigger.addEventListener('click', () => {
+                const popup = this.storyModals[index]
+          
+                if (!popup) {
+                    console.warn(`Нет попапа для сторис с индексом ${index}`)
+                    return
+                }
+          
+                new Stories(popup, index)
+            })
+          })
+    }
+
+    
+}
+
+export default StoriesInit
